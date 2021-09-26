@@ -6,7 +6,6 @@ module.exports = {
   plugins: [
     "gatsby-plugin-styled-components",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-mdx",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     {
@@ -14,6 +13,13 @@ module.exports = {
       options: {
         basePath: `/notes`,
         preset: false,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        remarkPlugins: [require("remark-math")],
+        rehypePlugins: [require("rehype-katex")],
       },
     },
     {

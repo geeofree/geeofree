@@ -16,6 +16,11 @@ const GlobalStyle = createGlobalStyle`
   html, body {
     min-height: 100vh;
   }
+
+  [aria-hidden="true"] {
+    opacity: 0;
+    visibility: hidden;
+  }
 `;
 
 const Container = styled.div`
