@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import styled, { createGlobalStyle } from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 import "@atlaskit/css-reset";
 
 const GlobalStyle = createGlobalStyle`
@@ -13,7 +14,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html, body {
-    min-width: 100vw;
     min-height: 100vh;
   }
 `;
@@ -38,7 +38,8 @@ const Subtitle = styled.h2`
 `;
 
 const Main = styled.main`
-  margin-top: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
 `;
 
 const LogoContainer = styled.div`
@@ -50,6 +51,32 @@ const TitleContainer = styled.div`
   flex-direction: column;
   justify-content: end;
 `;
+
+const List = styled.ul`
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+
+  & > li {
+    margin: 0 1rem;
+  }
+`;
+
+const Nav = styled.nav`
+  margin-top: 1rem;
+`;
+
+function LinkItem(props) {
+  const { path, children } = props;
+
+  return (
+    <li>
+      <Link to={path}>{children}</Link>
+    </li>
+  );
+}
 
 function HomeLayout(props) {
   const { title, children } = props;
@@ -72,6 +99,13 @@ function HomeLayout(props) {
             <Subtitle>Web Developer</Subtitle>
           </TitleContainer>
         </Header>
+        <Nav>
+          <List>
+            <LinkItem path="/">Home</LinkItem>
+            <LinkItem path="/notes">Notes</LinkItem>
+            <LinkItem path="/blogs">Blog</LinkItem>
+          </List>
+        </Nav>
         <Main>{children}</Main>
       </Container>
     </>

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "geeofree",
+    siteUrl: "https://geeofree.netlify.app",
+    title: "Geeofree",
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -9,6 +9,13 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-theme-notes`,
+      options: {
+        basePath: `/notes`,
+        preset: false,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
