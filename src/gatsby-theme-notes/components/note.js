@@ -9,7 +9,6 @@ function Note(props) {
   const { data, pageContext } = props;
   const { title } = pageContext;
   const body = data.note.body;
-  console.log(props);
 
   return (
     <HomeLayout title={title}>
