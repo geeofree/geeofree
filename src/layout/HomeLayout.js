@@ -30,7 +30,7 @@ const Header = styled.header`
 `;
 
 const Title = styled.h1`
-  font-size: 4rem;
+  font-size: 3.5rem;
 `;
 
 const Subtitle = styled.h2`
@@ -40,6 +40,8 @@ const Subtitle = styled.h2`
 const Main = styled.main`
   margin-top: 1.5rem;
   margin-bottom: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 `;
 
 const LogoContainer = styled.div`
