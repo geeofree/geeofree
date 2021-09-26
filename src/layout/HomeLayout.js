@@ -42,6 +42,7 @@ const Main = styled.main`
   margin-bottom: 5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  max-width: 480px;
 `;
 
 const LogoContainer = styled.div`
