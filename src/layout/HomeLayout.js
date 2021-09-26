@@ -112,6 +112,7 @@ function HomeLayout(props) {
             <LinkItem path="/">Home</LinkItem>
             <LinkItem path="/notes">Notes</LinkItem>
             <LinkItem path="/blogs">Blog</LinkItem>
+            <LinkItem path="/projects">Projects</LinkItem>
           </List>
         </Nav>
         <Main>{children}</Main>
