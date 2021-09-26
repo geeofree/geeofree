@@ -63,7 +63,7 @@ function Notes(props) {
     <HomeLayout title="Notes">
       {breadcrumbs.length ? <Breadcrumbs links={breadcrumbs} /> : null}
       <Folders directories={directories} />
-      {breadcrumbs.length ? <FileList files={files} /> : null}
+      {breadcrumbs.length ? <FileList files={files.sort()} /> : null}
     </HomeLayout>
   );
 }
