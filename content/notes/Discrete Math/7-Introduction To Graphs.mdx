@@ -106,3 +106,66 @@ States that the sum of all degrees in a graph is twice the size of the graph.
 
 ## Regular Graphs
 Is when every vertex in the graph has the same number of degrees.
+
+# 1.4 Subgraphs
+
+## Subgraphs
+For two graphs A and B, B is a subgraph of A if B contains a subset of vertices 
+of the vertices of A and a subset of edges of edges in A.
+
+## Proper Subgraphs
+For two graphs A and B, B is a proper subgraph if B contains a proper subset of 
+vertices as the vertices of A and a proper subset of edges of edges in A.
+
+## Induced Subgraphs
+A subgraph is an induced subgraph iff. for any two vertices in the super graph 
+that are adjacent, they must also be adjacent in the subgraph.
+
+## Spanning Subgraph
+A subgraph is a spanning subgraph iff. it contains the same vertices as the 
+vertices of the super graph.
+
+# 1.5 Complete and Complement Graphs
+
+## Complete Graphs
+Are graphs where every vertices is adjacent to all other vertices
+
+## Complement Graphs
+Are graphs where non-adjacent vertices are adjacent vertices.
+
+# 1.6 Path and Cyclic Graphs
+
+## Path Graphs
+Are graphs that does not have the starting vertex adjacent to the ending vertex.
+
+$$E = \{v_{i}v_{i+1} | 1 \le i < n \}$$
+
+Where $v \in V(G)$
+
+and $n = |V(G)|$.
+
+## Cyclic Graphs
+Are graphs that does have the starting vertex adjacent to the ending vertex.
+
+$$E = \{v_{i}v_{i+1} | 1 \le i < n \} \cup \{v_{1}{n}\}$$
+
+Where $v \in V(G)$
+
+and $n = |V(G)|$.
+
+## Path/Cycle Length
+Is the number of edges of a path or cyclic graph.
+
+# 1.7 Isomorphic Graphs
+
+## Isomorphic Graphs
+Are graphs that are the *same* — two distinct graphs G and H are isomorphic, iff. 
+
+for $$\phi: V(G) \to V(H)$$
+
+where $$uv \in E(G)$$
+
+then $$\phi(u)\phi(v) \in E(H)$$
+
+## Isomorphism
+A function that preserves relations (edges) between two structures (graphs).
