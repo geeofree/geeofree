@@ -1,0 +1,104 @@
+---
+title: "Relational Model"
+category: "DBMS"
+---
+
+# 2.1 Structure of Relational Databases
+
+## Structure of Relational Databases
+A relational databases consists of a table or relation, where each relation 
+consists of attributes or columns, and where each column consists of domains 
+or a set of permitted values.
+
+# 2.2 Database Schema
+
+## Database Schema
+Is a logical design of the database.
+
+# 2.3 Keys
+
+## Keys
+Is an attribute or a set of attributes that uniquely identify tuples in a relation.
+
+## Superkey
+An attribute or a set of attributes that uniquely identify a tuple in a relation. 
+A superkey can consist of other attributes.
+
+## Candidate Key
+Is a subset of a superkey that contains no unnecessary attributes.
+
+## Primary Key
+Is a candidate key selected by a Database Designer to uniquely identity tuples in 
+a relation.
+
+## Foreign Key
+Is a key that references a primary key from another relation.
+
+# 2.4 Schema Diagrams
+
+## Schema Diagrams
+Are pictorial representations of relations, its attributes, and with its relationships 
+to other relations.
+
+# 2.5 Relational Query Languages
+
+## Query Language
+Is a language that allows users to request information from a database.
+
+## Imperative Query Languages
+Are query languages that specify how data should be provided in an instructional 
+manner.
+
+## Functional Query Languages
+Are query languages that specify how data should be provided through evaluations 
+of function expressions.
+
+## Declarative Query Languages
+Are query languages that specify how data should be provided without specifying 
+the sequence of operations to get that data.
+
+# 2.6 Relational Algebra
+
+## Select Operation
+Returns a relation based from a given predicate.
+
+$$\sigma_{predicate}(Relation)$$
+
+## Project Operation
+Returns a relation with the specified attributes.
+
+$$\Pi_{attributes}(Relation)$$
+
+## Composition of Relational Operators
+Is the concept in which relational operators can be composed by providing a result 
+relation as the input of another relational operator.
+
+## Cartesian Product
+Returns a relation that is a combination of tuples from two relations.
+
+$$R \times S$$
+
+## Join
+Returns a relation that contains similar rows from two relations.
+
+$$R \Join_{predicate} S$$
+
+## Set Operations
+Other than the operators discussed above, set operations can also be used to operate 
+on relational sets. Specifically
+
+- **Union** returns records that are in one relation or the other relation.
+- **Intersection** returns records that are common in both relations.
+- **Set Difference** returns records that are unique in one relation and none on the other.
+
+## Assignment Operator
+Puts results of a relation in a temporary variable.
+
+$$some\_relation\_variable\_name \leftarrow Relation$$
+
+## Rename Operator
+Provides a name to a relation.
+
+$$\rho_x(Relation)$$
+
+Where *x* is the name of the resulting relation.
