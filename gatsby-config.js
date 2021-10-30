@@ -1,6 +1,8 @@
+const path = require("path")
+
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://geeofree.netlify.app",
+    siteUrl: "https://geeofree.vercel.app",
     title: "Geeofree",
   },
   plugins: [
@@ -8,13 +10,6 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
-    {
-      resolve: `gatsby-theme-notes`,
-      options: {
-        basePath: `/notes`,
-        preset: false,
-      },
-    },
     {
       resolve: "gatsby-plugin-mdx",
       options: {
@@ -31,7 +26,7 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#172B4D`,
         display: `standalone`,
-        icon: `src/images/icon.png`,
+        icon: path.join(__dirname, 'src', 'images', 'icon.png'),
       },
     },
     {
@@ -41,6 +36,14 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "contents",
+        path: path.join(__dirname, "contents"),
+      },
+      __key: "contents",
     },
     {
       resolve: "gatsby-plugin-web-font-loader",
