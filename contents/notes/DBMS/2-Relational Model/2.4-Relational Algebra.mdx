@@ -1,0 +1,48 @@
+---
+title: "2.4 Relational Algebra"
+category: "DBMS"
+---
+
+## Select Operation
+Returns a relation based from a given predicate.
+
+$$\sigma_{predicate}(Relation)$$
+
+## Project Operation
+Returns a relation with the specified attributes.
+
+$$\Pi_{attributes}(Relation)$$
+
+## Composition of Relational Operators
+Is the concept in which relational operators can be composed by providing a result 
+relation as the input of another relational operator.
+
+## Cartesian Product
+Returns a relation that is a combination of tuples from two relations.
+
+$$R \times S$$
+
+## Join
+Returns a relation that contains similar rows from two relations.
+
+$$R \Join_{predicate} S$$
+
+## Set Operations
+Other than the operators discussed above, set operations can also be used to operate 
+on relational sets. Specifically
+
+- **Union** returns records that are in one relation or the other relation.
+- **Intersection** returns records that are common in both relations.
+- **Set Difference** returns records that are unique in one relation and none on the other.
+
+## Assignment Operator
+Puts results of a relation in a temporary variable.
+
+$$some\_relation\_variable\_name \leftarrow Relation$$
+
+## Rename Operator
+Provides a name to a relation.
+
+$$\rho_x(Relation)$$
+
+Where *x* is the name of the resulting relation.

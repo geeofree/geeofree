@@ -1,0 +1,38 @@
+---
+title: "3.2 Basic SQL Queries"
+category: "DBMS"
+---
+
+## SQL Query Structure
+
+```sql
+SELECT attr(1), attr(2), attr(3), ..., attr(n)
+FROM tbl(1), tbl(2), tbl(3), ..., tbl(n)
+WHERE [predicate]
+```
+
+## Renaming Clause
+The **as** operator can rename an attribute from a `SELECT` clause or 
+a table name in the `FROM` clause.
+
+```sql
+SELECT some_attribute AS some_other_name
+FROM table_name AS some_other_table_name
+```
+
+## String Matching
+Strings can be matched using the `LIKE` operator in a `WHERE` clause.
+
+```sql
+SELECT full_name FROM people WHERE full_name LIKE '%Ge_'
+```
+
+## Ordering Clause
+The `ORDER BY` clause can be used to sort a relation based on a value for
+any attribute(s).
+
+```sql
+SELECT full_name
+FROM people
+ORDER BY age
+```

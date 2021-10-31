@@ -1,0 +1,33 @@
+---
+title: "3.3 Set Operators"
+category: "DBMS"
+---
+
+## Union Operator
+Two relations can be unioned using the `UNION` operator.
+
+```sql
+(SELECT full_name FROM people WHERE age > 20)
+UNION
+(SELECT full_name FROM people WHERE age < 10)
+```
+
+## Intersection Operator
+Two relations can be intersected using the `INTERSECT` operator.
+
+```sql
+(SELECT full_name FROM people WHERE age > 20)
+INTERSECT
+(SELECT full_name FROM people WHERE age < 25)
+```
+
+
+## Except Operator
+Finding the set difference of two relations can be found by using the 
+`EXCEPT` operator.
+
+```sql
+(SELECT full_name FROM people WHERE age > 20)
+EXCEPT
+(SELECT full_name FROM people WHERE age > 25)
+```
