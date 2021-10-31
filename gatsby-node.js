@@ -1,5 +1,4 @@
 const path = require("path")
-const lodash = require("lodash")
 
 function replaceWithDash(string) {
   return string.replace(/( |\.|_)/g, "-")
@@ -15,7 +14,7 @@ function isParentPath(child, parent) {
 async function createPages({ actions, graphql }) {
   const { data } = await graphql(`
     query {
-      allDirectory {
+      allDirectory(sort: {fields: relativePath}) {
         nodes {
           name
           id
@@ -23,7 +22,7 @@ async function createPages({ actions, graphql }) {
           relativePath
         }
       }
-      allMdx {
+      allMdx(sort: {fields: slug}) {
         nodes {
           slug
           id
@@ -55,7 +54,7 @@ async function createPages({ actions, graphql }) {
     actions.createPage({
       path: notePath,
       component: path.join(__dirname, 'src', 'templates', 'NotesTemplate.js'),
-      context: { directories: lodash.sortBy(directories, ['name']), notes: noteResults }
+      context: { directories, notes: noteResults }
     })
   })
 }
