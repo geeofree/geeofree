@@ -1,0 +1,29 @@
+---
+title: "4.1 Joins"
+category: "DBMS"
+---
+
+## Join Types
+1. **INNER JOIN** joins two relations and removes records that are 
+   not valid in the join.
+
+2. **LEFT OUTER JOIN** joins relations and preserves records from 
+   the left relation of the join construct that are not valid. 
+
+3. **RIGHT OUTER JOIN** joins relations and preserves records from 
+   the right relation of the join construct that are not valid. 
+
+4. **FULL OUTER JOIN** joins relations and preserves records from 
+   both the left and right relations of the join construct that are 
+   not valid. 
+
+**NOTE:** `INNER JOIN` is the default if the join keyword `OUTER` is 
+omitted.
+
+## Join Conditions
+1. **NATURAL** joins two relations using attributes that are the same 
+   in both relations.
+
+2. **USING** joins two relations using defined attributes.
+
+3. **ON** joins two relations using a predicate.
