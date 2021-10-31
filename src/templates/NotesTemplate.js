@@ -36,7 +36,6 @@ function LinkItem(props) {
 
 function NotesTemplate(props) {
   const { pageContext } = props
-  console.log(pageContext)
 
   const directories = pageContext.directories.map(directory => (
     <LinkItem key={directory.id} linkPath={directory.linkPath}>
