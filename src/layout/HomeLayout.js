@@ -99,7 +99,7 @@ function HomeLayout(props) {
       <Container>
         <Header>
           <LogoContainer>
-            <StaticImage alt="My Logo" src="../images/logo.png" />
+            <StaticImage alt="My Logo" src="../../images/logo.png" />
           </LogoContainer>
 
           <TitleContainer>

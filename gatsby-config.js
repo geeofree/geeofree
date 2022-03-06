@@ -10,11 +10,21 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    "gatsby-remark-images",
     {
       resolve: "gatsby-plugin-mdx",
       options: {
         remarkPlugins: [require("remark-math")],
         rehypePlugins: [require("rehype-katex")],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              showCaptions: true,
+              wrapperStyle: "text-align: center"
+            }
+          },
+        ],
       },
     },
     {
@@ -26,14 +36,22 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#172B4D`,
         display: `standalone`,
-        icon: path.join(__dirname, 'src', 'images', 'icon.png'),
+        icon: path.join(__dirname, 'images', 'icon.png'),
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: "images",
+        path: path.join(__dirname, "images"),
+      },
+      __key: "images",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
         name: "pages",
-        path: "./src/pages/",
+        path: path.join(__dirname, "src", "pages"),
       },
       __key: "pages",
     },
