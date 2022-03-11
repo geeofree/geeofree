@@ -1,0 +1,58 @@
+---
+title: "1.6 Protocols and the OSI Model"
+category: "Networking"
+---
+
+## Protocols
+Are a set of methods and rules for communication.
+
+## OSI (Open Systems Interconnection) Model
+Is a suite of network protocols containing seven layers.
+
+## Application Layer (Layer 7)
+Describes the interface that provides a service for users 
+to use. The data that comes out of this layer is called the 
+*payload*.
+
+## Presentation Layer (Layer 6)
+Describes how the *payload* from the application layer gets 
+reformatted, compressed, and/or encrypted.
+
+## Session Layer (Layer 5)
+Describes how data between two applications are synced and 
+recovered if messages don't arrived intact at the receiving 
+application.
+
+## Transport Layer (Layer 4)
+Describes how the application *payload* gets transported 
+to the other application. This layer provides two services, 
+namely:
+
+- **Transmission Control Protocol (TCP)** is a connection-oriented 
+  transport protocol meaning it guarantees that messages between
+  end-systems are sent and received successfully in whole. The 
+  data that comes out of this protocol is called a *segment*.
+
+- **User Datagram Protocol (UDP)** is a connectionless transport 
+  protocol meaning it only provides a *best-effort* transport of 
+  the payload to the receiving end-system — parts of the payload 
+  may drop using this protocol. The data that comes out of this 
+  protocol is called a *datagram*.
+
+## Network Layer (Layer 3)
+Describes how the *segment* or *datagram* gets delivered to other 
+nodes in the network. The data that comes out of this layer is 
+called a *packet*.
+
+## Data-Link Layer (Layer 2)
+Describes the protocol to use based on the underlying physical 
+medium, ie. ethernet for wired and wi-fi for wireless. The data 
+that comes out of this layer is called a *frame*.
+
+## Physical Layer (Layer 1)
+Is the physical medium that the computer system is connected with.
+
+## Protocol Data Unit (PDU)
+Fancy term for each data output in every layer.
+
+![PDU Table](../../../../images/pdu-table.png)
