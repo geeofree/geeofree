@@ -1,0 +1,28 @@
+---
+title: "2.3 IPv4"
+category: "Networking"
+---
+
+A 32-bit address assigned to a node in a network.
+
+The address is formatted as 4-bytes in decimal ie. `192.168.1.1`
+
+## IPv4 Classes
+1. **Class A** ranges from `1.x.y.z` to `126.x.y.z`
+2. **Class B** ranges from `128.0.x.y` to `191.255.x.y`
+3. **Class C** ranges from `192.0.0.x` to `223.255.255.x`
+4. **Class D** ranges from `224.x.y.z` to `239.x.y.z`
+5. **Class E** ranges from `240.x.y.z` to `254.x.y.z`
+
+**Note:** Class D and E are not for public or private use.
+Class D is mainly for broadcasting and Class E is for research.
+
+## Reserved IPv4 Address
+- `255.255.255.255` used for broadcast messages by tcp/ip background processes.
+- `0.0.0.0` unassigned.
+- `127.0.0.1` to `127.255.255.254` used for loopback address.
+
+## Recommended Private IPv4 Addresses
+- `10.0.0.0` to `10.255.255.255`
+- `172.16.0.0` to `172.32.255.255`
+- `192.168.0.0` to `192.168.255.255`
