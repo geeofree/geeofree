@@ -1,45 +1,8 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import styled from "styled-components"
 
 import { Layout } from "~/layout"
-
-const getProp = (key, defaultValue) => props => (
-	defaultValue === undefined ? props[key] : defaultValue
-)
-
-const Floating = styled.div`
-	position: absolute;
-	top: ${getProp('top')};
-	left: ${getProp('left')};
-	bottom: ${getProp('bottom')};
-	right: ${getProp('right')};
-	transform: ${getProp('transform')};
-	width: ${getProp('width')};
-	height: ${getProp('height')};
-`
-
-const Flex = styled.div`
-	display: flex;
-	justify-content: ${getProp('justify')};
-	align-items: ${getProp('align')};
-	flex-direction: ${getProp('direction')};
-`
-
-const Span = styled.span`
-	font-size: ${getProp('fontSize')};
-	font-weight: ${getProp('fontWeight')};
-`
-
-const Header = styled.h1`
-	font-size: ${getProp('fontSize')};
-	font-weight: ${getProp('fontWeight')};
-`
-
-const Text = styled.p`
-	font-size: ${getProp('fontSize')};
-	font-weight: ${getProp('fontWeight')};
-`
+import { Floating, Flex, Header, Text, Span } from '~/components'
 
 const IndexPage = () => (
 	<Layout>
