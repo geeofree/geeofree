@@ -1,0 +1,1 @@
+export { getProp } from "./getProp"
