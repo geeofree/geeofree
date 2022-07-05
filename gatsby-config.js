@@ -68,7 +68,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Zilla Slab", "Zilla Slab:bold"],
+          families: ["Inter", "Inter:bold"],
         },
       },
       __key: "pages",
