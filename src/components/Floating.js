@@ -10,4 +10,5 @@ export const Floating = styled.div`
 	transform: ${getProp('transform')};
 	width: ${getProp('width')};
 	height: ${getProp('height')};
+	z-index: ${getProp('zIndex')};
 `

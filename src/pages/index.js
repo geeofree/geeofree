@@ -2,7 +2,8 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
 import { Layout } from "~/layout"
-import { Floating, Flex, Header, Text, Span } from '~/components'
+import { Floating, Flex, Header, Text, Span, Graphics } from '~/components'
+import { graphicsIndex } from '~/graphics'
 
 const IndexPage = () => (
 	<Layout>
@@ -16,7 +17,6 @@ const IndexPage = () => (
 				<Text fontSize="18px">ジョフリ</Text>
 			</Flex>
 		</Floating>
-
 
 		<Floating left="10%" bottom="10%">
 			<Text fontSize="10px" fontWeight="normal">
@@ -42,6 +42,22 @@ const IndexPage = () => (
 			<Text fontSize="12px" fontWeight="normal">
 				Press <Span fontWeight="bold">Left</Span> or <Span fontWeight="bold">Right</Span> arrow keys to navigate.
 			</Text>
+		</Floating>
+
+		<Floating
+			zIndex="-1"
+			top="50%"
+			left="50%"
+			transform="translate(-50%, -50%)"
+			width="90%"
+			height="90%"
+		>
+			<Graphics 
+				width="100%"
+				height="100%"
+				border="1px solid"
+				renderer={graphicsIndex}
+			/>
 		</Floating>
 	</Layout>
 )
