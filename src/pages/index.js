@@ -29,21 +29,6 @@ const IndexPage = () => (
 			</Text>
 		</Floating>
 
-		<Floating right="10%" bottom="10%">
-			<Header fontSize="48px" fontWeight="normal">
-				<Flex direction="column" align="end">
-					<span>GEO</span>
-					<span>GLGRN.</span>
-				</Flex>
-			</Header>
-		</Floating>
-
-		<Floating top="50%" left="50%" transform="translate(-50%, -50%)">
-			<Text fontSize="12px" fontWeight="normal">
-				Press <Span fontWeight="bold">Left</Span> or <Span fontWeight="bold">Right</Span> arrow keys to navigate.
-			</Text>
-		</Floating>
-
 		<Floating
 			zIndex="-1"
 			top="50%"
@@ -55,9 +40,23 @@ const IndexPage = () => (
 			<Graphics 
 				width="100%"
 				height="100%"
-				border="1px solid"
 				renderer={graphicsIndex}
 			/>
+		</Floating>
+
+		<Floating top="50%" left="50%" transform="translate(-50%, -50%)">
+			<Text fontSize="12px" fontWeight="normal">
+				Press <Span fontWeight="bold">Left</Span> or <Span fontWeight="bold">Right</Span> arrow keys to navigate.
+			</Text>
+		</Floating>
+
+		<Floating right="10%" bottom="10%">
+			<Header fontSize="48px" fontWeight="normal">
+				<Flex direction="column" align="end">
+					<span>GEO</span>
+					<span>GLGRN.</span>
+				</Flex>
+			</Header>
 		</Floating>
 	</Layout>
 )
