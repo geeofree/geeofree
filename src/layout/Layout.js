@@ -26,6 +26,8 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const SCROLL_MOVE_VALUE = 256
+
 function HomeLayout(props) {
   const { route, title, children, ...main } = props;
 
@@ -44,13 +46,24 @@ function HomeLayout(props) {
 				navigate.prev()
 				break
 
+			case KEY.J:
+				window.scroll({
+					top: window.scrollY + SCROLL_MOVE_VALUE,
+					behavior: "smooth"
+				})
+				break
+
+			case KEY.K:
+				const diff = window.scrollY - SCROLL_MOVE_VALUE
+				window.scroll({
+					top: diff < 0 ? 0 : diff,
+					behavior: "smooth"
+				})
+				break
+
 			case KEY.L:
 			case KEY.ARROW_RIGHT:
 				navigate.next()
-				break
-
-			default:
-				// do-nothing
 				break
 		}
 	}
