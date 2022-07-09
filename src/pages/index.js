@@ -5,9 +5,9 @@ import { Layout } from "~/layout"
 import { Container, Header, Text, Span, Graphics } from '~/components'
 import { indexGraphics } from '~/graphics'
 
-function IndexPage() {
+function IndexPage(props) {
 	return (
-		<Layout>
+		<Layout route={props}>
 			<Container position="absolute" top="10%" left="10%">
 				<Container display="flex" direction="column" justify="center" align="center">
 					<StaticImage

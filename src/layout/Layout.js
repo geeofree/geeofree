@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
 import { createGlobalStyle } from "styled-components";
 
 import { designTokens } from "~/styling";
 import { Main } from '~/components'
+import { getRouteNavigation, KEY } from '~/utils'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -26,8 +27,40 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function HomeLayout(props) {
-  const { title, children, ...main } = props;
+  const { route, title, children, ...main } = props;
+
+	const navigate = getRouteNavigation(route)
   const pageTitle = title ? `Geeofree | ${title}` : "Geeofree";
+
+	const mainRef = useRef()
+
+	const handleKeyBinds = (/** @type {KeyboardEvent} */evt) => {
+		evt.persist()
+		evt.stopPropagation()
+
+		switch (evt.key) {
+			case KEY.H:
+			case KEY.ARROW_LEFT:
+				navigate.prev()
+				break
+
+			case KEY.L:
+			case KEY.ARROW_RIGHT:
+				navigate.next()
+				break
+
+			default:
+				// do-nothing
+				break
+		}
+	}
+
+	useEffect(() => {
+		if (mainRef.current) {
+			mainRef.current.focus()
+		}
+	}, [route.location.pathname])
+
   return (
     <>
       <GlobalStyle />
@@ -39,6 +72,10 @@ function HomeLayout(props) {
 				{...main}
 				maxWidth="1440px"
 				minHeight="max(100vh, 600px)"
+				tabIndex={-1}
+				onKeyDown={handleKeyBinds}
+				onClick={() => console.log("here")}
+				ref={mainRef}
 			>
 				{children}
 			</Main>
