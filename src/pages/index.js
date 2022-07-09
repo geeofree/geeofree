@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import { Layout } from "~/layout"
 import { Floating, Flex, Header, Text, Span, Graphics } from '~/components'
-import { graphicsIndex } from '~/graphics'
+import { indexGraphics } from '~/graphics'
 
 const IndexPage = () => (
 	<Layout>
@@ -40,7 +40,7 @@ const IndexPage = () => (
 			<Graphics 
 				width="100%"
 				height="100%"
-				renderer={graphicsIndex}
+				renderer={indexGraphics}
 			/>
 		</Floating>
 
