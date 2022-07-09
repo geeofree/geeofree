@@ -1,12 +1,9 @@
 import React, { useRef, useLayoutEffect } from 'react'
 import styled from 'styled-components'
-import { getProp } from '~/utils'
+import { allCssProps } from '~/styling'
 
 const Canvas = styled.canvas`
-	background-color: ${getProp('bgColor')};
-	border: ${getProp('border')};
-	width: ${getProp('width')};
-	height: ${getProp('height')};
+	${allCssProps}
 `
 
 /**
@@ -25,7 +22,7 @@ const Canvas = styled.canvas`
  * @param {Props} props
  * @returns {import('react').ReactElement}
  **/
-export function Graphics(props) {
+function Graphics(props) {
 	const { renderer } = props
 	const canvas = useRef()
 
@@ -37,3 +34,5 @@ export function Graphics(props) {
 
 	return <Canvas {...props} ref={canvas} />
 }
+
+export default Graphics

@@ -1,4 +1,5 @@
-import { Canvas, Style } from '~/utils'
+import { Canvas } from '~/utils'
+import { designTokens } from '~/styling'
 
 /**
 	* @type {import("~/components/Graphics").RendererCallback}
@@ -7,7 +8,7 @@ export function indexGraphics(cnvs) {
 	const canvas = Canvas(cnvs)
 	if (!canvas) return
 
-	const padding = Style.spacing[5]
+	const padding = designTokens.spacing[5]
 	const { width, height } = canvas.element.getBoundingClientRect()
 
 	const circleRightCenter = {
@@ -16,7 +17,7 @@ export function indexGraphics(cnvs) {
 			y: height / 2,
 		},
 		radius: 5,
-		fill: Style.colors.primary.background,
+		fill: designTokens.colors.primary.background,
 	}
 
 	const circleTopLeft = {
@@ -25,7 +26,7 @@ export function indexGraphics(cnvs) {
 			y: padding,
 		},
 		radius: 5,
-		fill: Style.colors.primary.background,
+		fill: designTokens.colors.primary.background,
 	}
 
 	const circleBottomCenter = {
@@ -34,11 +35,11 @@ export function indexGraphics(cnvs) {
 			y: height - padding,
 		},
 		radius: 5,
-		fill: Style.colors.primary.background,
+		fill: designTokens.colors.primary.background,
 	}
 
 	canvas.drawPaths({
-		stroke: Style.colors.primary.foreground,
+		stroke: designTokens.colors.primary.foreground,
 		paths: [
 			circleRightCenter.position,
 			circleTopLeft.position,
