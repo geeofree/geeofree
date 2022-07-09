@@ -1,7 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import styled, { createGlobalStyle } from "styled-components";
-import "@atlaskit/css-reset";
+import { createGlobalStyle } from "styled-components";
+
+import { designTokens } from "~/styling";
+import { Main } from '~/components'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -9,10 +11,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     box-sizing: border-box;
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-		color: #1F1F28;
+		color: ${designTokens.colors.primary.background};
   }
 
-  html, body, main {
+  html, body {
 		max-width: 1440px;
     min-height: max(100vh, 600px);
   }
@@ -23,12 +25,8 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const Main = styled.main`
-	position: relative;
-`;
-
 function HomeLayout(props) {
-  const { title, children } = props;
+  const { title, children, ...main } = props;
   const pageTitle = title ? `Geeofree | ${title}` : "Geeofree";
   return (
     <>
@@ -37,7 +35,13 @@ function HomeLayout(props) {
         <meta charSet="utf-8" />
         <title>{pageTitle}</title>
       </Helmet>
-			<Main>{children}</Main>
+			<Main
+				{...main}
+				maxWidth="1440px"
+				minHeight="max(100vh, 600px)"
+			>
+				{children}
+			</Main>
     </>
   );
 }
