@@ -2,9 +2,10 @@ import React from 'react'
 import { Layout } from '~/layout'
 import { Header, Text, Container, Anchor } from '~/components'
 
-function WhoAmI() {
+function WhoAmI(props) {
 	return (
 		<Layout
+			route={props}
 			display="flex"
 			align="center"
 			justify="center"
