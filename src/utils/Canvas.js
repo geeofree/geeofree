@@ -70,7 +70,7 @@ export const deg = degrees => (Math.PI / 180) * degrees
  * @param {HTMLCanvasElement} canvas - Canvas DOM element
  * @returns {Canvas | undefined}
  */
-export function Canvas(canvas) {
+function Canvas(canvas) {
 	if (!canvas.getContext) return
 	const ctx = canvas.getContext('2d')
 	const element = ctx.canvas
@@ -118,7 +118,6 @@ export function Canvas(canvas) {
 			paths = paths.concat(startPath)
 		}
 
-		console.log(paths)
 		ctx.beginPath()
 		ctx.moveTo(startPath.x, startPath.y)
 
@@ -158,3 +157,5 @@ export function Canvas(canvas) {
 		path,
 	}
 }
+
+export default Canvas
