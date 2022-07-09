@@ -1,7 +1,8 @@
 import styled from "styled-components"
-import { getProp } from "~/utils"
+import { allCssProps } from "~/styling"
 
-export const Text = styled.p`
-	font-size: ${getProp('fontSize')};
-	font-weight: ${getProp('fontWeight')};
+const Text = styled.p`
+	${allCssProps}
 `
+
+export default Text

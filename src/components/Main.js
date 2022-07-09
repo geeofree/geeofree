@@ -1,8 +1,8 @@
 import styled from "styled-components"
 import { allCssProps } from "~/styling"
 
-const Span = styled.span`
+const Main = styled.main`
 	${allCssProps}
 `
 
-export default Span
+export default Main
