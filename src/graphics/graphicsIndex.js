@@ -1,4 +1,4 @@
-import { Canvas } from '~/utils'
+import { Canvas, Style } from '~/utils'
 
 /**
 	* @type {import("~/components/Graphics").RendererCallback}
@@ -7,15 +7,46 @@ export function graphicsIndex(cnvs) {
 	const canvas = Canvas(cnvs)
 	if (!canvas) return
 
-	const padding = 36
-	const { width } = canvas.element.getBoundingClientRect()
+	const padding = Style.spacing[5]
+	const { width, height } = canvas.element.getBoundingClientRect()
 
-	const x = width - 36
-	const y = padding
-
-	canvas.drawCircle({
-		position: { x, y },
+	const circleRightCenter = {
+		position: {
+			x: padding,
+			y: height / 2,
+		},
 		radius: 5,
-		fill: "red"
+		fill: Style.colors.primary.background,
+	}
+
+	const circleTopLeft = {
+		position: {
+			x: width - padding,
+			y: padding,
+		},
+		radius: 5,
+		fill: Style.colors.primary.background,
+	}
+
+	const circleBottomCenter = {
+		position: {
+			x: width / 2,
+			y: height - padding,
+		},
+		radius: 5,
+		fill: Style.colors.primary.background,
+	}
+
+	canvas.drawPaths({
+		stroke: Style.colors.primary.foreground,
+		paths: [
+			circleRightCenter.position,
+			circleTopLeft.position,
+			circleBottomCenter.position,
+		]
 	})
+
+	canvas.drawCircle(circleRightCenter)
+	canvas.drawCircle(circleTopLeft)
+	canvas.drawCircle(circleBottomCenter)
 }
