@@ -23,6 +23,12 @@ export const colorCssProps = css`
 	${setCssProp('color', 'color')}
 	${setCssProp('background-color', 'bgColor')}
 	${setCssProp('border', 'border')}
+	${setCssProp('border', 'border')}
+`
+
+export const borderCssProps = css`
+	${setCssProp('border', 'border')}
+	${setCssProp('border-radius', 'borderRadius')}
 `
 
 export const spacingCssProps = css`
@@ -49,6 +55,8 @@ export const dimensionCssProps = css`
 export const layoutCssProps = css`
 	${setCssProp('display', 'display')}
 	${setCssProp('z-index', 'zIndex')}
+	${setCssProp('visibility', 'visibility')}
+	${setCssProp('opacity', 'opacity')}
 
 	${setCssProp('position', 'position')}
 	${setCssProp('transform', 'transform')}
@@ -68,11 +76,17 @@ export const layoutCssProps = css`
 	${setCssProp('column-gap', 'gridColumnGap')}
 `
 
+const transitionCssProps = css`
+	${setCssProp('transition-duration', 'transitionDuration')}
+`
+
 export const allCssProps = css`
 	${textCssProps}
 	${colorCssProps}
+	${borderCssProps}
 	${spacingCssProps}
 	${dimensionCssProps}
 	${layoutCssProps}
+	${transitionCssProps}
 	${adhocCssProp}
 `
