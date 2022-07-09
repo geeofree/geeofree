@@ -1,1 +1,1 @@
-export { graphicsIndex } from "./graphicsIndex"
+export { indexGraphics } from "./index.graphics"

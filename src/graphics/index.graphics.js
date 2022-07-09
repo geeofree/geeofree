@@ -3,7 +3,7 @@ import { Canvas, Style } from '~/utils'
 /**
 	* @type {import("~/components/Graphics").RendererCallback}
 	**/
-export function graphicsIndex(cnvs) {
+export function indexGraphics(cnvs) {
 	const canvas = Canvas(cnvs)
 	if (!canvas) return
 
