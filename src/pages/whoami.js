@@ -34,16 +34,15 @@ function WhoAmI(props) {
 				</Text>
 
 				<Text>
-					I mostly write programs in JS/TS + Bash and use <Anchor href="https://artixlinux.org/">Artix OS </Anchor>{' '}
-					with <Anchor href="https://wiki.gentoo.org/wiki/OpenRC">OpenRC</Anchor> and <Anchor href="https://neovim.io/">neovim</Anchor>{' '}
-					as my text editor for my development environment.{' '}
-					My configs are <Anchor href="https://github.com/geeofree/.dotfiles/tree/master/artix">here</Anchor>{' '}
-					and <Anchor href="https://github.com/geeofree/.nvim">here</Anchor> respectively if you're interested.
+					I mostly write programs in JS/TS + Bash and use <Anchor href="https://artixlinux.org/">Artix Linux</Anchor>{' '}
+					with <Anchor href="https://wiki.gentoo.org/wiki/OpenRC">OpenRC</Anchor> and write code using{' '}
+					<Anchor href="https://neovim.io/">neovim</Anchor>.
 				</Text>
 
 				<Text>
 					The following is an exhaustive list of{' '}
-					languages, tools, and technologies that I am familiar with:
+					languages, tools, and technologies that I am{' '}
+					familiar with:
 				</Text>
 
 				<Container
