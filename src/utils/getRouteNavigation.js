@@ -11,13 +11,13 @@ const routeMap = {
 	}
 }
 
-function getRouteNavigation(route) {
-	const currentRoute = routeMap[route.location.pathname]
+function getRouteNavigation(routePath) {
+	const currentRoute = routeMap[routePath]
 
 	const prev = () => currentRoute.prev ? navigate(currentRoute.prev) : null
 	const next = () => currentRoute.next ? navigate(currentRoute.next) : null
 
-	return { prev, next }
+	return { prev, next, currentRoute, routeMap }
 }
 
 export default getRouteNavigation

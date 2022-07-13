@@ -1,4 +1,4 @@
-const KEY = {
+export const KEY = {
 	H: "h",
 	J: "j",
 	K: "k",
@@ -9,4 +9,9 @@ const KEY = {
 	ARROW_RIGHT: "ArrowRight",
 }
 
-export default KEY
+export const POSITION = {
+	TOP: "top",
+	BOTTOM: "bottom",
+	LEFT: "left",
+	RIGHT: "right",
+}

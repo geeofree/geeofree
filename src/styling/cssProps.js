@@ -29,6 +29,7 @@ export const colorCssProps = css`
 export const borderCssProps = css`
 	${setCssProp('border', 'border')}
 	${setCssProp('border-radius', 'borderRadius')}
+	${setCssProp('outline', 'outline')}
 `
 
 export const spacingCssProps = css`
