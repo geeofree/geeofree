@@ -2,12 +2,20 @@ import { navigate } from 'gatsby'
 
 const routeMap = {
 	"/": {
-		prev: null,
+		prev: "/blogs",
 		next: "/whoami"
 	},
 	"/whoami": {
 		prev: "/",
-		next: null
+		next: "/projects"
+	},
+	"/projects": {
+		prev: "/whoami",
+		next: "/blogs",
+	},
+	"/blogs": {
+		prev: "/projects",
+		next: "/",
 	}
 }
 
