@@ -33,14 +33,17 @@ function WhoAmI(props) {
 					in Web Development.
 				</Text>
 
+				<Text>I mostly write programs in JS/TS + Bash.</Text>
+
 				<Text>
-					I mostly write programs in JS/TS + Bash and use <Anchor href="https://artixlinux.org/">Artix Linux</Anchor>{' '}
-					with <Anchor href="https://wiki.gentoo.org/wiki/OpenRC">OpenRC</Anchor> and write code using{' '}
-					<Anchor href="https://neovim.io/">neovim</Anchor>.
+					For my development environment I use <Anchor href="https://artixlinux.org/">Artix Linux</Anchor>{' '}
+					with <Anchor href="https://wiki.gentoo.org/wiki/OpenRC">OpenRC</Anchor> as 
+					my OS and <Anchor href="https://neovim.io/">neovim</Anchor> for my 
+					text editor.
 				</Text>
 
 				<Text>
-					The following is an exhaustive list of{' '}
+					The following is a complete list of{' '}
 					languages, tools, and technologies that I am{' '}
 					familiar with:
 				</Text>
