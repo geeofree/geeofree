@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+import { animated } from 'react-spring'
 
 import { designTokens } from "~/styling";
 import { Main } from '~/components'
 import { getRouteNavigation, KEY } from '~/utils'
+import { useRouteTransition } from '~/hooks'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -26,15 +28,27 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const AnimatedDiv = styled(animated.div)`
+	position: relative;
+`
+
 const SCROLL_MOVE_VALUE = 256
 
 function HomeLayout(props) {
-  const { route, title, children, ...main } = props;
+  const { route, title, children, ...mainProps } = props;
 
-	const navigate = getRouteNavigation(route)
   const pageTitle = title ? `Geeofree | ${title}` : "Geeofree";
+	const routePath = route.location.pathname
+	const navigate = getRouteNavigation(routePath)
 
+	const { transitions, ...routeTransition } = useRouteTransition(routePath)
 	const mainRef = useRef()
+
+	useEffect(() => {
+		if (mainRef.current) {
+			mainRef.current.focus()
+		}
+	}, [route.location.pathname])
 
 	const handleKeyBinds = (/** @type {KeyboardEvent} */evt) => {
 		evt.persist()
@@ -43,6 +57,7 @@ function HomeLayout(props) {
 		switch (evt.key) {
 			case KEY.H:
 			case KEY.ARROW_LEFT:
+				routeTransition.animateLeft()
 				navigate.prev()
 				break
 
@@ -63,16 +78,27 @@ function HomeLayout(props) {
 
 			case KEY.L:
 			case KEY.ARROW_RIGHT:
+				routeTransition.animateRight()
 				navigate.next()
 				break
 		}
 	}
 
-	useEffect(() => {
-		if (mainRef.current) {
-			mainRef.current.focus()
-		}
-	}, [route.location.pathname])
+	const main = transitions((style) => (
+		<AnimatedDiv style={style}>
+			<Main
+				{...mainProps}
+				outline="none"
+				maxWidth="1440px"
+				minHeight="max(100vh, 600px)"
+				tabIndex={-1}
+				onKeyDown={handleKeyBinds}
+				ref={mainRef}
+			>
+				{children}
+			</Main>
+		</AnimatedDiv>
+	))
 
   return (
     <>
@@ -81,17 +107,7 @@ function HomeLayout(props) {
         <meta charSet="utf-8" />
         <title>{pageTitle}</title>
       </Helmet>
-			<Main
-				{...main}
-				maxWidth="1440px"
-				minHeight="max(100vh, 600px)"
-				tabIndex={-1}
-				onKeyDown={handleKeyBinds}
-				onClick={() => console.log("here")}
-				ref={mainRef}
-			>
-				{children}
-			</Main>
+			{main}
     </>
   );
 }
