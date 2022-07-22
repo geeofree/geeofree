@@ -19,7 +19,10 @@ const routeMap = {
 	}
 }
 
-function getRouteNavigation(routePath) {
+function getRouteNavigation(currentRoutePath) {
+	const routePath = Object.keys(routeMap).find(
+		routePath => currentRoutePath === routePath || currentRoutePath === `${routePath}/`
+	)
 	const currentRoute = routeMap[routePath]
 
 	const prev = () => currentRoute.prev ? navigate(currentRoute.prev) : null
