@@ -26,7 +26,8 @@ const colors = {
 }
 
 // Powers of two as the spacing scale
-const spacing = Array(8).fill(null).map((_, i) => Math.pow(2, i))
+const spacings = Array(8).fill(null).map((_, i) => Math.pow(2, i))
+const spacing = (index, unit='px') => [spacings[index], unit].join('')
 
 const tokens = {
 	colors,

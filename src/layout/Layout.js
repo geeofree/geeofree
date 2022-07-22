@@ -4,7 +4,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import { animated } from 'react-spring'
 
 import { designTokens } from "~/styling";
-import { Main } from '~/components'
+import { Main, NotifyPageIsLoading } from '~/components'
 import { getRouteNavigation, KEY } from '~/utils'
 import { useRouteTransition } from '~/hooks'
 
@@ -108,6 +108,7 @@ function HomeLayout(props) {
         <title>{pageTitle}</title>
       </Helmet>
 			{main}
+			<NotifyPageIsLoading />
     </>
   );
 }

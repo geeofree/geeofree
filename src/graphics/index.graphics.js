@@ -8,7 +8,7 @@ export function indexGraphics(cnvs) {
 	const canvas = Canvas(cnvs)
 	if (!canvas) return
 
-	const padding = designTokens.spacing[5]
+	const padding = designTokens.spacing(5)
 	const { width, height } = canvas.element.getBoundingClientRect()
 
 	const circleRightCenter = {
