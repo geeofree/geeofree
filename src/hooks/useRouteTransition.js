@@ -35,7 +35,6 @@ const useTransitionConfig = create((setState) => ({
 
 function useRouteTransition(routePath) {
 	const { transition, animateLeft, animateRight } = useTransitionConfig()
-	console.log("geo-transition", transition)
 	const transitions = useTransition(routePath, transition)
 	return { transitions, animateLeft, animateRight }
 }
