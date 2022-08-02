@@ -1,0 +1,24 @@
+:root {
+	--sans-font: "Inter",
+		-apple-system,BlinkMacSystemFont,
+		"Avenir Next",
+		Avenir,
+		"Nimbus Sans L",
+		Roboto,
+		"Noto Sans",
+		"Segoe UI",
+		Arial,Helvetica,
+		"Helvetica Neue",
+		sans-serif;
+	--bg: white;
+	--text: #1f1f28;
+	--accent: #7e9cd8;
+}
+
+html, body {
+	min-height: 23rem;
+}
+
+nav > a:not(:last-child) {
+	margin-right: 1rem;
+}

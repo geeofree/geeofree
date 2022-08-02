@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/base.css">
+		{% if css %}<link rel="stylesheet" href="css/{{ css }}">{% endif %}
+		<title>0x47656f | {{ title }}</title>
+	</head>
+	<body>
+		<nav>
+			{%- for parent in collections.parents -%}
+			<a href="{{parent.url}}" class="{% if page.url == parent.url %}current{% endif %}">{{ parent.data.title }}</a>
+			{%- endfor %}
+		</nav>
+		{{ content }}
+		{% if js %}<script src="js/{{ js }}"></script>{% endif %}
+	</body>
+</html>
