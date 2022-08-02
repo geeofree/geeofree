@@ -16,7 +16,7 @@
 			<a href="{{parent.url}}" class="{% if page.url == parent.url %}current{% endif %}">{{ parent.data.title }}</a>
 			{%- endfor %}
 		</nav>
-		{{ content }}
+		<main>{{ content }}</main>
 		{% if js %}<script src="/js/{{ js }}"></script>{% endif %}
 	</body>
 </html>

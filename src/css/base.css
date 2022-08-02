@@ -15,8 +15,12 @@
 	--accent: #7e9cd8;
 }
 
-html, body {
-	min-height: 23rem;
+nav {
+	display: flex;
+}
+
+nav > a {
+	padding: 1rem 0;
 }
 
 nav > a:not(:last-child) {
