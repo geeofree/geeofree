@@ -1,0 +1,16 @@
+div.grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 1rem;
+	row-gap: 2rem;
+	margin-top: 2rem;
+}
+
+div.grid > div > h5 {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+}
+
+div.grid > div > p {
+	margin: 0.5rem 0;
+}
