@@ -14,7 +14,7 @@
 	<body>
 		<nav>
 			{%- for parent in collections.parents -%}
-			<a href="{{parent.url}}" class="{% if page.url == parent.url %}current{% endif %}">{{ parent.data.title }}</a>
+			<a href="{{ parent.url }}" class="{% if page.url == parent.url %}current{% endif %}">{{ parent.data.title }}</a>
 			{%- endfor %}
 		</nav>
 		<main>{{ content }}</main>
