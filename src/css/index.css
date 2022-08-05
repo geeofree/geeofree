@@ -44,3 +44,12 @@ nav {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+canvas.home-graphic {
+  width: calc(100vw - 2em);
+  height: calc(100vh - 2em);
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  z-index: -1;
+}
