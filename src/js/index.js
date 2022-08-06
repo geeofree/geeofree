@@ -1,3 +1,8 @@
+/**
+  * Get radian value from degrees
+  * @param {number} degrees
+  * @returns {number} Radian value
+  **/
 const getRadiansFromDegrees = degrees => (Math.PI / 180) * degrees
 
 /**
