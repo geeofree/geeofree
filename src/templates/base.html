@@ -3,9 +3,9 @@
 	<head>
     <!-- Metadata -->
 		<meta charset="UTF-8">
+		<title>ジョフリ | {{ title }}</title>
+    <meta name="description" content="{{ description }}">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="{{ title }}" />
-    <meta property="og:description" content="{{ description }}" />
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="{{ page.url }}">
     <meta property="og:type" content="website">
@@ -31,7 +31,6 @@
 		<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
 		<link rel="stylesheet" href="/css/base.css">
 		{% if css %}<link rel="stylesheet" href="/css/{{ css }}">{% endif %}
-		<title>ジョフリ | {{ title }}</title>
 	</head>
 	<body>
     {{ page | log }}
