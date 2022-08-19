@@ -6,6 +6,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="{{ title }}" />
     <meta property="og:description" content="{{ description }}" />
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="{{ page.url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="/images/thumbnail.png">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ page.url }}">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="/images/thumbnail.png">
     <!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +34,7 @@
 		<title>ジョフリ | {{ title }}</title>
 	</head>
 	<body>
+    {{ page | log }}
 		<nav>
 			{%- for parent in collections.parents -%}
 			<a href="{{ parent.url }}" class="{% if page.url == parent.url %}current{% endif %}">{{ parent.data.title }}</a>
