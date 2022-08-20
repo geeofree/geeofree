@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+    {% if env == 'production' %}
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFL9Q4BEZL"></script>
     <script>
@@ -10,6 +11,7 @@
 
     gtag('config', 'G-WFL9Q4BEZL');
     </script>
+    {% endif %}
     <!-- Metadata -->
 		<meta charset="UTF-8">
 		<title>ジョフリ | {{ title }}</title>
