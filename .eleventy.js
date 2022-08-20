@@ -1,5 +1,6 @@
 const path = require('path')
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const formatDate = require('date-fns/format')
 
 module.exports = (eleventyConfig) => {
   // Plugins
@@ -17,6 +18,9 @@ module.exports = (eleventyConfig) => {
     .slice()
     .sort((a, b) => a.data.order - b.data.order)
   ))
+
+  // Filters
+  eleventyConfig.addFilter('formatDate', date => formatDate(date, 'Pppp'))
 
 	return {
 		dir: {
