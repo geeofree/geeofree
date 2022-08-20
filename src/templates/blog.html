@@ -1,0 +1,14 @@
+---
+layout: base.html
+---
+
+<nav>
+  <a href="javascript:history.back()">&#129044; Go Back</a>
+</nav>
+
+<header class="blog-post-title">
+  <h1>{{ title }}</h1>
+  <p>Last Modified: {{ date | formatDate }}</p>
+</header>
+
+{{ content }}
