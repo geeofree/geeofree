@@ -9,3 +9,12 @@ css: blogs.css
 
 <h1>BLOGS</h1>
 
+{%- for blog in collections.blogs reversed -%}
+<section class="blog">
+  <a href="{{ blog.url }}" class="blog-anchor">
+    <h3 class="blog-title">{{ blog.data.title }}</h3>
+  </a>
+  <p class="blog-date">Last Modified: {{ blog.date | formatDate }}</p>
+  <p class="blog-description">{{ blog.data.description }}</p>
+</section>
+{%- endfor %}
