@@ -20,6 +20,7 @@ description: Everything you need to know to get started with TypeScript.
 * [Typing Aliases](#type-aliases)
 * [Typing Interfaces](#type-interfaces)
 * [Generics](#generics)
+  * [Generic Types](#generic-types)
 * [More Resources](#more-resources)
 
 ### What is TypeScript?
@@ -346,8 +347,12 @@ let identity = (arg: any): any => arg
 When we do this though, we add back ambiguity to our code: giving rise to questions 
 such as _When we input it a `number` value, what will it give us?_
 
-To mitigate this problem, TypeScript provides the **Generic** type: a type that allows 
-us to define the type of an object based on how we use it.
+To mitigate this problem, we can use **Generic Types**.
+
+#### Generic Types
+
+TypeScript provides the **Generic** type: a type that allows us to define the type 
+of an object based on how we use it.
 
 The syntax for this for a function is as follows:
 
