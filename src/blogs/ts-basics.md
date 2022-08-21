@@ -4,6 +4,24 @@ title: TypeScript Basics
 description: Everything you need to know to get started with TypeScript.
 ---
 
+### Contents
+* [What is TypeScript?](#what-is-typescript%3F)
+* [Declaring Types](#declaring-types)
+  * [Type Primitives](#type-primitives)
+  * [Arrays](#arrays)
+  * [Objects](#objects)
+  * [Literal Types](#literal-types)
+  * [The _any_ type](#the-any-type)
+  * [Type Inferrence](#type-inferrence)
+* [Typing Functions](#typing-functions)
+* [Type Operators](#type-operators)
+  * [Union Operator](#union-operator)
+  * [Intersection Operator](#intersection-operator)
+* [Typing Aliases](#type-aliases)
+* [Typing Interfaces](#type-interfaces)
+* [Generics](#generics)
+* [More Resources](#more-resources)
+
 ### What is TypeScript?
 
 [TypeScript](https://www.typescriptlang.org/) is a statically typed superset of JavaScript.
