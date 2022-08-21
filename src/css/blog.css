@@ -10,10 +10,10 @@ p.blog-header-date {
   color: var(--text-muted);
 }
 
-a {
+main a {
   text-decoration: none;
 }
 
-a:hover {
+main a:hover {
   text-decoration: underline;
 }
