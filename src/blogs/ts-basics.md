@@ -201,7 +201,7 @@ with, these are namely:
 
 #### Union Operator
 
-An operator that assigns exactly one(1) type that matches in a set of two 
+An operator that assigns exactly one(1) type that is matched in a set of two 
 or more types.
 
 The syntax for this operator is as follows:
