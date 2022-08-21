@@ -372,7 +372,7 @@ Using this on the `identity` function example:
 let identity = <T,>(arg: T): T => arg
 ```
 
-Now, when we use the `identity` function, we must define what type the Generic type `T` is,
+Now, when we use the `identity` function we must define what type the Generic type `T` is,
 like so:
 
 ```ts
