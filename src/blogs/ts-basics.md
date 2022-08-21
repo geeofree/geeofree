@@ -149,7 +149,7 @@ name = 'Daisy' // Okay.
 name = 3.14    // Error, `number` is not a valid `string` type.
 ```
 
-Here even though the type wasn't defined for the `name` variable, 
+Here, even though the type wasn't defined for the `name` variable, 
 TypeScript still assigned it with a `string` type because of the 
 value that the variable was set to.
 
