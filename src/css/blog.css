@@ -1,0 +1,11 @@
+header.blog-header {
+  margin-bottom: 3rem;
+}
+
+h1.blog-header-title {
+  margin: 0;
+}
+
+p.blog-header-date {
+  color: var(--text-muted);
+}
