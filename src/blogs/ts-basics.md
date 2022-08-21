@@ -196,7 +196,8 @@ let concat = (a: string, b: number) => a + b // Returns a `string` type
 
 ### Type Operators
 
-In TypeScript there are two type operators, namely these are the:
+In TypeScript there are two type operators that we can use to compose types 
+with, these are namely:
 
 #### Union Operator
 
