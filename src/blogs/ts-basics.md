@@ -339,8 +339,8 @@ such as `strings`, `booleans`, `arrays`, etc.
 
 If we type it with the `any` type however, then we can match all the types.
 
-When we do this however, we add ambiguity to our code: giving rise to questions such 
-as _When we input it a `number` value, what will it give us?_
+When we do this however, we add back ambiguity to our code: giving rise to questions 
+such as _When we input it a `number` value, what will it give us?_
 
 To mitigate this problem, TypeScript provides the **Generic** type: a type that allows 
 us to define the type of an object based on how we use it.
