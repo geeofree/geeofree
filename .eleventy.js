@@ -1,6 +1,17 @@
 const path = require('path')
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const formatDate = require('date-fns/format')
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
+
+let markdownLibrary = markdownIt({
+  html: true,
+  linkify: true
+}).use(markdownItAnchor, {
+  permalink: true,
+  permalinkClass: "direct-link",
+  permalinkSymbol: "#"
+});
 
 module.exports = (eleventyConfig) => {
   // Plugins
@@ -21,6 +32,9 @@ module.exports = (eleventyConfig) => {
 
   // Filters
   eleventyConfig.addFilter('formatDate', date => formatDate(date, 'Pppp'))
+
+  // Libraries
+  eleventyConfig.setLibrary('md', markdownLibrary)
 
 	return {
 		dir: {
