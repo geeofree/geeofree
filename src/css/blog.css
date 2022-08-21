@@ -9,3 +9,11 @@ h1.blog-header-title {
 p.blog-header-date {
   color: var(--text-muted);
 }
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
