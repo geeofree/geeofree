@@ -136,8 +136,8 @@ foo = { quas: 1, wex: 2, exort: 3 }
 
 #### Type Inferrence
 
-We can omit explicitly defining types for an object in TypeScript 
-and still have it assign a type due to _type inferrence_: meaning 
+We can omit explicitly defining types for an object and still have 
+TypeScript assign it a type due to _type inferrence_: meaning 
 TypeScript will make a (very good) guess of what the type of the 
 object is based on certain information.
 
