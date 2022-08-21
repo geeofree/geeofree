@@ -372,7 +372,7 @@ let myFunction = <NameOfGeneric,>(argOne: typeOfArgOne, ..., argN: typeOfArgN): 
 
 > **NOTE** the `,` after the Generic name declaration.
 
-The `Generic` type can be assigned to arguments, the return type, or to any objects 
+The **Generic** type can be assigned to arguments, the return type, or to any objects 
 within the function.
 
 Using this on the `identity` function example:
