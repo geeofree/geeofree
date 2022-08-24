@@ -41,8 +41,8 @@ let name: string = 'Lexie'
 ```
 
 Here we assign the variable `name` to a `string` type. If 
-we reassign this to a different type, say the number `5`,
-TypeScript will complain:
+we reassign this to a different type value, say the number 
+`5`, TypeScript will show an error:
 
 ```ts
 name = 5 // Error, `number` is not a valid `string` type.
@@ -136,10 +136,9 @@ foo = { quas: 1, wex: 2, exort: 3 }
 
 #### Type Inferrence
 
-We can omit explicitly defining types for an object and still have 
-TypeScript assign it a type due to _type inferrence_: meaning TypeScript 
-will make a (very good) guess of what type an object is based on 
-certain information.
+We can omit defining types explicitly and still have TypeScript assign 
+a type to an object due to _type inferrence_: meaning TypeScript will make 
+a (very good) guess of what type an object is based on certain information.
 
 For example:
 
@@ -151,13 +150,13 @@ name = 3.14    // Error, `number` is not a valid `string` type.
 
 Here, even though the type wasn't defined for the `name` variable, 
 TypeScript still assigned it with a `string` type because of the 
-value that the variable was set to.
+value that the variable was initialized to.
 
 So when `name` was assigned with the value `'Daisy'`, TypeScript 
-didn't complain because `'Daisy'` is a valid `string` type.
+didn't show errors because `'Daisy'` is a valid `string` type.
 
-When `name` was assigned with the value `3.14` however, it will 
-show an error because `name` was assigned a `number` value.
+When `name` was assigned with the value `3.14` however, TypeScript
+showed an error because `name` was assigned a `number` value.
 
 ### Typing Functions
 
