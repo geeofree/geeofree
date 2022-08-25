@@ -41,7 +41,7 @@ let name: string = 'Lexie'
 ```
 
 Here we assign the variable `name` to a `string` type. If 
-we reassign this to a different type value, say the number 
+we reassign this to a value of a different type, say the number 
 `5`, TypeScript will show an error:
 
 ```ts
