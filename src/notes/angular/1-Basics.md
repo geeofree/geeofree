@@ -1,6 +1,7 @@
 ---
+tags: angular
 title: 'Chapter 1: Basics'
-description: The very basics of AngularJS and how to get started.
+description: Understand components, templates, and how to get started with the CLI.
 ---
 
 #### What is AngularJS?
@@ -11,6 +12,8 @@ It provides features such as components, route management,
 form management, etc.
 
 Angular applications are written using [TypeScript](https://www.typescriptlang.org/).
+
+----
 
 #### Components
 
@@ -61,6 +64,8 @@ When Angular renders `AnotherComponent` it should render:
 <h1>Hello my component!</h1>
 <p>This is from another component</p>
 ```
+
+----
 
 #### Templates
 
@@ -184,4 +189,37 @@ export class DirectivesComponent {
     this.apples.push('Apple')
   }
 }
+```
+
+----
+
+#### Getting Started
+
+> **Prerequisites:** you should have the Angular CLI installed globally.
+> If you don't have this yet just run `npm i -g @angular/cli`.
+
+To generate a new Angular application run:
+
+```shell
+$ ng new <app-name>
+```
+
+To run the development server invoke:
+
+```shell
+$ npm start
+```
+
+The ff. are commands that allow you to generate different entities 
+for your Angular application:
+
+```shell
+$ # Generate a new component
+$ ng generate component <component-name>
+$
+$ # Generate a new module
+$ ng generate module <module-name>
+$
+$ # Generate a new service
+$ ng generate service <service-name>
 ```
