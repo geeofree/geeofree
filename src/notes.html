@@ -14,7 +14,6 @@ css: notes.css
 
 <section class="notes">
   {%- for note in collections.notes -%}
-  {{ note | log }}
   <a href="{{ note.url }}">
     <section class="note">
       <div class="note-icon-container">
