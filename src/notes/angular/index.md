@@ -11,3 +11,4 @@ Resource: [Angular's Official Docs](https://angular.io).
 
 * [Chapter 1: Basics](1-Basics)
 * [Chapter 2: Architecture](2-Architecture)
+* [Chapter 3: Components](3-Components)

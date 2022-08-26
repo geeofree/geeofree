@@ -1,5 +1,4 @@
 ---
-tags: angular
 title: 'Chapter 2: Architecture'
 description: Angular's module system, services, and its usage of dependency injection.
 ---
