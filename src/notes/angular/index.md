@@ -13,3 +13,4 @@ Resource: [Angular's Official Docs](https://angular.io).
 * [Chapter 2: Architecture](2-Architecture)
 * [Chapter 3: Components](3-Components)
 * [Chapter 4: Forms](4-Forms)
+* [Chapter 5: Routing](5-Routing)
