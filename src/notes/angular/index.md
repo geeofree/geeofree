@@ -5,7 +5,7 @@ tags:
   - angular
 title: AngularJS
 description: Notes I've taken while learning AngularJS.
-icon: /images/angularjs.png
+icon: /images/icon-note-angular.png
 ---
 
 Resource: [Angular's Official Docs](https://angular.io).
