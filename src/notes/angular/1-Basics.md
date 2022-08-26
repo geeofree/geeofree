@@ -1,7 +1,7 @@
 ---
 tags: angular
 title: 'Chapter 1: Basics'
-description: Understand components, templates, and how to get started with the CLI.
+description: Basics of components, templates, and how to get started using the CLI.
 ---
 
 #### What is AngularJS?
