@@ -44,3 +44,7 @@ nav > a.current:after {
 nav > a:not(:last-child) {
 	margin-right: 1rem;
 }
+
+tr, tr:nth-child(2n), th {
+  background-color: transparent;
+}
