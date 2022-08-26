@@ -1,5 +1,16 @@
 header.note-header > h1 {
   margin: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
+}
+
+@media only screen and (min-width: 480px) {
+  header.note-header > h1 {
+		grid-template-columns: repeat(2, max-content);
+	}
+}
+
+header.note-header > p {
+  color: var(--text-muted);
 }
