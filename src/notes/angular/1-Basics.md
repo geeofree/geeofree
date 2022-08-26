@@ -7,7 +7,7 @@ description: The very basics of AngularJS and how to get started.
 
 [AngularJS](https://angular.io/) is a framework for developing web application UIs.
 
-It provides features such as composable UIs, route management, 
+It provides features such as components, route management, 
 form management, etc.
 
 Angular applications are written using [TypeScript](https://www.typescriptlang.org/).
@@ -64,16 +64,17 @@ When Angular renders `AnotherComponent` it should render:
 
 #### Templates
 
-Templates are the markup for a component and is defined by 
-an extended HTML syntax called *Angular Markup* which allows 
-us to provide data from classes to the template.
+Templates are the markup of a component and is defined by 
+an extended HTML syntax (informally) called *Angular Markup* 
+that allows the component class to provide data to the 
+template.
 
-There are three types _data binding_ that can be done in a
-component template. These are namely:
+There are three types of _data binding_ that can be done in a
+template. These are namely:
 
 ##### Interpolation
 
-Interpolation substitutes a value provided by the class in the template 
+Interpolation substitutes a value from a component's property
 and is defined by the syntax {% raw %}`{{ someValue }}`{% endraw %}.
 
 For example:
@@ -103,8 +104,10 @@ render the ff. markup:
 
 ##### Property Binding
 
-Property binding modifies the attributes of an element and is defined 
-by the ff. syntax: `[someAttribute]="someValue"`
+Property binding connects a component's property to an element's 
+attribute.
+
+This is defined by the ff. syntax: `[someAttribute]="someValue"`
 
 For example we can `disable` a `<button>` or provide an `id` and 
 `name` to an `<input>` using property binding:
@@ -116,21 +119,19 @@ import { Component } from '@angular/core'
   selector: 'app-property-binding',
   template: `
   <input [id]="inputID" [name]="inputID" placeholder="Enter some text">
-  <button type="submit" [disable]="isDisabled">Submit</button>
+  <button type="submit" [disable]="!canSubmit">Submit</button>
   `,
 })
 export class PropertyBindingComponent {
   inputID = 'myInput'
-  isDisabled = true
+  canSubmit = false
 }
 ```
 
 ##### Event Binding
 
-Similar to _property binding_, _event binding_ modifies attributes of 
-an element. The only difference however is that it can only modify 
-attributes that are event handlers and must be provided with a 
-method of the component.
+Event binding connects methods of a component to an element's event 
+handler attributes.
 
 This is defined by the ff. syntax `(someEventHandler)="someMethod()"`.
 
@@ -157,9 +158,9 @@ export class EventBindingComponent {
 Directives provide additional behaviour such as control fllow in a 
 component's template.
 
-The most common directive that Angular provides are `*ngIf` and `*ngFor` 
-which can conditionally render an element or iterate over items 
-respectively.
+The most common directives that Angular provides are `*ngIf` and 
+`*ngFor` which can conditionally render an element or iterate 
+over items respectively.
 
 For example:
 
