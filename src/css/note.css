@@ -1,3 +1,5 @@
 header.note-header > h1 {
   margin: 0;
+  display: flex;
+  align-items: center;
 }
