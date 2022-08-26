@@ -175,7 +175,7 @@ import { Component } from '@angular/core'
   selector: 'app-directives',
   template: `
   <p *ngIf="!apples.length">There are no apples!</p>
-  <ul *ngFor="let apple in apples">
+  <ul *ngFor="let apple of apples">
     <li>{{ apple }}</li>
   </ul>
   <button type="button" (click)="addApple()">Add Apple</button>
