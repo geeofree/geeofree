@@ -1,0 +1,26 @@
+---
+tags: parents
+order: 6
+layout: base.html
+title: Notes
+description: Things that I'm learning or have learned.
+css: notes.css
+---
+
+<h1>Notes</h1>
+
+<section class="notes">
+  {%- for note in collections.notes -%}
+  <a href="{{ note.url }}">
+    <section class="note">
+      <div class="note-icon-container">
+        <img src="{{ note.data.icon }}" alt="{{ note.data.title }}">
+      </div>
+      <div class="note-text-container">
+        <h4>{{ note.data.title }}</h4>
+        <p>{{ note.data.description }}</p>
+      </div>
+    </section>
+  </a>
+  {%- endfor -%}
+</section>
