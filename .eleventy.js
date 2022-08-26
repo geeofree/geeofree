@@ -31,7 +31,7 @@ module.exports = (eleventyConfig) => {
   ))
 
   // Filters
-  eleventyConfig.addFilter('formatDate', date => formatDate(date, 'Pppp'))
+  eleventyConfig.addFilter('formatDate', date => formatDate(date, 'P KK:mma z'))
 
   // Libraries
   eleventyConfig.setLibrary('md', markdownLibrary)
