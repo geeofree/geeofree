@@ -1,0 +1,217 @@
+---
+title: 'Chapter 4: Forms'
+description: Form management using template or reactive-driven approaches.
+---
+
+Angular has two approaches when it comes to form management: 
+`template-driven` or `reactive-driven` forms.
+
+## Template-Driven Forms
+
+Are for forms that are more static and simple ie. sign in forms. 
+
+To use template-driven forms we have to import the module: 
+`FormsModule` which allows us to use the `[(ngModel)]` 
+two-way data binding property.
+
+For example:
+
+```ts
+// template-form.module.ts
+import { NgModule } from '@angular/core'
+import { FormsModule } from '@angular/forms'
+import { TemplateFormComponent } from './template-form.component'
+
+@NgModule({
+  declarations: [TemplateFormComponent],
+  imports: [FormsModule],
+})
+export class TemplateFormModule {}
+```
+
+```ts
+// template-form.component.ts
+import { Component } from '@angular/core'
+
+@Component({
+  selector: 'app-template-form'
+  template: `
+  <input type="text" [(ngModel)]="username">
+  <input type="text" [(ngModel)]="password">
+  <p>Username: {%raw%}{{ username }}{%endraw%}</p>
+  <p>Password: {%raw%}{{ password }}{%endraw%}</p>
+  `
+})
+export class TemplateFormModule {
+  username = '';
+  password = '';
+}
+```
+
+## Reactive-Driven Forms
+
+Are for forms that are more dynamic and can scale better than 
+template-driven forms.
+
+To use reactive-driven forms first we must import the `ReactFormsModule`.
+
+Afterwards we can start using one(1) or more form handler helper classes:
+
+### FormControl
+
+Controls a single component property.
+
+```ts
+import { Component } from '@angular/core'
+import { FormControl } from '@angular/forms'
+
+@Component({
+  selector: 'app-form-control'
+  template: `
+  <input type="text" [formControl]="username">
+  <input type="text" [formControl]="password">
+  <p>Username: {%raw%}{{ username.value }}{%endraw%}</p>
+  <p>Password: {%raw%}{{ password.value }}{%endraw%}</p>
+  `
+})
+export class FormControlModule {
+  username = new FormControl('');
+  password = new FormControl('');
+}
+```
+
+### FormGroup
+
+Controls a fixed set of properties in an object.
+
+```ts
+import { Component } from '@angular/core'
+import { FormGroup, FormControl } from '@angular/forms'
+
+@Component({
+  selector: 'app-form-group'
+  template: `
+  <form [formGroup]="signIn">
+    <input type="text" [formControl]="username">
+    <input type="text" [formControl]="password">
+  </form>
+  <p>Username: {%raw%}{{ username.value }}{%endraw%}</p>
+  <p>Password: {%raw%}{{ password.value }}{%endraw%}</p>
+  `
+})
+export class FormGroupModule {
+  signIn = new FormGroup({
+    username: new FormControl(''),
+    password: new FormControl(''),
+  })
+}
+```
+
+### FormArray
+
+Manages a list of unnamed controls.
+
+```ts
+import { Component } from '@angular/core'
+import { FormArray, FormControl } from '@angular/forms'
+
+@Component({
+  selector: 'app-form-array'
+  template: `
+  <form *ngFor="let control of people.controls; let i=index">
+    <label {%raw%}for="person-{{ i }}">Person:</labe>
+    <input
+      id="person-{{ i }}"
+      name="person-{{ i }}"{%endraw%}
+      type="text"
+      [formControl]="i"
+    >
+  </form>
+  <button
+    type="button"
+    (click)="addPersonControl()"
+  >
+    Add Person Control
+  </button>
+  `
+})
+export class FormArrayModule {
+  people = new FormArray([
+    new FormControl(''),
+    new FormControl(''),
+  ])
+  
+  addPersonControl() {
+    this.people.push(new FormControl(''))
+  }
+}
+```
+
+### FormBuilder
+
+A service that provides a convenient syntax to generate form 
+controls.
+
+```ts
+import { Component } from '@angular/core'
+import { FormBuilder, FormArray } from '@angular/forms'
+
+@Component({
+  selector: 'app-form-array'
+  providers: [FormBuilder],
+  template: `
+  <form [formGroup]="person">
+    <fieldset>
+      <label for="personFirstName">First Name:</labe>
+      <input
+        id="personFirstName"
+        name="personFirstName"
+        type="text"
+        [formControl]="firstName"
+      >
+    </fieldset>
+    
+    <fieldset>
+      <label for="personLastName">Last Name:</labe>
+      <input
+        id="personLastName"
+        name="personLastName"
+        type="text"
+        [formControl]="lastName"
+      >
+    </fieldset>
+    
+    <fieldset *ngFor="let hobby of hobbies; let i=index">
+      <label {%raw%}for="hobby-{{ i }}">Hobby:</labe>
+      <input
+        id="hobby-{{ i }}"
+        name="hobby-{{ i }}"{%endraw%}
+        type="text"
+        [formControl]="i"
+      >
+    </fieldset>
+  </form>
+  
+  <button type="button" (click)="addHobby()">
+    New Hobby
+  </button>
+  `
+})
+export class FormBuilderModule {
+  person = this.fb.group({
+    firstName: [''],
+    lastName: [''],
+    hobbies: this.fb.array([])
+  })
+  
+  constructor(private fb: FormBuilder) {}
+  
+  get hobbies() {
+    return this.person.get('hobbies') as FormArray
+  }
+  
+  addHobby() {
+    this.hobbies.push(this.fb.control(''))
+  }
+}
+```
