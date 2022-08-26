@@ -8,7 +8,7 @@ description: Angular's module system, services, and its usage of dependency inje
 > Figure 1: An overview of Angular's architecture. 
 > Image taken from [here](https://angular.io/guide/architecture#whats-next).
 
-#### NgModules
+## NgModules
 
 Angular uses a module system called [NgModules](https://angular.io/guide/ngmodules) that provides a 
 _compilation context_ for components (or directives).
@@ -35,9 +35,7 @@ essentially bootstraps all other modules within the system.
 In most cases the **Root Module** is referred to as the `AppModule` class 
 and is found in the generated `app.module.ts` file.
 
-----
-
-#### Dependency Injection
+## Dependency Injection
 
 [Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection) is a design pattern where an instance of an object 
 is provided to another object as an argument to it, granted the class of 
@@ -46,9 +44,7 @@ the instance implements some interface that the consuming object defines.
 Angular uses this pattern to provide or inject **Services** to its components 
 (or to other **Services**).
 
-----
-
-#### Services
+## Services
 
 **Services** are classes that holds values, functions, or features that an application 
 needs.

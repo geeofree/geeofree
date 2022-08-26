@@ -3,7 +3,7 @@ title: 'Chapter 1: Basics'
 description: Basics of components, templates, and how to get started using the CLI.
 ---
 
-#### What is AngularJS?
+## What is AngularJS?
 
 [AngularJS](https://angular.io/) is a framework for developing web application UIs.
 
@@ -12,9 +12,7 @@ form management, etc.
 
 Angular applications are written using [TypeScript](https://www.typescriptlang.org/).
 
-----
-
-#### Components
+## Components
 
 Components are the basic building blocks of any Angular application. 
 
@@ -64,9 +62,7 @@ When Angular renders `AnotherComponent` it should render:
 <p>This is from another component</p>
 ```
 
-----
-
-#### Templates
+## Templates
 
 Templates are the markup of a component and is defined by 
 an extended HTML syntax (informally) called *Angular Markup* 
@@ -76,7 +72,7 @@ template.
 There are three types of _data binding_ that can be done in a
 template. These are namely:
 
-##### Interpolation
+### Interpolation
 
 Interpolation substitutes a value from a component's property
 and is defined by the syntax {% raw %}`{{ someValue }}`{% endraw %}.
@@ -106,7 +102,7 @@ render the ff. markup:
 <p>Hi, I am Lexie and I am 2 years old!</p>
 ```
 
-##### Property Binding
+### Property Binding
 
 Property binding connects a component's property to an element's 
 attribute.
@@ -132,7 +128,7 @@ export class PropertyBindingComponent {
 }
 ```
 
-##### Event Binding
+### Event Binding
 
 Event binding connects methods of a component to an element's event 
 handler attributes.
@@ -157,7 +153,7 @@ export class EventBindingComponent {
 }
 ```
 
-#### Directives
+## Directives
 
 Directives provide additional behaviour such as control fllow in a 
 component's template.
@@ -190,9 +186,7 @@ export class DirectivesComponent {
 }
 ```
 
-----
-
-#### Getting Started
+## Getting Started
 
 > **Prerequisites:** you should have the Angular CLI installed globally.
 > If you don't have this yet just run `npm i -g @angular/cli`.
