@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Languages",
+    "values": ["Tagalog", "English"]
+  },
+  {
+    "name": "Programming Languages",
+    "values": [
+      "JavaScript/TypeScript",
+      "Lua",
+      "Bash/Zsh",
+      "CSS",
+      "HTML"
+    ]
+  },
+  {
+    "name": "UI Frameworks/Libraries",
+    "values": [
+      "React",
+      "React Native",
+      "AngularJS",
+      "Eleventy",
+      "Gatsby"
+    ]
+  },
+  {
+    "name": "Styling",
+    "values": [
+      "Tailwind",
+      "Bootstrap",
+      "SCSS/SASS",
+      "CSS Modules",
+      "Styled Components"
+    ]
+  },
+  {
+    "name": "State Management",
+    "values": ["Redux", "Zustand", "XState"]
+  },
+  {
+    "name": "Testing",
+    "values": ["Jest", "Playwright", "Cypress"]
+  },
+  {
+    "name": "Bundlers",
+    "values": ["Webpack", "Parcel", "Rollup"]
+  },
+  {
+    "name": "Web Servers",
+    "values": ["NodeJS/Express", "Ruby/Rails"]
+  },
+  {
+    "name": "Databases",
+    "values": ["MySQL", "PostgreSQL", "SQLite"]
+  },
+  {
+    "name": "Infrastructure",
+    "values": ["AWS", "Ansible", "Docker"]
+  },
+  {
+    "name": "Monorepos",
+    "values": ["Nx", "Lerna"]
+  },
+  {
+    "name": "Prototyping",
+    "values": ["Figma"]
+  }
+]
