@@ -7,7 +7,7 @@ header.note-header > h1 {
 
 @media only screen and (min-width: 480px) {
   header.note-header > h1 {
-		grid-template-columns: repeat(2, max-content);
+		grid-template-columns: max-content 1fr;
 	}
 }
 
