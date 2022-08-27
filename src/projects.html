@@ -7,52 +7,23 @@ description: Things I've made.
 css: projects.css
 ---
 
-<h1>PROJECTS</h1>
-<p>{{ description }}</p>
+<header>
+  <h1>PROJECTS</h1>
+  <p>{{ description }}</p>
+</header>
 
+{% for project in projects %}
 <div class="project">
-	<h4>Kalendaryo</h4>
+  <h4>{{ project.name }}</h4>
 	<ul class="links">
+    {% for link in project.links %}
 		<li>
-			<a href="https://www.npmjs.com/package/kalendaryo" target="_blank" rel="noreferrer noopener">
-				<img src="/images/npm.png" />
+      <a href="{{ link.url }}" target="_blank" rel="noreferrer noopener">
+        <img src="/images/{{ link.icon }}" />
 			</a>
 		</li>
-		<li>
-			<a href="https://github.com/geeofree/kalendaryo" target="_blank" rel="noreferrer noopener">
-				<img src="/images/github.png" />
-			</a>
-		</li>
+    {% endfor %}
 	</ul>
-	<p>An unopinionated React component for building calendars by providing data only.</p>
+  <p>{{ project.description }}</p>
 </div>
-
-<div class="project">
-	<h4>ishould</h4>
-	<ul class="links">
-		<li>
-			<a href="https://www.npmjs.com/package/ishould" target="_blank" rel="noreferrer noopener">
-				<img src="/images/npm.png" />
-			</a>
-		</li>
-		<li>
-			<a href="https://github.com/geeofree/ishould" target="_blank" rel="noreferrer noopener">
-				<img src="/images/github.png" />
-			</a>
-		</li>
-	</ul>
-	<p>Interactive CLI todo list for NodeJS.</p>
-</div>
-
-<div class="project">
-	<h4>Personal Website</h4>
-	<ul class="links">
-		<li>
-			<a href="https://github.com/geeofree/geeofree" target="_blank" rel="noreferrer noopener">
-				<img src="/images/github.png" />
-			</a>
-		</li>
-	</ul>
-	<p>This website.</p>
-</div>
-
+{% endfor %}
