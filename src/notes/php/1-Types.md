@@ -191,7 +191,7 @@ types using the following syntax:
 
 ```php
 <?php
-function someFunc(TypeOne argOne, TypeTwo argTwo, ..., TypeN argN): returnType {
+function someFunc(TypeOne $argOne, TypeTwo $argTwo, ..., TypeN $argN): returnType {
   // body goes here.
 }
 ?>
@@ -201,8 +201,8 @@ For example:
 
 ```php
 <?php
-function add(int a, int b): int {
-  return a + b;
+function add(int $a, int $b): int {
+  return $a + $b;
 }
 ?>
 ```
