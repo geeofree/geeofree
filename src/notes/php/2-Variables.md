@@ -1,6 +1,6 @@
 ---
 title: 'Chapter 2: Variables'
-description: Syntax, scoping, and static.
+description: Syntax, scoping, static variables, and constants.
 ---
 
 ## Basic Syntax
@@ -95,8 +95,18 @@ static_increment(); // 3
 Constants are variables that cannot be reassigned and can only 
 take in scalar values or an array of scalar values.
 
-Constant variables are defined using the `const` keyword and must 
-not have a `$` prefix.
+This is declared using the `define()` function:
+
+```php
+<?php
+define('PI', 3.14);
+echo PI;
+define('PI', 3.1420); // Error.
+?>
+```
+
+Constant variables can also be defined using the `const` keyword 
+which must not have a `$` prefix.
 
 ```php
 <?php
