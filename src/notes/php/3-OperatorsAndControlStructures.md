@@ -58,7 +58,8 @@ echo $eat_result;
 The `return` keyword in PHP can be used within a global scope or 
 in a body of a function.
 
-In both cases it stops further execution in both scopes.
+In both cases it stops further execution and passes control back 
+to the line to were it was executed in both scopes.
 
 Using a `return` in the global scope provides the value to the 
 calling module that `include`d or `require`d it.
