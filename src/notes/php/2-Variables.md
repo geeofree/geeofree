@@ -59,7 +59,7 @@ function my_func() {
 ?>
 ```
 
-### Static Variables
+## Static Variables
 
 **Static variables** are variables that do not get recreated 
 on every function execution.
@@ -87,5 +87,21 @@ function static_increment() {
 static_increment(); // 1
 static_increment(); // 2
 static_increment(); // 3
+?>
+```
+
+## Constants
+
+Constants are variables that cannot be reassigned and can only 
+take in scalar values or an array of scalar values.
+
+Constant variables are defined using the `const` keyword and must 
+not have a `$` prefix.
+
+```php
+<?php
+const PI = 3.14;
+echo PI;
+PI = 3.1420; // Error.
 ?>
 ```
