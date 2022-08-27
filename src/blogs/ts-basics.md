@@ -1,7 +1,10 @@
 ---
-tags: blogs
 title: TypeScript Basics
 description: Everything you need to know to get started with TypeScript.
+tags:
+  - guides
+  - typescript
+  - javascript
 ---
 
 ### Contents
