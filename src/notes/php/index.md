@@ -5,7 +5,7 @@ title: PHP
 description: Trying to learn PHP.
 ---
 
-Resource: [PHP's Official Docs](https://php.net).
+Resource: [PHP's Official Docs](https://www.php.net/manual/en/).
 
 **Table Of Contents**
 
