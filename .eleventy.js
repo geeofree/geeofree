@@ -30,6 +30,13 @@ module.exports = (eleventyConfig) => {
     .sort((a, b) => a.data.order - b.data.order)
   ))
 
+  // Shortcodes
+  eleventyConfig.addShortcode('isActiveLink', function (url) {
+    if (url === this.page.url) return 'active-link'
+    if (url !== '/' && this.page.url.includes(url)) return 'active-link'
+    return ''
+  })
+
   // Filters
   eleventyConfig.addFilter('formatDate', date => formatDate(date, 'P KK:mma z'))
 

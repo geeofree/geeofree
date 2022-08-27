@@ -38,7 +38,7 @@ nav.base-nav > a,a:visited {
 	text-decoration: none;
 }
 
-nav.base-nav > a.current:after {
+nav.base-nav > a.active-link:after {
 	content: '';
 	position: absolute;
 	bottom: 0px;
