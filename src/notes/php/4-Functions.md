@@ -5,8 +5,8 @@ description: Notable syntax and semantics about functions in PHP.
 
 ## Function Scoping
 
-In PHP, all functions (and classes) are global regardless if they 
-were defined within another function's scope.
+In PHP, all functions (and classes) are global regardless of if 
+they were defined within another function's scope.
 
 ```php
 <?php
@@ -26,7 +26,7 @@ bar();
 ## Variable Functions
 
 PHP allows variables to be invoked based on whatever value 
-it evaluates to (this should be mostly strings).
+it evaluates to (this should mostly be with strings).
 
 ```php
 <?php
@@ -66,11 +66,20 @@ foo(bar: /** some value goes here */)
 ```php
 <?php
 // Anonymous Function
+$myfunction = function() {
+  /** do something */
+}
+
 some_function(function() {
   /** do something */
 })
 
+
 // Arrow Function
+$my_function = () => {
+  /** do something */
+}
+
 some_function(() => {
   /** do something */
 })

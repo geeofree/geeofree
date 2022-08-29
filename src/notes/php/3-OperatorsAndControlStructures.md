@@ -13,13 +13,9 @@ using the `'message'` element from `error_get_last()`.
 
 ```php
 <?php
-/* Intentional file error */
-$my_file = @file ('non_existent_file') or
-    die ("Failed opening file: error was '" . error_get_last()['message'] . "'");
-
-// this works for any expression, not just functions:
-$value = @$cache[$key];
-// will not issue a notice if the index $key doesn't exist.
+$key = 'key';
+$value = @$non_existent_map[$key]; // No exception made.
+echo $error_get_last['message'];
 ?>
 ```
 
@@ -59,10 +55,10 @@ The `return` keyword in PHP can be used within a global scope or
 in a body of a function.
 
 In both cases it stops further execution and passes control back 
-to the line to were it was executed in both scopes.
+to the line to where it was executed.
 
-Using a `return` in the global scope provides the value to the 
-calling module that `include`d or `require`d it.
+Using a `return` in the global scope provides the evaluated value 
+to the calling module that `include`d or `require`d it.
 
 ## Include/Require
 

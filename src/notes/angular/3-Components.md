@@ -25,8 +25,8 @@ component goes into that we can use, these are namely:
 
 ## @Input()
 
-Components can expose properties to take inputs from a 
-parent component using the `@Input` property decorator:
+Components can expose properties that parent components 
+can define values to using the `@Input` property decorator:
 
 ```ts
 // child.component.ts
@@ -61,7 +61,7 @@ class ParentComponent {
 ## @Output()
 
 Components can also expose event handlers that parent components 
-can use to update their data.
+can define their methods into.
 
 This requires the use of the `EventEmitter` class on the child 
 component:
@@ -104,12 +104,8 @@ class ParentComponent {
 
 ## Content Projection
 
-**Content Projection** allows components to define places in 
-the template that other views can render themselves into.
-
-This is through the use of the `<ng-content>` directive.
-
-For example:
+Are _placeholders_ for defining other views and is implemented using 
+Angular's `<ng-content>` element.
 
 ```ts
 // dashboard.component.ts
@@ -131,9 +127,6 @@ import { Component } from '@angular/core'
 })
 class DashboardComponent {}
 ```
-
-Then, we can wrap our other components using the dashboard 
-component like so:
 
 ```ts
 // foo.component.ts
@@ -178,18 +171,14 @@ For example:
 <p>{%raw%}{{ personName.value }}{%endraw%}</p>
 ```
 
-Template variables have lexical scoping: meaning variables 
-cannot be accessed outside of its scope.
+Template variables have lexical scoping.
 
 For example the `*ngIf` directive creates a new scope. If a 
 template variable were to be declared in this scope, then 
-elements outside of it cannot access it, like so:
+elements outside of it (non-children) cannot access it, like so:
 
 ```html
 <h1 *ngIf="isFoo" #heading>...</h1>
+<!-- Here, heading is not defined or out of scope. -->
 <p>{%raw%}{{ heading.textContent }}{%endraw%}</p>
 ```
-
-Here, the `<p>` element cannot access the `#heading` template 
-variable because it is scoped under child of the `<h1>` 
-element only.

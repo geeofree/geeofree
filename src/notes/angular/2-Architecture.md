@@ -13,8 +13,8 @@ description: Angular's module system, services, and its usage of dependency inje
 Angular uses a module system called [NgModules](https://angular.io/guide/ngmodules) that provides a 
 _compilation context_ for components (or directives).
 
-This helps organize information that components can use in an 
-isolated manner.
+This helps organize the different entities that components can 
+use in an isolated manner.
 
 A module is a class that is decorated with the `@Modules` decorator 
 and has these ff. properties:
@@ -54,3 +54,25 @@ data binding to its template only; components should use a service for things th
 doesn't concern the view or application logic.
 
 A class is defined as a service using the `@Injectable` decorator.
+
+A component can use a service using its own `providers` definition:
+
+```ts
+import { @Component } from '@angular/core'
+import { SomeService } from '/path/to/some.service'
+
+@Component({
+  selector: 'app-some-service',
+  template: `<h1>App service</h1>`,
+  providers: [SomeService],
+})
+export class SomeServiceComponent {
+  // Inject the service 
+  constructor(private ss: SomeService) {}
+  
+  ngOnInit() {
+    // Use the service
+    this.ss.<somePropertyOrMethod>
+  }
+}
+```

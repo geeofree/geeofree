@@ -7,7 +7,7 @@ description: Basics of components, templates, and how to get started using the C
 
 [AngularJS](https://angular.io/) is a framework for developing web application UIs.
 
-It provides features such as components, route management, 
+It provides features such as UI composition, route management, 
 form management, etc.
 
 Angular applications are written using [TypeScript](https://www.typescriptlang.org/).
@@ -19,13 +19,11 @@ Components are the basic building blocks of any Angular application.
 A component in Angular is defined as a class that is decorated with 
 the `@Component` decorator and is comprised of these properties:
 
-* **selector** the name of the component that other components can refer to.
-
-* **template/templateUrl** the markup of the component.
-
-* **style/styleUrl** *(optional)* the styles or design of the component
-
-For example:
+| Property               | Description                                                   |
+|------------------------|---------------------------------------------------------------|
+| `selector`             | The name of the component that other components can refer to. |
+| `template/templateUrl` | The markup of the component.                                  |
+| `style/styleUrl`       | The css of the component's template (optional).               |
 
 ```ts
 import { Component } from '@angular/core'
@@ -37,10 +35,8 @@ import { Component } from '@angular/core'
 export class MyComponent {}
 ```
 
-In order for other components to refer to the `MyComponent` component in 
-their templates, we must refer to it using its **selector**.
-
-For example:
+The `selector` property is used to refer to a component in templates 
+of other components.
 
 ```ts
 import { Component } from '@angular/core'
@@ -55,7 +51,7 @@ import { Component } from '@angular/core'
 export class AnotherComponent {}
 ```
 
-When Angular renders `AnotherComponent` it should render:
+This should render:
 
 ```html
 <h1>Hello my component!</h1>
@@ -77,8 +73,6 @@ template. These are namely:
 Interpolation substitutes a value from a component's property
 and is defined by the syntax {% raw %}`{{ someValue }}`{% endraw %}.
 
-For example:
-
 ```ts
 import { Component } from '@angular/core'
 
@@ -95,8 +89,10 @@ export class InterpolatingComponent {
 ```
 
 Here the `name` and `age` properties in the component are _interpolated_ 
-or substituted to whatever values they hold. This should in effect 
-render the ff. markup:
+or substituted to whatever values these properties evaluate to in 
+the template before it gets rendered.
+
+This should have the ff. markup:
 
 ```html
 <p>Hi, I am Lexie and I am 2 years old!</p>

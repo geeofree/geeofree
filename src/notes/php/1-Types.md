@@ -51,11 +51,6 @@ When converting values to a `bool` the ff. values are considered
 
 ## Integer
 
-Values which are positive and negative numbers as well as `0`.
-
-These can be represented in either decimal, hexadecimal, 
-octal, or binary:
-
 ```php
 <?php
 $a = 1234; // decimal number
@@ -67,11 +62,7 @@ $a = 1_234_567; // decimal number (as of PHP 7.4.0)
 ?>
 ```
 
-> Example taken directly from the [Official Docs](https://www.php.net/manual/en/language.types.integer.php#example-33).
-
 ## Float
-
-Represents `Real Numbers` and is defined with the ff. syntax:
 
 ```php
 <?php
@@ -81,8 +72,6 @@ $c = 7E-10;
 $d = 1_234.567; // as of PHP 7.4.0
 ?>
 ```
-
-> [Official Docs Example](https://www.php.net/manual/en/language.types.float.php)
 
 ## Strings
 
@@ -95,6 +84,24 @@ Represents a sequence of characters and can be denoted using:
 
 PHP follows the same string semantics as bash ie. double quotes 
 expand values while single quotes are literals.
+
+```php
+<?php
+$single = 'Hello there,\nworld!';
+
+$double = "Hello there,\nworld!";
+
+$heredoc = <<<HERE
+Hello there,
+world!
+HERE;
+
+$nowdoc = <<<'HERE'
+Hello there,
+world!
+HERE;
+?>
+```
 
 ## Arrays
 
@@ -127,7 +134,7 @@ $cart = [
 
 When keys are omitted PHP will automatically assign numeric 
 keys in sequence (incrementing from the largest previously 
-used int key) on the instance:
+used `int` key) on the instance:
 
 ```php
 <?php
@@ -140,11 +147,8 @@ $fruits[2]; // "canteloupe"
 
 ## Iterables
 
-Is a newly defined type in PHP which are any objects that implement 
-the `Traversable` interface (an array for example).
-
-This can be operated with the `foreach` or `yield from` expression in 
-a function generator.
+A type that can generate a stream of data. The `foreach` or 
+`yield from` expression can be used to operate on an iterable.
 
 ```php
 <?php
@@ -186,7 +190,7 @@ Represents _no value_. A variable is considered `null` iff.:
 
 ## Type Declarations
 
-Functions parameters and its return value can be specified with 
+Function parameters and its return value can be specified with 
 types using the following syntax:
 
 ```php

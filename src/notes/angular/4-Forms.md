@@ -3,18 +3,13 @@ title: 'Chapter 4: Forms'
 description: Form management using template or reactive-driven approaches.
 ---
 
-Angular has two approaches when it comes to form management: 
-`template-driven` or `reactive-driven` forms.
-
 ## Template-Driven Forms
 
 Are for forms that are more static and simple ie. sign in forms. 
 
-To use template-driven forms we have to import the module: 
-`FormsModule` which allows us to use the `[(ngModel)]` 
-two-way data binding property.
-
-For example:
+To implement template-driven forms, import the module `FormsModule` 
+which will allow the use of the `[(ngModel)]` two-way data binding 
+property.
 
 ```ts
 // template-form.module.ts
@@ -53,9 +48,9 @@ export class TemplateFormModule {
 Are for forms that are more dynamic and can scale better than 
 template-driven forms.
 
-To use reactive-driven forms first we must import the `ReactFormsModule`.
+To implement reactive-driven forms first import the `ReactFormsModule`.
 
-Afterwards we can start using one(1) or more form handler helper classes:
+Now use one(1) or more form handler helper classes:
 
 ### FormControl
 

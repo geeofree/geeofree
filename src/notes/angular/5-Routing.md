@@ -8,7 +8,7 @@ description: Route management in Angular.
 Angular provides a module that allows for components to be 
 rendered based on the current URL path.
 
-To do this we must create a _routing modules_ that imports 
+To do this, a _routing module_ must be created that imports 
 and exports the `RouterModule` like so:
 
 ```ts
@@ -104,8 +104,8 @@ Route paths can be matched either using `prefix` or `full`:
 | `prefix`          | Default matching strategy. Prepends child route paths with its parent's route path. |
 | `full`            | Matches the entire URL path.                                                        |
 
-We can use the `full` matching strategy to redirect a user to 
-a different path, for example:
+The `full` matching strategy can be used to redirect a user 
+to a different path:
 
 ```ts
 // app-routing.module.ts
@@ -138,16 +138,13 @@ export class AppRoutingModule {}
 
 ## Organizing Routing Modules
 
-We can create multiple routing modules by designating a 
-_root routing module_ using the `RouterModule.forRoot` 
-static method and a _child routing module_ by using the 
-`RouterModule.forChild` static method.
+Routing modules can be organized to separate areas of 
+concern by defining a _root routing module_ (using the 
+`RouterModule.forRoot` static method) and a _child routing module_ 
+(using the `RouterModule.forChild`) static method.
 
-> **NOTE:** The key difference between the two is that `forRoot` 
-> creates a new routing instance each time it gets invoked 
-> while `forChild` reuses the same routing instance.
-
-For example:
+The `forRoot` static method creates a new `Router` instance 
+while `forChild` reuses the same `Router` instance.
 
 ```ts
 // admin-routing.module.ts
@@ -195,7 +192,7 @@ const routes: Routes = [
 export class AppRoutingModule {}
 ```
 
-We can then import these modules in the root module like so:
+These modules can now be imported in the root module like so:
 
 ```ts
 import { NgModule } from '@angular/core';

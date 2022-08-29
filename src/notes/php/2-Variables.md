@@ -25,7 +25,7 @@ $foo_Bar1 = "FooBar1";
 ## Reference Assignment
 
 Variables can be passed by reference instead of by value 
-by prefixing the variable `&` character:
+by prefixing the variable with the `&` character:
 
 ```php
 <?php
@@ -62,7 +62,8 @@ function my_func() {
 ## Static Variables
 
 **Static variables** are variables that do not get recreated 
-on every function execution.
+on every function execution; variables are that are referred 
+by reference.
 
 For example:
 

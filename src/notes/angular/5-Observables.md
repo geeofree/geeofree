@@ -5,18 +5,18 @@ description: An introduction to Observables.
 
 ## Observables
 
-Is a type that allows us to work with streams of data either 
+A programming paradigm that deals with streams of data either 
 synchronously or asynchronously.
 
 Observables uses the [Observer](https://en.wikipedia.org/wiki/Observer_pattern) pattern for pushing streams 
-of data from an [Iterator](https://en.wikipedia.org/wiki/Iterator).
+of data from an [Iterator](https://en.wikipedia.org/wiki/Iterator) to it's _subscribers_.
 
 Observables are implemented in many languages/platforms. 
 In JavaScript for example there is the `rxjs` library.
 
 ## Getting Started
 
-To create an observable we define it using the `Observable` 
+To create an observable first define it using the `Observable` 
 class like so:
 
 ```ts
@@ -30,8 +30,8 @@ const myObservable = new Observable(subscriber => {
 })
 ```
 
-The `Observable` class takes in a callback with a `Subscriber` 
-object that must have the ff. properties:
+The `Observable` class takes in a `Subscription` callback which gets 
+a `Subscriber` object which has the ff. properties:
 
 | Property     | Description                                          |
 |--------------|------------------------------------------------------|
@@ -40,8 +40,8 @@ object that must have the ff. properties:
 | `complete()` | Runs when the observable has completed its stream.   |
 
 To run an observable it must have at least one(1) subscriber. 
-To do this we invoke the `subscribe` method of the `Observable` 
-instance.
+
+To do this invoke the `subscribe` method of the `Observable` instance.
 
 For example:
 
@@ -84,12 +84,12 @@ S1-Finished
 ## Operators
 
 Observable operators are immutable functions that operate 
-on an observable instance that then returns a new 
-observable instance.
+on an observable instance which then returns a new observable 
+instance.
 
-To compose operators we use the `pipe()` function which 
-is available as a method in the `Observable` instance or 
-as a stand-alone function from the `rxjs` library.
+The `pipe()` operator allows to compose operators and is available 
+as a method in the `Observable` instance or as a stand-alone function 
+from the `rxjs` library.
 
 For example:
 
@@ -131,9 +131,8 @@ Got number: 100
 
 ## Cleanup
 
-Observables may return values that allow for cleanup.
-
-For example:
+Observables may return values that allow for cleanup by 
+defining it in the `Subscription` callback:
 
 ```ts
 import { Observable } from 'rxjs'
