@@ -19,9 +19,8 @@ module.exports = (eleventyConfig) => {
 }
 ```
 
-We can access the [page](https://www.11ty.dev/docs/data-eleventy-supplied/#page-variable) object within the shortcode if we provide 
-the callback as a normal, non-arrow function (this was added in 
-11ty [v0.11.0](https://github.com/11ty/eleventy/releases/tag/v0.11.0)).
+Make sure to use a normal, non-arrow function so we can bind `this` to it 
+and get the [page](https://www.11ty.dev/docs/data-eleventy-supplied/#page-variable) object in the shortcode callback. (this was added in 11ty [v0.11.0](https://github.com/11ty/eleventy/releases/tag/v0.11.0)).
 
 Example usage:
 
