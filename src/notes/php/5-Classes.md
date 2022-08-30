@@ -174,7 +174,7 @@ Traits are _reusable attributes_ that can be inserted into class
 definitions.
 
 Traits work the same as classes but promotes composability over 
-inheritance (vertical vs. hierarchical composition).
+inheritance (horizontal vs. vertical composition).
 
 ```php
 <?php
@@ -208,9 +208,9 @@ $sample->bar();
 The precedence of overriden attributes in a child class 
 are as follows:
 
-1. Child class overrides,
-2. Trait overrides,
-3. Parent class overrides.
+1. Child class
+2. Trait
+3. Parent class
 
 ### Conflict Resolution
 
