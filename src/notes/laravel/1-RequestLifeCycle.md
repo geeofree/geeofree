@@ -40,7 +40,7 @@ The main goal of the service provider is to register and boot
 various application components.
 
 All the service providers are defined under the `config/app.php` 
-file in the `providers` array of the class.
+file in the `providers` array of the returned array map.
 
 Laravel will iterate over the `providers` list, calling `register` 
 on each of them and then `boot` afterwards.
