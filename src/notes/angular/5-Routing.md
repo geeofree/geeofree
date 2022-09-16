@@ -143,8 +143,8 @@ concern by defining a _root routing module_ (using the
 `RouterModule.forRoot` static method) and a _child routing module_ 
 (using the `RouterModule.forChild`) static method.
 
-The `forRoot` static method creates a new `Router` instance 
-while `forChild` reuses the same `Router` instance.
+The `forRoot` static method uses a new `Router` service 
+while `forChild` reuses the same `Router` service.
 
 ```ts
 // admin-routing.module.ts
