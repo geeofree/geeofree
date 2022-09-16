@@ -17,3 +17,7 @@ Resource: [Angular's Official Docs](https://angular.io).
 * [Chapter 1.4: Forms](1.4-Forms)
 * [Chapter 1.5: Routing](1.5-Routing)
 * [Chapter 1.6: Observables](1.6-Observables)
+
+**II. Advanced**
+
+* [Chapter 2.1: NgModules](2.1-NgModules)
