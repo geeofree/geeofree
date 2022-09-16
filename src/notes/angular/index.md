@@ -7,11 +7,13 @@ description: Notes I've taken while learning AngularJS.
 
 Resource: [Angular's Official Docs](https://angular.io).
 
-**Table Of Contents**
+#### Table Of Contents
 
-* [Chapter 1: Basics](1-Basics)
-* [Chapter 2: Architecture](2-Architecture)
-* [Chapter 3: Components](3-Components)
-* [Chapter 4: Forms](4-Forms)
-* [Chapter 5: Routing](5-Routing)
-* [Chapter 6: Observables](5-Observables)
+**I. Foundations**
+
+* [Chapter 1.1: Basics](1.1-Basics)
+* [Chapter 1.2: Architecture](1.2-Architecture)
+* [Chapter 1.3: Components](1.3-Components)
+* [Chapter 1.4: Forms](1.4-Forms)
+* [Chapter 1.5: Routing](1.5-Routing)
+* [Chapter 1.6: Observables](1.6-Observables)
