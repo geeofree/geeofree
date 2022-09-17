@@ -21,3 +21,4 @@ Resource: [Angular's Official Docs](https://angular.io).
 **II. Advanced**
 
 * [Chapter 2.1: NgModules](2.1-NgModules)
+* [Chapter 2.2: Directives](2.2-Directives)
