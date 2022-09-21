@@ -16,3 +16,4 @@ Resource: [Laravel's Official Docs](https://laravel.com/docs/).
 #### Basics
 
 * [Chapter 4: Routes](4-Routes)
+* [Chapter 5: Middlewares](5-Middlewares)
