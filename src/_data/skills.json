@@ -9,6 +9,7 @@
       "JavaScript/TypeScript",
       "Lua",
       "Bash/Zsh",
+      "PHP",
       "CSS",
       "HTML"
     ]
@@ -47,7 +48,7 @@
   },
   {
     "name": "Web Servers",
-    "values": ["NodeJS/Express", "Ruby/Rails"]
+    "values": ["NodeJS/Express", "PHP/Laravel", "Ruby/Rails"]
   },
   {
     "name": "Databases",
