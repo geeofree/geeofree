@@ -91,3 +91,34 @@ class Kernel extends HttpKernel {
   ]
 }
 ```
+
+## Middleware Parameters
+
+Middlewares can accept parameters which are defined after the closure 
+argument:
+
+```php
+<?php
+
+class UserHasRole {
+  function handle(Request $request, Closure $next, $role)
+  {
+    if (! $request->user()->hasRole($role)) {
+      // do something
+    }
+    
+    return $next($request);
+  }
+}
+```
+
+Values for middleware parameters are provided after the middleware name, 
+separated by a colon(`:`) character:
+
+```php
+<?php
+
+Route::middleware('role:admin')->get('/foo', function() {
+  // ...
+});
+```
