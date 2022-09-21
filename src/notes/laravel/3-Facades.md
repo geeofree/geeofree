@@ -1,0 +1,62 @@
+---
+title: 'Chapter 3: Facades'
+description: Handling complex implementations using Laravel Facades.
+---
+
+## Facades
+
+A [facade](https://en.wikipedia.org/wiki/Facade_pattern) is a design pattern that provides a much simpler interface to 
+an otherwise complex implementation that uses many different classes:
+
+```php
+<?php
+
+class Foo {
+  // ...
+}
+
+class Bar {
+  // ...
+}
+
+class Baz {
+  // ...
+}
+
+class Facade {
+  function doSomething()
+  {
+    $foo = new Foo;
+    $bar = new Bar;
+    $baz = new Baz;
+    
+    $a = $foo->thing();
+    $b = $bar->another($a);
+    $c = $baz->last($a, $b);
+    
+    return $c;
+  }
+}
+```
+
+In Laravel, facades are used as _static proxy calls_ to methods of services.
+
+Most facades in Laravel are available under `Illuminate\Support\Facades`
+
+```php
+<?php
+
+use Illuminate\Support\Facades\Route
+use Illuminate\Support\Facades\Cache
+
+Route::get('/thing', function() {
+  return Cache::get('thing');
+});
+```
+
+Here, the `Route` and `Cache` facades call the `get` method on the router and 
+cache services respectively.
+
+Most facades are also available as _helper functions_, for example when
+using the router service the `route` helper function can be used instead 
+of `Illuminate\Support\Facades\Route`.
