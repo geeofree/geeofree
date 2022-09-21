@@ -1,0 +1,107 @@
+---
+title: 'Chapter 4: Routes'
+description: Route handling basics in Laravel.
+---
+
+## Basics
+
+The `Route` facade facilitates all route handling within a 
+Laravel application.
+
+Most http verbs are available as static methods that take in 
+a closure:
+
+```php
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function() {
+  // ...
+});
+
+Route::put('/foo', function() {
+  // ...
+});
+
+Route::post('/bar', function() {
+  // ...
+});
+
+Route::patch('/baz', function() {
+  // ...
+});
+
+Route::delete('/quas', function() {
+  // ...
+});
+
+Route::option('/wex', function() {
+  // ...
+});
+```
+
+## Route Parameters
+
+To define a route parameter, define a path enclosed in curly braces which will 
+be automatically provided to the closure as an argument:
+
+```php
+<?php
+
+Route::get('/users/{id}', function($id) {
+  // ...
+});
+```
+
+Dependencies can also be injected to the closure, just make sure to define route 
+parameters is after all injected dependencies:
+
+```php
+<?php
+
+Route::get('/users/{id}', function(Request $request, $id) {
+  // ...
+});
+```
+
+Eloquent models can also be used as a typed-hint dependency which will query for a 
+single record corresponding to an id (by default):
+
+```php
+<?php
+
+Route::get('/users/{user}', function(User $user) {
+  // ...
+});
+```
+
+To select a record using a different column use the `{parameterName:modelColumn}` 
+syntax:
+
+```php
+<?php
+
+Route::get('/users/{user:uuid}', function(User $user) {
+  // ...
+});
+```
+
+## Grouping Routes
+
+Routes defined in groups inherit attributes such as middlewares, controllers, prefixes, etc.:
+
+```php
+<?php
+
+Route::prefix('/api')->group(function() {
+  Route::prefix('/users')
+  ->middleware('auth')
+  ->controller(UserController::class)
+  ->group(function() {
+    Route::get('/', 'index');
+    Route::get('/{id}', 'show');
+    Route::post('/create', 'create');
+  });
+});
+```
