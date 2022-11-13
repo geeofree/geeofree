@@ -10,3 +10,4 @@ Reference material: [Introduction To Computing Systems: From Bits & Gates To C/C
 #### Table Of Contents
 
 * [Chapter 1: Basics](1-Basics)
+* [Chapter 2: Bits And Data Types](2-BitsAndDataTypes)
