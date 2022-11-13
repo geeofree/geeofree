@@ -3,6 +3,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const formatDate = require('date-fns/format')
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const mathjaxPlugin = require("eleventy-plugin-mathjax");
 
 let markdownLibrary = markdownIt({
   html: true,
@@ -16,6 +17,7 @@ let markdownLibrary = markdownIt({
 module.exports = (eleventyConfig) => {
   // Plugins
   eleventyConfig.addPlugin(syntaxHighlight)
+  eleventyConfig.addPlugin(mathjaxPlugin)
 
   // Passthroughs
 	eleventyConfig.addPassthroughCopy({ 'src/css': 'css' })
