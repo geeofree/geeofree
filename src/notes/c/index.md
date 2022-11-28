@@ -10,3 +10,4 @@ Resource: [The C Programming Language, 2ed. K&R](https://www.amazon.com/Programm
 ### Table of Contents
 
 * [1-Basics](1-Basics)
+* [2-Types, Operators, and Expressions](2-TypesOperatorsAndExpressions)
