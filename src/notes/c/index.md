@@ -11,3 +11,4 @@ Resource: [The C Programming Language, 2ed. K&R](https://www.amazon.com/Programm
 
 * [1-Basics](1-Basics)
 * [2-Types, Operators, and Expressions](2-TypesOperatorsAndExpressions)
+* [3-Control Flow](3-ControlFlow)
