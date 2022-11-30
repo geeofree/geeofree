@@ -9,7 +9,8 @@ Resource: [The C Programming Language, 2ed. K&R](https://www.amazon.com/Programm
 
 ### Table of Contents
 
-* [1-Basics](1-Basics)
-* [2-Types, Operators, and Expressions](2-TypesOperatorsAndExpressions)
-* [3-Control Flow](3-ControlFlow)
-* [4-Functions and Program Structure](4-FunctionsAndProgramStructure)
+* [Chapter 1: Basics](1-Basics)
+* [Chapter 2: Types, Operators, and Expressions](2-TypesOperatorsAndExpressions)
+* [Chapter 3: Control Flow](3-ControlFlow)
+* [Chapter 4: Functions and Program Structure](4-FunctionsAndProgramStructure)
+* [Chapter 5: Pointers and Arrays](5-PointersAndArrays)
