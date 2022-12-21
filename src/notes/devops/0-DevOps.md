@@ -1,6 +1,6 @@
 ---
-title: DevOps Basics
-description: Introduction to basic terminologies and concepts in DevOps.
+title: DevOps
+description: Introduction to DevOps.
 ---
 
 ## DevOps

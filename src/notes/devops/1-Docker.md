@@ -1,7 +1,27 @@
 ---
-title: 'Chapter 1.2: Docker Basics'
-description: Common Docker commands.
+title: 'Chapter 1.1: Docker Basics'
+description: Basic terminologies and concepts in Docker.
 ---
+
+## Docker
+
+Docker is a tool that packages applications using a lightweight and 
+isolated process called *containers*.
+
+Containers make it easier to provide applications with its dependencies 
+without having to provision to an entire OS and also connect with other 
+containerized applications.
+
+### Images
+
+Are executable *isolated virtual environments* that contains the filesystem, 
+configuration, and packages that exists within that environment.
+
+### Containers
+
+Instances of images.
+
+## Common Commands
 
 ## Images
 
