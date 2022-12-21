@@ -12,3 +12,4 @@ description: DevOps Notes.
 #### Docker
 
 * [Chapter 1.1: Docker Basics](1.1-DockerBasics)
+* [Chapter 1.2: Docker Commands](1.2-DockerCommands)
