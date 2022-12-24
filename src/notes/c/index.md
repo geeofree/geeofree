@@ -15,3 +15,4 @@ Resource: [The C Programming Language, 2ed. K&R](https://www.amazon.com/Programm
 * [Chapter 4: Functions and Program Structure](4-FunctionsAndProgramStructure)
 * [Chapter 5: Pointers and Arrays](5-PointersAndArrays)
 * [Chapter 6: Structures](6-Structures)
+* [Chapter 7: Input and Output](7-InputOutput)
