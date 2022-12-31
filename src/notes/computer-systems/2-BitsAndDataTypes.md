@@ -8,13 +8,13 @@ description: Data representation and operations in a computer system.
 Binary digits (or _bits_) are the primitive unit of information in a 
 computer system.
 
-A bit is essentially the _existance_ or _non-existance_ of a voltage 
+A bit is essentially the _existence_ or _non-existence_ of a voltage 
 in a computer; any voltage which is measured close to zero(0) means 
-a non-existant signal while anything bigger than one(1) means a 
-the existance of a signal.
+a non-existent signal while anything bigger than one(1) means the 
+existence of a signal.
 
-A **data type** provides context on what a string of bits represent ie. 
-an integer, character code, or floating point number.
+A **data type** provides the context on what a string of bits represent 
+ie. an integer, character code, or floating point number.
 
 ## Integers
 
@@ -50,7 +50,13 @@ namely:
 #### Signed Magnitude
 
 Represents integers by reserving the left-most bit (also known as the 
-sign bit) as an indicator of whether it is a positive or negative number.
+sign bit) as an indicator of whether it is a positive or negative number. 
+
+For a given positive non-zero integer $k$, there is a total of $2^{k-1}$
+to represent the *magnitude* of numbers in this representation.
+
+For example if $k = 3$, then there are $2^{3-1} = 2^2 = 4$ total 
+numbers to represent the positive or negative integers.
 
 | Bit | Decimal |
 |-----|---------|
@@ -65,11 +71,15 @@ sign bit) as an indicator of whether it is a positive or negative number.
 
 #### 1's Complement
 
-Represents integers by complementing the values ie. inverting the a $0$ 
-to a $1$ and a $1$ to a $0$.
+Represents integers by complementing the bits: inverting the $0$ 
+to a $1$ and vice versa.
 
 This representation also uses a sign bit to indicate whether it is positive 
 or negative.
+
+For example, to get the 1's complement of the decimal number $3$, we first 
+get its bit representation which is $3 = 011$, then complement the bits which 
+would result in $100 = -3$.
 
 | Bit | Decimal |
 |-----|---------|
@@ -89,7 +99,7 @@ values), but has an extra step of adding a $1$ to the result.
 
 In this representation, the sign bit represents $-2^{k-1}$.
 
-So for example to represent the decimal number $-2$ we first get its 
+For example to represent the decimal number $-2$ we first get its 
 **1's Complement** which is $101$, then add $1$ which results in $110$:
 
 $$
@@ -128,11 +138,53 @@ $$
 #### Bit Shifting
 
 A property of binary arithmetic is that adding a number by itself 
-shifts the bits to the left ie. $3 + 3 = 0011 + 0011 = 0110$, this is 
-simply because:
+shifts the bits to the left ie. $3 + 3 = 0011 + 0011 = 0110 = 6$, this is 
+simply because the value is multipled by [a multiple of] $2$:
 
 $$
-3 + 3 = 2(3) = 2[0(2^3) + 0(2^2) + 1(2^1) + 1(2^0)] = 0(2^4) + 0(2^3) + 1(2^2) + 1(2^1)
+3 + 3 = 2(3)
+$$
+
+$$
+= 2[0(2^3) + 0(2^2) + 1(2^1) + 1(2^0) + 0(2^{-1})]
+$$
+
+$$
+= 0(2^4) + 0(2^3) + 1(2^2) + 1(2^1) + 0(2^0)
+$$
+
+$$
+= 00110
+$$
+
+$$
+= 0110
+$$
+
+$$
+= 6
+$$
+
+Corollary, dividing the bits by [a multiple of] $2$ shifts it to the right:
+
+$$
+6 = 0110
+$$
+
+$$
+6 / 2 = 2^{-1}[0(2^3) + 2(2^2) + 2(2^1) + 0(2^0) + 0(2^-1)]
+$$
+
+$$
+= 0(2^2) + 2(2^1) + 2(2^0) + 0(2^{-1}) + 0(2^{-2})
+$$
+
+$$
+= 0011
+$$
+
+$$
+= 3
 $$
 
 ### Sign Extension
@@ -140,7 +192,7 @@ $$
 Two bit strings with differing lengths can be processed by _extending_ the sign 
 bit of the smaller length bit string.
 
-For example, given the number $15$ as a 5-bit integer and the number $-3$ as 
+For example, given the number $21$ as a 5-bit integer and the number $-3$ as 
 a 3-bit integer:
 
 1. Represent $21$ in binary: $21 = 01111$
