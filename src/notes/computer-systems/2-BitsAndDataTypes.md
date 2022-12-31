@@ -16,12 +16,14 @@ existence of a signal.
 A **data type** provides the context on what a string of bits represent 
 ie. an integer, character code, or floating point number.
 
-## Integers
+### Representations
+
+#### Integers
 
 A data type that represents the number zero, positive, and negative 
 whole numbers.
 
-### Unsigned Integers
+#### Unsigned Integers
 
 Represents positive integers and zero only.
 
@@ -42,12 +44,12 @@ the unsigned integers $0$ to $2^3 - 1  = 7$.
 | 110 | 6       |
 | 111 | 7       |
 
-### Signed Integers
+#### Signed Integers
 
 There are three main ways to represent signed integers, these are 
 namely:
 
-#### Signed Magnitude
+##### Signed Magnitude
 
 Represents integers by reserving the left-most bit (also known as the 
 sign bit) as an indicator of whether it is a positive or negative number. 
@@ -69,7 +71,7 @@ numbers to represent the positive or negative integers.
 | 110 | -2      |
 | 111 | -3      |
 
-#### 1's Complement
+##### 1's Complement
 
 Represents integers by complementing the bits: inverting the $0$ 
 to a $1$ and vice versa.
@@ -92,7 +94,7 @@ would result in $100 = -3$.
 | 110 | -1      |
 | 111 | -0      |
 
-#### 2's Complement
+##### 2's Complement
 
 Represents integers the same way as the **1's Complement** (ie. inverting the 
 values), but has an extra step of adding a $1$ to the result.
@@ -187,7 +189,7 @@ $$
 = 3
 $$
 
-### Sign Extension
+#### Sign Extension
 
 Two bit strings with differing lengths can be processed by _extending_ the sign 
 bit of the smaller length bit string.
@@ -200,7 +202,7 @@ a 3-bit integer:
 3. _Extend_ the sign-bit of $-3$ to 5-bits: $11101$
 4. Now add: $01111 - 11101 = 01100 = 12$
 
-### Overflow/Underflow
+#### Overflow/Underflow
 
 Since computers work with a finite length of bits, there comes a situation where 
 processing bits would result in an error such as an **overflow** or **underflow** 
@@ -214,3 +216,93 @@ adding two positive integers would result in a negative integer, for example $15
 
 An **underflow** is the same but results in a positive integer if two negatives are 
 processed and go over the minimum negative integer.
+
+### Bit Logical Operations
+
+#### NOT (Complement)
+
+Returns $0$ if the given value is $1$ and vice versa.
+
+| A | NOT |
+|---|-----|
+| 0 | 1   |
+| 1 | 0   |
+
+#### AND
+
+For two given bits $A$ and $B$, the $AND$ operator returns a $1$ iff. both $A$ and $B$ 
+are $1$, $0$ otherwise.
+
+| A | B | AND |
+|---|---|-----|
+| 0 | 0 | 0   |
+| 0 | 1 | 0   |
+| 1 | 0 | 0   |
+| 1 | 1 | 1   |
+
+**AND** is commonly used for **bit-masking**: the retrieval or extraction of specific 
+information in a bit string.
+
+For example, it can be used to determine if a 2's complement bit string
+is odd:
+
+```c
+3 & 1 = 1; // Odd  => 011 & 001 = 001 = 1
+2 & 1 = 0; // Even => 010 & 001 = 000 = 0
+```
+
+#### OR
+
+For two given bits $A$ and $B$, the $OR$ operator returns a $1$ iff. either $A$ or $B$ 
+are $1$, $0$ if both $A$ and $B$ are $0$ otherwise.
+
+| A | B | OR |
+|---|---|----|
+| 0 | 0 | 0  |
+| 0 | 1 | 1  |
+| 1 | 0 | 1  |
+| 1 | 1 | 1  |
+
+#### XOR (Exclusive OR)
+
+For two given bits $A$ and $B$, the $OR$ operator returns a $1$ iff. either $A$ or $B$ 
+are $1$ but not both.
+
+| A | B | XOR |
+|---|---|-----|
+| 0 | 0 | 0   |
+| 0 | 1 | 1   |
+| 1 | 0 | 1   |
+| 1 | 1 | 0   |
+
+**XOR** can be used to check if two bit strings are the same.
+
+#### De Morgan's Law
+
+States two properties of composed logical operators:
+
+1. The complement of $NOT(A)\ AND\ NOT(B)$ is equivalent to $A\ OR\ B$.
+
+$$
+NOT(NOT(A)\ AND\ NOT(B)) = A\ OR\ B
+$$
+
+| A | B | NOT(A) | NOT(B) | NOT(A) AND NOT(B) | NOT(NOT(A) AND NOT(B)) | A OR B |
+|---|---|--------|--------|-------------------|------------------------|--------|
+| 0 | 0 | 1      | 1      | 1                 | 0                      | 0      |
+| 0 | 1 | 1      | 0      | 0                 | 1                      | 1      |
+| 1 | 0 | 0      | 1      | 0                 | 1                      | 1      |
+| 1 | 1 | 0      | 0      | 0                 | 1                      | 1      |
+
+2. The complement of $NOT(A)\ OR\ NOT(B)$ is equivalent to $A\ AND\ B$.
+
+$$
+NOT(NOT(B)\ OR\ NOT(A)) = A\ AND\ B
+$$
+
+| A | B | NOT(A) | NOT(B) | NOT(A) OR NOT(B) | NOT(NOT(A) OR NOT(B)) | A AND B |
+|---|---|--------|--------|------------------|-----------------------|---------|
+| 0 | 0 | 1      | 1      | 1                | 0                     | 0       |
+| 0 | 1 | 1      | 0      | 1                | 0                     | 0       |
+| 1 | 0 | 0      | 1      | 1                | 0                     | 0       |
+| 1 | 1 | 0      | 0      | 0                | 1                     | 1       |
