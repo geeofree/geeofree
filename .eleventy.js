@@ -21,6 +21,7 @@ module.exports = (eleventyConfig) => {
 
   // Passthroughs
 	eleventyConfig.addPassthroughCopy({ 'src/css': 'css' })
+	eleventyConfig.addPassthroughCopy({ 'node_modules/simpledotcss/simple.min.css': 'css/simple.min.css' })
 	eleventyConfig.addPassthroughCopy({ 'src/js': 'js' })
 	eleventyConfig.addPassthroughCopy({ 'src/images': 'images' })
 
