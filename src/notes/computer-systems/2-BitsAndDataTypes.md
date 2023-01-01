@@ -306,3 +306,42 @@ $$
 | 0 | 1 | 1      | 0      | 1                | 0                     | 0       |
 | 1 | 0 | 0      | 1      | 1                | 0                     | 0       |
 | 1 | 1 | 0      | 0      | 0                | 1                     | 1       |
+
+#### Floating Point
+
+Is a form of [scientific notation](https://en.wikipedia.org/wiki/Scientific_notation) that represents Real numbers in 
+a finite set of bits.
+
+The most widely adopted standard to represent floating point arithmetic 
+is the [IEEE-754](https://en.wikipedia.org/wiki/IEEE_754) standard where in a 32-bit system:
+
+* The left-most bit is the *sign bit*.
+* The next 8 bits are the *exponent* which is calculated by subtracting the *excess*.
+* And the remaining 23 bits are the *mantissa*.
+
+![Floating Point Sections](/images/figures/computer-systems/floating-point-sections.png)
+
+Notation:
+
+$$
+S \times 1.M \times 2^E
+$$
+
+Where:
+
+* **S** is the sign bit.
+* **M** is the mantissa.
+* **E** is the exponent derived from some bit string that is subtracted to $127$ (the 
+  *excess* number). For example, if the exponent is $4$, then the bit string to 
+  represent this in floating point notation is $127 + 4 = 131 = 1000\ 0011$.
+
+To convert a Real number to a floating point:
+
+1. Convert the significands on the left and right sides of the *radix* (decimal point): 
+   * The left-side is derived by continuously dividing the value by 2 and retrieving 
+     the remainders.
+   * The right-side is derived by continuously multiplying the value by 2 and retrieving 
+     the value on the right hand side of the result. This should have repeating patterns.
+2. Move the decimal point either left or right to get the *exponent*.
+
+[See video for example.](https://www.youtube.com/watch?v=8afbTaA-gOQ)
