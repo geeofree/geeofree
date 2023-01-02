@@ -345,3 +345,7 @@ To convert a Real number to a floating point:
 2. Move the decimal point either left or right to get the *exponent*.
 
 [See video for example.](https://www.youtube.com/watch?v=8afbTaA-gOQ)
+
+#### ASCII
+
+Represents a character with a unique integer in a single byte.
