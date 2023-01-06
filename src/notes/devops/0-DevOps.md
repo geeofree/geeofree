@@ -46,6 +46,6 @@ and deployment when new code changes are submitted.
 ## Infrastructure As A Code (IAAC)
 
 Tools that automate infrastructure processes such as provisioning, software installment, 
-configurationn, and deployment.
+configuration, and deployment.
 
 [Terraform](https://www.terraform.io/) and [Ansible](https://www.ansible.com/) are two popular tools for IAAC.
