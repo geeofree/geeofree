@@ -9,8 +9,9 @@ Docker is a tool that packages applications using a lightweight and
 isolated process called *containers*.
 
 Containers make it easier to provide applications with its dependencies 
-without having to provision to an entire OS and also connect with other 
-containerized applications.
+without having to provision an entire OS and/or resources.
+
+Containers can also connect with other containerized applications.
 
 ### Images
 
