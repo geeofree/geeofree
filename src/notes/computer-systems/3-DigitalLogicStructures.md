@@ -40,3 +40,12 @@ the current flowing to the transistor based on the configuration:
 | PNP | P-Channel | Current flows from the *input* terminal to the *output* terminal |
 
 ![Terminal differences between BJT and FET](/images/figures/computer-systems/bjt-vs-fet-terminals.png)
+
+In general, N-Type and P-Type transistors are *complimentary* of each other:
+
+* N-Type transistors **allows** the flow of current if a given voltage is provided.
+* P-Type transistors **stops** the flow of current if a given voltage is given.
+
+A common circuit design that takes advantage of these properties of transistors is 
+called the **CMOS (Complimentary Metal-Oxide Semiconductor)** circuit and is the basis 
+for most *Logic Gates*.
