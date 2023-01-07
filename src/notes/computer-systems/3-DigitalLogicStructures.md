@@ -49,3 +49,9 @@ In general, N-Type and P-Type transistors are *complimentary* of each other:
 A common circuit design that takes advantage of these properties of transistors is 
 called the **CMOS (Complimentary Metal-Oxide Semiconductor)** circuit and is the basis 
 for most *Logic Gates*.
+
+## Logic Gates
+
+Logical operators built from transistors.
+
+![Logic Gates](/images/figures/computer-systems/logic-gates.png)
