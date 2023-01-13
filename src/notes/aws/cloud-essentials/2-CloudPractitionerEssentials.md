@@ -105,3 +105,21 @@ capacity at any time.
 ##### Dedicated Hosts
 
 Reserves a physical machine. Suitable for compliance requirements.
+
+#### Scaling
+
+AWS EC2 Auto Scaling provides scalability and elasticity on-demand.
+
+There are two scaling approaches that can be used:
+
+* **Dynamic Scaling** scales instances on-demand.
+* **Predictive Scaling** scales instances on a given period.
+
+There are three (3) things to configuring an EC2 Auto Scaling Group:
+
+1. **Minimum Capacity** which defines the least amount of instances to 
+   be available.
+2. **Desired Capacity** is the initial number of instances that are 
+   ran when the service is started.
+3. **Maximum Capacity** defines the max number of instances in the 
+   auto scaling group.
