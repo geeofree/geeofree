@@ -106,7 +106,7 @@ capacity at any time.
 
 Reserves a physical machine. Suitable for compliance requirements.
 
-#### Scaling
+#### Scaling (EC2 Auto Scaling)
 
 AWS EC2 Auto Scaling provides scalability and elasticity on-demand.
 
@@ -123,3 +123,8 @@ There are three (3) things to configuring an EC2 Auto Scaling Group:
    ran when the service is started.
 3. **Maximum Capacity** defines the max number of instances in the 
    auto scaling group.
+
+## Elastic Load Balancing (ELB)
+
+AWS ELB is a cloud service that distributes incoming traffic to different 
+service nodes such that no service node handles the bulk of most of the requests.
