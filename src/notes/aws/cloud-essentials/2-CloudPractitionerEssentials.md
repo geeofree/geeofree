@@ -18,7 +18,7 @@ description: AWS Cloud concepts, services, security, architecture, pricing, and 
 * [AWS Elastic Cloud Compute (EC2)](#aws-elastic-cloud-compute-(ec2))
   * [Instance Types](#instance-types)
   * [Pricing](#pricing)
-  * [Scaling](#scaling-(ec2-auto-scaling))
+  * [EC2 Auto Scaling](#ec2-auto-scaling)
 * [AWS Elastic Load Balancing (ELB)](#aws-elastic-load-balancing-(elb))
 * [AWS Simple Notification Service (SNS)](#aws-simple-notification-service-(sns))
 * [AWS Simple Queue Service (SQS)](#aws-simple-queue-service-(sqs))
@@ -37,6 +37,13 @@ description: AWS Cloud concepts, services, security, architecture, pricing, and 
   * [AWS Software Development Kit (SDK)](#aws-software-development-kit-(sdk))
   * [AWS Elastic Beanstalk](#aws-elastic-beanstalk)
   * [AWS CloudFormation](#aws-cloudformation)
+
+**Module 4: Networking**
+
+* [AWS Virtual Private Cloud (VPC)](#aws-virtual-private-cloud-(vpc))
+* [Subnets and Packet Filtering](#subnets-and-packet-filtering)
+  * [Network Access Control Lists (ACLs)](#network-access-control-lists-(acls))
+  * [Security Groups](#security-groups)
 
 # Module 1: Introduction to Cloud Computing
 
@@ -145,7 +152,7 @@ capacity at any time.
 
 Reserves a physical machine. Suitable for compliance requirements.
 
-#### Scaling (EC2 Auto Scaling)
+#### EC2 Auto Scaling
 
 AWS EC2 Auto Scaling provides scalability and elasticity on-demand.
 
@@ -253,3 +260,45 @@ automaticaly provision the infrastructure that the application will run on.
 
 An Infrastructure as Code (IaC) service: provisioning is done by defining them in a config 
 file (YAML).
+
+# Module 4: Networking
+
+## AWS Virtual Private Cloud (VPC)
+
+A service that provides a virtual network within the cloud.
+
+In order for resources within the VPC to be available to the public, a 
+*public internet gateway (IWG)* must be established on the VPC.
+
+To make the resources in the virtual network to be available privately 
+(as in only available to a few handful of people), a *private* IWG must 
+be established on the VPC which the users can then connect to through 
+a VPN.
+
+## AWS Direct Connect
+
+A networking service that connects private, on-premises networks directly 
+to AWS. This requires coordination with a Direct Connect provider.
+
+## Subnets and Packet Filtering
+
+A subnet is a section of a network that contains a range of IP addresses that 
+are available.
+
+A common network configuration is to have a public and private subnets where 
+public subnets are resources that can be used publicly ie. a website, and 
+private subnets are resources that are available only within the network ie. 
+a database instance.
+
+### Network Access Control Lists (ACLs)
+
+Stateless packet filtering of inbound and outbound traffic in a subnet.
+
+By default, ACLs are configured to allow any inbound or outbound traffic.
+
+### Security Groups
+
+Stateful packets filtering of inbound traffic to an instance.
+
+By default, Security Groups are configured to deny any inbound 
+traffic.
