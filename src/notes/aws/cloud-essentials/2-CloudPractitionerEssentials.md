@@ -128,3 +128,35 @@ There are three (3) things to configuring an EC2 Auto Scaling Group:
 
 AWS ELB is a cloud service that distributes incoming traffic to different 
 service nodes such that no service node handles the bulk of most of the requests.
+
+## Simple Notification Service (SNS)
+
+A publish/subscriber service where publishers send data to subscribers (service nodes) 
+that subscribe to certain topics (ie. a record was recently updated).
+
+## Simple Queue Service (SQS)
+
+SQS enables asynchronous request handling by storing, sending, and receiving messages 
+to and from service nodes.
+
+## AWS Lambda (Serverless)
+
+A service that handles the provisioning and handling of servers/instances and lets 
+customers focus on building features rather than the infrastructure.
+
+In this service, functions are *triggered* through some event like incoming requests or 
+database updates.
+
+## AWS Elastic Container Service (ECS)
+
+Container orchestration cloud service; manages containerized applications in different 
+instances.
+
+## AWS Elastic Kubernetes Service (EKS)
+
+Container orchestration cloud service using Kubernetes.
+
+## AWS Fargate
+
+Serverless compute engine for containers; handles the infrastructure that uses containerization 
+to run applications such that customers can focus only on the features.
