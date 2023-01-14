@@ -3,15 +3,38 @@ title: 'CLF-C01: Cloud Practitioner Essentials'
 description: AWS Cloud concepts, services, security, architecture, pricing, and support.
 ---
 
+# Table of Contents
+
+**Module 1**
+* [Cloud Computing](#cloud-computing)
+  * [Cloud Deployment Models](#cloud-deployment-models)
+    * [Cloud Deployment (Public Cloud)](#cloud-deployment-(public-cloud))
+    * [On-Premise Deployment (Private Cloud)](#on-premise-deployment-(private-cloud))
+    * [Hybrid Deployment](#hybrid-deployment)
+* [Benefits of Cloud Computing](#benefits-of-cloud-computing)
+
+**Module 2**
+* [AWS Elastic Cloud Compute (EC2)](#aws-elastic-cloud-compute-(ec2))
+  * [Instance Types](#instance-types)
+  * [Pricing](#pricing)
+  * [Scaling](#scaling-(ec2-auto-scaling))
+* [AWS Elastic Load Balancing (ELB)](#aws-elastic-load-balancing-(elb))
+* [AWS Simple Notification Service (SNS)](#aws-simple-notification-service-(sns))
+* [AWS Simple Queue Service (SQS)](#aws-simple-queue-service-(sqs))
+* [AWS Lambda (Serverless)](#aws-lambda-(serverless))
+* [AWS Elastic Container Service (ECS)](#aws-elastic-container-service-(ecs))
+* [AWS Elastic Kubernetes Service (EKS)](#aws-elastic-kubernetes-service-(eks))
+* [AWS Fargate](#aws-fargate)
+
 ## Cloud Computing
 
 Provides an on-demand and pay-as-you-go model for IT resources.
 
-## Cloud Computing Deployment Models
+### Cloud Deployment Models
 
-Cloud Computing Deployment Models are ways IT resources are deployed and consumed.
+Cloud Deployment Models are ways IT resources are deployed and consumed.
 
-There are three (3) common deployment models, namely:
+There are three (3) deployment models, namely:
 
 #### Cloud Deployment (Public Cloud)
 
@@ -124,17 +147,17 @@ There are three (3) things to configuring an EC2 Auto Scaling Group:
 3. **Maximum Capacity** defines the max number of instances in the 
    auto scaling group.
 
-## Elastic Load Balancing (ELB)
+## AWS Elastic Load Balancing (ELB)
 
 AWS ELB is a cloud service that distributes incoming traffic to different 
 service nodes such that no service node handles the bulk of most of the requests.
 
-## Simple Notification Service (SNS)
+## AWS Simple Notification Service (SNS)
 
 A publish/subscriber service where publishers send data to subscribers (service nodes) 
 that subscribe to certain topics (ie. a record was recently updated).
 
-## Simple Queue Service (SQS)
+## AWS Simple Queue Service (SQS)
 
 SQS enables asynchronous request handling by storing, sending, and receiving messages 
 to and from service nodes.
