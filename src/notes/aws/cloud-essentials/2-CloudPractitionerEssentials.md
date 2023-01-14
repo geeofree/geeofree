@@ -5,7 +5,7 @@ description: AWS Cloud concepts, services, security, architecture, pricing, and 
 
 # Table of Contents
 
-**Module 1**
+**Module 1: Introduction to Cloud Computing**
 * [Cloud Computing](#cloud-computing)
   * [Cloud Deployment Models](#cloud-deployment-models)
     * [Cloud Deployment (Public Cloud)](#cloud-deployment-(public-cloud))
@@ -13,7 +13,8 @@ description: AWS Cloud concepts, services, security, architecture, pricing, and 
     * [Hybrid Deployment](#hybrid-deployment)
 * [Benefits of Cloud Computing](#benefits-of-cloud-computing)
 
-**Module 2**
+**Module 2: Cloud Computing Services**
+
 * [AWS Elastic Cloud Compute (EC2)](#aws-elastic-cloud-compute-(ec2))
   * [Instance Types](#instance-types)
   * [Pricing](#pricing)
@@ -25,6 +26,19 @@ description: AWS Cloud concepts, services, security, architecture, pricing, and 
 * [AWS Elastic Container Service (ECS)](#aws-elastic-container-service-(ecs))
 * [AWS Elastic Kubernetes Service (EKS)](#aws-elastic-kubernetes-service-(eks))
 * [AWS Fargate](#aws-fargate)
+
+**Module 3: Global Infrastructure**
+
+* [Regions and Availability Zones](#regions-and-availability-zones)
+* [Edge Locations](#edge-locations)
+* [Provisioning AWS Services](#provisioning-aws-services)
+  * [AWS Management Console (Web)](#aws-management-console-(web))
+  * [AWS Command Line Interface (CLI)](#aws-command-line-interface-(cli))
+  * [AWS Software Development Kit (SDK)](#aws-software-development-kit-(sdk))
+  * [AWS Elastic Beanstalk](#aws-elastic-beanstalk)
+  * [AWS CloudFormation](#aws-cloudformation)
+
+# Module 1: Introduction to Cloud Computing
 
 ## Cloud Computing
 
@@ -69,6 +83,8 @@ services for any non-sensitive resources.
 5. **Increase speed and agility:** focus more on what's important for your product 
    rather than building the Infrastructure that it runs on.
 6. **Go global in minutes:** provide services at a global scale seamlessly.
+
+# Module 2: Cloud Computing Services
 
 ## AWS Elastic Cloud Compute (EC2)
 
@@ -147,6 +163,8 @@ There are three (3) things to configuring an EC2 Auto Scaling Group:
 3. **Maximum Capacity** defines the max number of instances in the 
    auto scaling group.
 
+# Module 2: Cloud Computing Services
+
 ## AWS Elastic Load Balancing (ELB)
 
 AWS ELB is a cloud service that distributes incoming traffic to different 
@@ -183,3 +201,55 @@ Container orchestration cloud service using Kubernetes.
 
 Serverless compute engine for containers; handles the infrastructure that uses containerization 
 to run applications such that customers can focus only on the features.
+
+# Module 3: Global Infrastructure
+
+## Regions and Availability Zones
+
+### Regions
+
+A geographical area that contains AWS resources.
+
+When selecting a Region make sure to consider the following:
+
+1. Compliance with data governance and legal requirements
+2. Proximity to customers
+3. Available services within a Region.
+4. Pricing.
+
+### Availability Zones
+
+A single or group of data centers within a Region.
+
+## Edge Locations
+
+Are sites that provide CDNs (AWS CloudFront) and DNS (AWS Route 53) services.
+
+## Provisioning AWS Services
+
+There are several different ways to provision AWS services, namely:
+
+### AWS Management Console (Web)
+
+A web-based application that allows users to view, configure, and use different 
+AWS services in the browser.
+
+### AWS Command Line Interface (CLI)
+
+A CLI application to provision AWS services. Best option if using shell scripts 
+is preferred to automate provisioning.
+
+### AWS Software Development Kit (SDK)
+
+A software library that integrates with AWS services. Best option if using programming 
+languages is preferred.
+
+### AWS Beanstalk
+
+An AWS service that takes in an application code and some configuration which will then 
+automaticaly provision the infrastructure that the application will run on.
+
+### AWS CloudFormation
+
+An Infrastructure as Code (IaC) service: provisioning is done by defining them in a config 
+file (YAML).
