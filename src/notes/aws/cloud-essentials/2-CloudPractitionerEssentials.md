@@ -328,7 +328,7 @@ traffic.
 
 ## Block-Level Storage
 
-A storage type where data is stored in fixed block sizes, each of with is 
+A storage type where data is stored in fixed block sizes, each of which is 
 accessed and managed independently from others.
 
 ## Instance Storage
