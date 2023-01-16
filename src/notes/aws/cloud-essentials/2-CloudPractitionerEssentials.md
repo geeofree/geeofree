@@ -45,6 +45,26 @@ description: AWS Cloud concepts, services, security, architecture, pricing, and 
   * [Network Access Control Lists (ACLs)](#network-access-control-lists-(acls))
   * [Security Groups](#security-groups)
 
+**Module 5: Storage and Databases**
+
+* [Block-Level Storage](#block-level-storage)
+* [Instance Storage](#instance-storage)
+* [AWS Elastic Block Storage (EBS)](#aws-elastic-block-storage-(ebs))
+* [Object-Level Storage](#object-level-storage)
+* [AWS Simple Storage Service (S3)](#aws-simple-storage-service-(s3))
+* [AWS Elastic File System (EFS)](#aws-elastic-file-system-(efs))
+* [AWS Relational Database Service (RDS)](#aws-relational-database-service-(rds))
+* [AWS Amazon Aurora](#aws-amazon-aurora)
+* [AWS DynamoDB](#aws-dynamodb)
+* [AWS Redshift](#aws-redshift)
+* [AWS Database Migration Service (DMS)](#aws-database-migration-service-(dms))
+* [AWS DocumentDB](#aws-documentdb)
+* [AWS Neptune](#aws-neptune)
+* [AWS Quantum Ledger Database (Amazon QLDB)](#aws-quantum-ledger-database-(amazon-qldb))
+* [AWS Managed Blockchain](#aws-managed-blockchain)
+* [AWS ElastiCache](#aws-elasticache)
+* [AWS DynamoDB Accelerator](#aws-dynamodb-accelerator)
+
 # Module 1: Introduction to Cloud Computing
 
 ## Cloud Computing
@@ -302,3 +322,115 @@ Stateful packets filtering of inbound traffic to an instance.
 
 By default, Security Groups are configured to deny any inbound 
 traffic.
+
+# Module 5: Storage and Databases
+
+## Block-Level Storage
+
+A storage type where data is stored in fixed block sizes, each of with is 
+accessed and managed independently from others.
+
+## Instance Storage
+
+AWS EC2 instances have integrated block-level storage facilities that can be used 
+to store data.
+
+This is useful if the data being stored is temporary because instance storage is 
+lost whenever an EC2 instance is terminated as it can be ran on a different host.
+
+## AWS Elastic Block Storage (EBS)
+
+AWS EBS is a block-level storage device that can be attached to an EC2 instance and 
+is independent of it. This means data can persist even after the instance is stopped.
+
+This can also have *incremental backups* where subsequent backups only store data that 
+has been modified.
+
+AWS EBS can contain up to 16TB of data.
+
+## Object-Level Storage
+
+A storage type that contains objects and buckets where:
+
+* **Objects** are files that contain complete and discrete data, metadata, and a key.
+* **Buckets** are a collection of objects.
+
+## AWS Simple Storage Service (S3)
+
+AWS S3 is an object-level storage service that can store up to 5TB of data and has 
+seven (7) storage classes:
+
+* **S3 Standard** designed for frequently accessed resources such as static websites, 
+  content distribution (images, videos, music), or data analytics.
+
+* **S3 Standard-Infrequent Access (Standard-IA)** designed for infreqeuently accessed resources that 
+  also need high-availability ie. backups, disaster recovery, or any objects that require 
+  long-term storage.
+
+* **S3 One Zone-Infrequent Access (One Zone-IA)** provides resources in a single availability zone 
+  (unlike in Standard and Standard-IA which are stored in at least 3 availability zones).
+  
+  Best for cost-saving and if handling data failures is something that can be easily reproduced.
+
+* **S3 Intelligent-Tiering** automatically moves objects to different tiers such as to Standard-IA 
+  or to Standard based on the access pattern ie. if a file hasn't been accessed for 30 consecutive 
+  days then it gets moved to Standard-IA.
+
+* **S3 Glacier Instant Retrieval** designed for archived objects for fast retrieval.
+
+* **S3 Glacier Flexible Retrieval** designed for archived objects that are semi-frequently accessed.
+
+* **S3 Glacier Deep Archived** designed for long-term archived objects, ones that are access in more 
+  than one-year.
+
+* **S3 Outposts** stores objects in on-premises AWS Outposts environments.
+
+## AWS Elastic File System (EFS)
+
+A file-system storage that multiple services can connect to concurrently and auto-scales.
+
+## AWS Relational Database Service (RDS)
+
+A storage service that manages relational databases and automates tasks such as hardware 
+provisioning, database setup, backups, and security.
+
+## AWS Amazon Aurora
+
+A cloud-native, high-performance relational database compatible with MySQL and PostgreSQL.
+
+## AWS DynamoDB
+
+A serverless cloud service that uses NoSQL, key-value structure.
+
+## AWS Redshift
+
+A data warehousing service for Business Analytics/Business intelligence(BI).
+
+## AWS Database Migration Service (DMS)
+
+A service to migrate databases that are either in the cloud (ie. using a different cloud provider) 
+or on-premises.
+
+## AWS DocumentDB
+
+A document database service.
+
+## AWS Neptune
+
+A graph database service.
+
+## AWS Quantum Ledger Database (Amazon QLDB)
+
+A ledger database service.
+
+## AWS Managed Blockchain
+
+A database service for managed blockchain databases.
+
+## AWS ElastiCache
+
+A caching service that runs in-memory.
+
+## AWS DynamoDB Accelerator
+
+An in-memory caching service for DynamoDB.
