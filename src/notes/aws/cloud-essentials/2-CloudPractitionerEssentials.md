@@ -5,7 +5,8 @@ description: AWS Cloud concepts, services, security, architecture, pricing, and 
 
 # Table of Contents
 
-**Module 1: Introduction to Cloud Computing**
+[**Module 1: Introduction to Cloud Computing**](#module-1%3A-introduction-to-cloud-computing)
+
 * [Cloud Computing](#cloud-computing)
   * [Cloud Deployment Models](#cloud-deployment-models)
     * [Cloud Deployment (Public Cloud)](#cloud-deployment-(public-cloud))
@@ -13,7 +14,7 @@ description: AWS Cloud concepts, services, security, architecture, pricing, and 
     * [Hybrid Deployment](#hybrid-deployment)
 * [Benefits of Cloud Computing](#benefits-of-cloud-computing)
 
-**Module 2: Cloud Computing Services**
+[**Module 2: Cloud Computing Services**](#module-2%3A-cloud-computing-services)
 
 * [AWS Elastic Cloud Compute (EC2)](#aws-elastic-cloud-compute-(ec2))
   * [Instance Types](#instance-types)
@@ -27,7 +28,7 @@ description: AWS Cloud concepts, services, security, architecture, pricing, and 
 * [AWS Elastic Kubernetes Service (EKS)](#aws-elastic-kubernetes-service-(eks))
 * [AWS Fargate](#aws-fargate)
 
-**Module 3: Global Infrastructure**
+[**Module 3: Global Infrastructure**](#module-3%3A-global-infrastructure)
 
 * [Regions and Availability Zones](#regions-and-availability-zones)
 * [Edge Locations](#edge-locations)
@@ -38,14 +39,14 @@ description: AWS Cloud concepts, services, security, architecture, pricing, and 
   * [AWS Elastic Beanstalk](#aws-elastic-beanstalk)
   * [AWS CloudFormation](#aws-cloudformation)
 
-**Module 4: Networking**
+[**Module 4: Networking**](#module-4%3A-networking)
 
 * [AWS Virtual Private Cloud (VPC)](#aws-virtual-private-cloud-(vpc))
 * [Subnets and Packet Filtering](#subnets-and-packet-filtering)
   * [Network Access Control Lists (ACLs)](#network-access-control-lists-(acls))
   * [Security Groups](#security-groups)
 
-**Module 5: Storage and Databases**
+[**Module 5: Storage and Databases**](#module-5%3A-storage-and-databases)
 
 * [Block-Level Storage](#block-level-storage)
 * [Instance Storage](#instance-storage)
