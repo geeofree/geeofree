@@ -71,3 +71,36 @@ int max(int A[], int total) {
   return m;
 }
 ```
+
+## Analyzing Algorithms
+
+There are two important resources that algorithms will use when they are executed, 
+these are namely:
+
+* **Time Complexity** refers to how long the algorithm will take to give a result
+  when it executes.
+* **Space Complexity** refers to how much memory the algorithm will use when it executes.
+
+These two are measured using functions and how they grow based on the number of inputs 
+and how the algorithm executes with those inputs.
+
+For example, the [insertion sort algorithm](https://en.wikipedia.org/wiki/Insertion_sort) implemented in C is as follows:
+
+```c
+void insertion_sort(int array[], int size) {
+  int i = 1, j, current;
+  
+  while (i < size) {
+    current = array[i];
+    j = i - 1;
+    
+    while (j > -1 && array[j] > current) {
+      array[j + 1] = array[j];
+      ++j;
+    }
+    
+    array[j + 1] = current;
+    i++;
+  }
+}
+```
