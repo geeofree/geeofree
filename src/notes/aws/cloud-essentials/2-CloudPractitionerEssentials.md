@@ -435,3 +435,52 @@ A caching service that runs in-memory.
 ## AWS DynamoDB Accelerator
 
 An in-memory caching service for DynamoDB.
+
+# Module 6: Security
+
+## Shared Responsibility Model
+
+In AWS, maintaining cloud services are handled by both the customer and AWS such that:
+
+* Customers manage things *in* the cloud ie. their VPC, EC2 instances, etc.
+* AWS manages things *of* the cloud ie. the physical machines, storage space, etc.
+
+## AWS Identity and Access Management (IAM)
+
+A service that manages users and the actions they can take on their respective resources.
+
+### Root User
+
+When a new AWS account is created, this account will be the *root* user account. Meaning it 
+has all the capabilities to work on AWS resources and create IAM users and assign them roles.
+
+### IAM User
+
+An account created by a root user (or an IAM User with account creation priviledges).
+
+### IAM Policies
+
+Assigns resources and the actions that can be done to them to an IAM user.
+
+### IAM Groups
+
+A group-policy that can be assigned to multiple IAM users.
+
+### IAM Roles
+
+Multiple temporary policies that an IAM user can switch into. Note that an IAM 
+user can only be in one policy at a time.
+
+### Multi-Factor Authentication (MFA)
+
+An authentication flow where after providing credentials the user should also provide 
+a distinct value that proves that they really are who they say they are.
+
+## AWS Organizations
+
+A service that colocates users to their respective organizations which contains only 
+the allowed policies within each organization through the **Service Control Policy (SCP)**.
+
+### Organization Unit (OU)
+
+A group that has a set of available policies that can be enforced.
