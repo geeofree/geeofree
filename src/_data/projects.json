@@ -16,6 +16,14 @@
     ]
   },
   {
+    "name": "Dental Clinic Website",
+    "description": "A website for a Dental Clinic based in Olongapo.",
+    "links": [
+      { "icon": "www.png", "url": "https://dpdc-website.vercel.app" },
+      { "icon": "github.png", "url": "https://github.com/geeofree/dpdc-website" }
+    ]
+  },
+  {
     "name": "Personal Website",
     "description": "This website.",
     "links": [
