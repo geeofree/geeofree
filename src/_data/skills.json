@@ -7,22 +7,21 @@
     "name": "Programming Languages",
     "values": [
       "JavaScript/TypeScript",
+      "C",
       "Lua",
-      "Bash/Zsh",
+      "Bash",
       "PHP",
       "CSS",
-      "HTML",
-      "C"
+      "HTML"
     ]
   },
   {
     "name": "UI Frameworks/Libraries",
     "values": [
       "React",
-      "React Native",
       "AngularJS",
       "Eleventy",
-      "Gatsby"
+      "AlpineJS"
     ]
   },
   {
