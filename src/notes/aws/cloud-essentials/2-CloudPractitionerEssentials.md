@@ -66,6 +66,19 @@ description: AWS Cloud concepts, services, security, architecture, pricing, and 
 * [AWS ElastiCache](#aws-elasticache)
 * [AWS DynamoDB Accelerator](#aws-dynamodb-accelerator)
 
+[**Module 6: Security and Compliance**](#module-6%3A-security-and-compliance)
+
+* [Shared Responsibility Model](#shared-responsibility-model)
+* [AWS Identity and Access Management (IAM)](#aws-identity-and-access-management-(iam))
+* [AWS Organizations](#aws-organizations)
+* [AWS Artifacts](#aws-artifacts)
+* [Customer Compliance Center](#customer-compliance-center)
+* [AWS Shield](#aws-shield)
+* [AWS Key Management Service (KMS)](#aws-key-management-service-(kms))
+* [AWS Web Application Firewall (WAF)](#aws-web-application-firewall-(waf))
+* [AWS Inspector](#aws-inspector)
+* [AWS Guard Duty](#aws-guard-duty)
+
 # Module 1: Introduction to Cloud Computing
 
 ## Cloud Computing
@@ -436,7 +449,7 @@ A caching service that runs in-memory.
 
 An in-memory caching service for DynamoDB.
 
-# Module 6: Security
+# Module 6: Security and Compliance
 
 ## Shared Responsibility Model
 
@@ -484,3 +497,51 @@ the allowed policies within each organization through the **Service Control Poli
 ### Organization Unit (OU)
 
 A group that has a set of available policies that can be enforced.
+
+## AWS Artifacts
+
+A service for managing compliance reports and online agreements and comes in two sections:
+
+### AWS Artifact Agreements
+
+Provides documents regarding the use of certain types of information throughout AWS services.
+
+### AWS Artifact Reports
+
+Provides information for regulatory standard compliances.
+
+## Customer Compliance Center
+
+Contains resources and references on various customer compliance stories from 
+various regulated industries.
+
+## AWS Shield
+
+A service to protect applications against DDoS attacks and provides two levels of protection:
+
+### AWS Shield Standard
+
+A free service that is automatically provided to all AWS customers. This can protect 
+applications from the most common and frequent occuring types of DDoS attacks.
+
+### AWS Shield Advanced
+
+A service that provides better diagnostics and has the capability of deterring more sophisticated 
+DDoS attacks.
+
+## AWS Key Management Service (KMS)
+
+A service that allows to create, manage, and use cryptographic keys.
+
+## AWS Web Application Firewall (WAF)
+
+A service that protects applications by filtering requests through firewall policies.
+
+## AWS Inspector
+
+A service that provides automated security assessments and compliance.
+
+## AWS Guard Duty
+
+A service that provides intelligent threat detection and monitoring for AWS infrastructure 
+and resources.
