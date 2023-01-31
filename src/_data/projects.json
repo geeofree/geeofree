@@ -8,6 +8,14 @@
     ]
   },
   {
+    "name": "semrel",
+    "description": "A simple semantic release CLI tool 📦",
+    "links": [
+      { "icon": "npm.png", "url": "https://www.npmjs.com/package/@geeofree/semrel" },
+      { "icon": "github.png", "url": "https://github.com/geeofree/semrel" }
+    ]
+  },
+  {
     "name": "ishould",
     "description": "Interactive CLI TODO list on NodeJS.",
     "links": [
