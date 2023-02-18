@@ -15,3 +15,4 @@ description: AWS Learning Plan notes.
   * [Chapter 2.4: Networking](cloud-essentials/2.4-Networking)
   * [Chapter 2.5: Storage & Databases](cloud-essentials/2.5-StorageAndDatabases)
   * [Chapter 2.6: Security & Compliance](cloud-essentials/2.6-SecurityAndCompliance)
+  * [Chapter 2.7: Monitoring & Analytics](cloud-essentials/2.7-MonitoringAndAnalytics)
