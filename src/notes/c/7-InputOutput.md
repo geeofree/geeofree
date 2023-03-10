@@ -95,6 +95,7 @@ In order to define a variadic function we must:
    macro which takes in a `va_list` value and the last named argument.
 5. Iterate through the variable-length argument list by using `va_arg` 
    macro which takes in a `va_list` value and a type.
+6. Cleanup using `va_end`.
 
 ```c
 #include <stdarg.h>
@@ -113,6 +114,7 @@ void test(int count, ...) {
   while (count--) {
     printf("%d\n", va_arg(args, int));
   }
+  va_end(args);
 }
 ```
 
