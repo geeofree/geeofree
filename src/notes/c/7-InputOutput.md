@@ -210,6 +210,14 @@ int main(int argc, char **argv) {
 }
 ```
 
+The `errno` global variable can also be used to receive the latest 
+error code from a given system call. This can also be used along 
+with `strerror` to get the error message of a given error code:
+
+```c
+fprintf(stderr, "code: %d message: %s\n", errno, strerror(errno));
+```
+
 Another error handling function is the `ferror()` function which 
 returns a non-zero integer if an error occured in some file 
 stream.
@@ -220,6 +228,8 @@ int ferror(FILE *fp);
 
 This is useful for checking if, for example, the disk is full 
 and can no longer take in additional data.
+
+To learn more about error handling in C read [GNU: Checking for errors.](https://www.gnu.org/software/libc/manual/html_node/Checking-for-Errors.html)
 
 ## Line I/O
 
