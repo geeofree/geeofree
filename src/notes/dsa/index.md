@@ -1,12 +1,12 @@
 ---
 tagID: dsa
 tags: notes
-title: Algorithms & Data Structures
-description: DSA Notes.
+title: DSA
+description: Algorithms and Data Structures Notes.
 ---
 
 Reference: [Introduction to Algorithms (4th ed.) - CLRS](https://www.amazon.com/Introduction-Algorithms-fourth-Thomas-Cormen/dp/026204630X/ref=sr_1_1?keywords=introduction+to+algorithms&qid=1673567643&sr=8-1)
 
-## Foundations
+### Table of Contents
 
-* [Chapter 1: Getting Started](foundations/GettingStarted)
+* [Chapter 1: Introduction to Algorithms, Techniques, and Analysis](1-AlgorithmsIntro)
