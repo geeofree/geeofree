@@ -296,6 +296,66 @@ $$
 O(n^{2})
 $$
 
+## Complexities
+
+In theoretical computer science, *Complexity Theory* describes how much 
+resources, such as time and space, are required to run a computation.
+
+**Time Complexity** refers to how long a computation will run.
+
+**Space Complexity** refers to how much space (ie. memory allocation) will be 
+needed when a computation executes.
+
+In most cases, the important resource between the two is time complexity as 
+time does not have a physical analog unlike space which can increase as [the] 
+technology gets better.
+
+### Analysis: Bubble Sort
+
+[Bubble sort](https://en.wikipedia.org/wiki/Bubble_sort) is a [sorting algorithm](https://en.wikipedia.org/wiki/Sorting_algorithm) that passes through a list of elements, 
+swapping unsorted adjacent elements until the list is *completely sorted*.
+
+**Pseudocode:**
+
+```py
+def bubble_sort(A):
+  should_loop := True
+
+  while should_loop:
+    should_loop := False
+    for 1 to A.length - 1:
+      if A[i - 1] > A[i]:
+        # Swap A[i - 1] and A[i]
+        temp = A[i]
+        A[i] = A[i - 1]
+        A[i - 1] = temp
+        
+        # This indicates that we should keep sorting
+        should_loop := True
+```
+
+**Analysis:**
+
+In the **best case**, when the bubble sort algorithm receives an already (or almost) 
+sorted array of items it will have a time complexity of $O(n)$ as it will 
+only pass through the outer loop once because the comparisons will never be true 
+and therefore `should_loop := False` once the *for-loop* ends and will not rerun 
+the outer *while-loop*.
+
+On the **worse case** however, when the algorithm receives an unsorted array of 
+items ie. an array in descending order, then it will have a time complexity of 
+$O(n^{2})$ since it will have to keep looping until all the items have been sorted.
+
+```py
+bubble_sort([5,4,3,2,1])
+# Execution:
+# (1) [4,3,2,1,5]
+# (2) [3,2,1,4,5]
+# (3) [2,1,3,4,5]
+# (4) [1,2,3,4,5]
+# (5) [1,2,3,4,5] <- This pass is done because the previous iteration compared 2 > 1 which sets `should_loop := True`.
+```
+
 ## Techniques
 
 ### Loop Invariants
