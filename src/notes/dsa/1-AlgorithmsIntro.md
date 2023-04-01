@@ -409,3 +409,75 @@ int max(int A[], int total) {
   return m;
 }
 ```
+
+### Divide-and-Conquer
+
+A problem solving technique that:
+
+- **Divides** the problem into smaller subproblems.
+- **Conquers** the original problem by solving each subproblem.
+- **Combines** the solution to each subproblem to solve the 
+  original problem.
+
+For example a very popular algorithm that uses this technique is the 
+[merge sort](https://en.wikipedia.org/wiki/Merge_sort) algorithm which goes as follows:
+
+Given a list of numbers:
+
+- **Divide:** recursively divide the list of numbers into half until its length 
+  reaches one (1).
+- **Conquer:** Sort each sublist.
+- **Combine:** Combine each sorted sublist.
+
+```py
+def merge_sort(A):
+  if A.length == 1:
+    return A
+    
+  middle = Math.floor(A.length / 2)
+  
+  # Divide
+  left_half = merge_sort(A[0, middle])
+  right_half = merge_sort(A[middle + 1, A.length])
+  
+  # Conquer and Combine
+  return merge(left_half, right_half);
+  
+def merge(Left, Right):
+  left_index = 0
+  right_index = 0
+  sorted = []
+  
+  while (left_index < Left.length && right_index < Right.length):
+    left = Left[left_index]
+    right = Right[right_index]
+    
+    if left < right:
+      sorted.push(left)
+      left_index += 1
+      continue
+    
+    if right < left:
+      sorted.push(right)
+      right_index += 1
+      continue
+      
+    if left == right:
+      sorted.push(left)
+      sorted.push(right)
+      left_index += 1
+      right_index += 1
+      
+      
+  while (left_index < Left.length):
+    left = Left[left_index]
+    right_index += 1
+    sorted.push(left)
+    
+  while (right_index < Right.length):
+    right = Right[right_index]
+    right_index += 1
+    sorted.push(right)
+    
+  return sorted
+```
