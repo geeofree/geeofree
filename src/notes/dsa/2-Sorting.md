@@ -33,6 +33,140 @@ If we wanted to sort this list of persons by `age` in ascending order we designa
 the sorting key to be the `age` property, while the remaining properties (`name` and 
 `address`) are the satellite data.
 
-## Heapsort
+## Heaps & Heapsort
 
-TODO
+### Heap
+
+A **heap** is a binary-tree data structure whose elements/nodes are stored in an array.
+
+The size of the heap is the number of elements within the heap structure and will 
+always be less than or equal to the array's length size.
+
+More formally:
+
+$$
+0 \leq A.heap\\_size \leq A.length\\_size
+$$
+
+![Figure 1: Heap Structure](/images/figures/dsa/heaps.png)
+
+The ff. procedures are used to index elements (in zero-based indexing) of a 
+heap structure:
+
+```py
+def get_parent_index(i):
+  return ceil(i / 2) - 1
+  
+def get_left_index(i):
+  return (2 * i) + 1
+  
+def get_right_index(i):
+  return (2 * i) + 2
+```
+
+Using the heap structure from the previous figure:
+
+```py
+parent_index = get_parent_index(1) # returns index 0
+left_index = get_left_index(1)     # returns index 3
+right_index = get_right_index(1)   # returns index 4
+
+A[parent_index] # returns 27
+A[left_index]   # returns 15
+A[right_index]  # returns 13
+```
+
+### Max & Min Heaps
+
+There are two kinds of heaps, namely:
+
+1. **Max-Heaps** are heaps where parent nodes are always greater than or equal to 
+   any of its child nodes.
+   
+   More formally:
+   
+   For an array $A$, a max-heap always has $A[parent\\_index(i)] \geq A[i]$
+
+2. **Min-Heaps** are the opposite of max-heaps in that the parent nodes are always 
+   smaller than or equal any of its child nodes.
+   
+   More formally:
+   
+   For an array $A$, a min-heap always has $A[parent\\_index(i)] \leq A[i]$
+
+> For this chapter max-heap is used for demonstration, however  the same 
+> method should work with min-heaps only in reverse.
+
+### Maintaining the max-heap property
+
+In order to maintain the max-heap property where $A[parent\\_index(i)] \geq A[i]$, 
+we must have a procedure that exactly does this, like so:
+
+```py
+def max_heapify(A, i):
+  li = left_index(i)
+  ri = right_index(i)
+  
+  largest_index = i
+  
+  if li < A.heap_size and A[li] > A[i]:
+    largest_index = li
+    
+  if ri < A.heap_size and A[ri] > A[largest_index]:
+    largest_index = ri
+    
+  if largest_index != i
+    swap(A[i], A[largest_index])
+    max_heapify(A, largest_index)
+```
+
+This `max_heapify` procedure maintains the max-heap property by swapping parent 
+nodes with the largest of its child node, recursively descending the tree until 
+it encounters a leaf node.
+
+### Building the max-heap
+
+A property of heaps is that $A[(\lfloor{n/2}\rfloor) ... n]$ are all leaves of 
+the tree where $n = A.heap\\_size$.
+
+Consequently with this property we can determine that $A[0] ... A[\lfloor{n/2}\rfloor - 1]$ 
+will either be a root or subroot node which can allow us to build the max-heap 
+tree:
+
+```py
+def build_max_heap(A):
+  for i := floor(A.length / 2) to 0:
+    max_heapify(A, i)
+```
+
+The `build_max_heap` procedure iteratively calls the `max_heapify` procedure from 
+the last subroot up to the root node.
+
+### Heapsort
+
+The heapsort algorithm sorts a max-heap structure by:
+
+1. Swapping the root node with the last node.
+2. Decrement the heap size by $1$.
+3. Fix the tree by calling $max\\_heapify(A, 0)$ to swap elements from the 
+   root up to the current $heap\\_size$ exclusively.
+4. Repeat step $1$ to $3$ until the last subroot is processed.
+
+```py
+def heapsort(A):
+  build_max_heap(A)
+  for i := A.length - 1 to 1:
+    # Swap the root node to the last node
+    swap(A[1], A[i])
+    
+    # Reduce the heap_size so the sorting procedure
+    # doesn't swap it against unvisited nodes; it stays
+    # in its final position
+    A.heap_size = A.heap_size - 1
+    
+    # Run the `max_heapify` procedure, fixing the tree from
+    # the root node downwards until `heap_size` exclusive.
+    max_heapify(A, 0)
+```
+
+See: [Wikipedia: Heapsort Example](https://en.wikipedia.org/wiki/Heapsort#Example) to view how the heapsort algorithm works visually.
