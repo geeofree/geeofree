@@ -1,0 +1,38 @@
+---
+title: 'Chapter 2: Sorting Algorithms'
+description: 'A selection of sorting algorithms and its runtime analysis'
+---
+
+## Sorting Algorithms
+
+For a given list of entries $a_{1}, a_{2}, a_{3}, ..., a_{n}$, a sorting algorithm 
+permutates these entries such that it is sorted in:
+
+- Ascending order: $a^{'}_1 \leq a^{'}_2 \leq a^{'}_3 \leq ... \leq a^{'}_n$
+- Descending order: $a^{'}_1 \geq a^{'}_2 \geq a^{'}_3 \geq ... \geq a^{'}_n$
+
+In general, sorting algorithms sort records of entries that contain a *[sorting] key* 
+which is the value of a property to be sorted and may contain *satellite data* 
+which are the remaining properties within the structure of an entry in the 
+record.
+
+For example, if there is a list of records that contain a person's information 
+using the following structure:
+
+```c
+struct {
+  char *name;
+  char *address;
+  unsigned int age;
+} typedef Person;
+
+Person[10] persons = { ... };
+```
+
+If we wanted to sort this list of persons by `age` in ascending order we designate
+the sorting key to be the `age` property, while the remaining properties (`name` and 
+`address`) are the satellite data.
+
+## Heapsort
+
+TODO
