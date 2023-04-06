@@ -33,6 +33,17 @@ module.exports = (eleventyConfig) => {
     .sort((a, b) => a.data.order - b.data.order)
   ))
 
+  eleventyConfig.addCollection('notes', collection => (
+    collection
+    .getFilteredByTag('notes')
+    .slice()
+    .sort((a, b) => {
+      if (a.data.title > b.data.title) return 1;
+      if (a.data.title < b.data.title) return -1;
+      return 0;
+    })
+  ))
+
   // Shortcodes
   eleventyConfig.addShortcode('isActiveLink', function (url) {
     if (url === this.page.url) return 'active-link'
