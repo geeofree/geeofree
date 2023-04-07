@@ -16,6 +16,14 @@
     ]
   },
   {
+    "name": "UI Workout",
+    "description": "Personal website to practice, showcase, implement UI/UX design challenges",
+    "links": [
+      { "icon": "www.png", "url": "https://ui-workout-rho.vercel.app/" },
+      { "icon": "github.png", "url": "https://github.com/geeofree/ui-workout" }
+    ]
+  },
+  {
     "name": "ishould",
     "description": "Interactive CLI TODO list on NodeJS.",
     "links": [
