@@ -14,7 +14,11 @@ css: projects.css
 
 {% for project in projects %}
 <div class="project">
-  <h4>{{ project.name }}</h4>
+  <h4>
+    <a href="{{ project.links[0].url }}" target="_blank" rel="noopener noreferrer">
+      {{ project.name }}
+    </a>
+  </h4>
 	<ul class="links">
     {% for link in project.links %}
 		<li>
