@@ -109,12 +109,12 @@ def max_heapify(A, i):
   
   largest_index = i
   
-  if li < A.heap_size and A[li] > A[i]:
+  if li < A.heap_size and A[largest_index] < A[li]:
     largest_index = li
-    
-  if ri < A.heap_size and A[ri] > A[largest_index]:
+
+  if ri < A.heap_size and A[largest_index] < A[ri]:
     largest_index = ri
-    
+
   if largest_index != i
     swap(A[i], A[largest_index])
     max_heapify(A, largest_index)
@@ -147,9 +147,9 @@ the last subroot up to the root node.
 The heapsort algorithm sorts a max-heap structure by:
 
 1. Swapping the root node with the last node.
-2. Decrement the heap size by $1$.
-3. Fix the tree by calling $max\\_heapify(A, 0)$ to swap elements from the 
+2. Fix the tree by calling $max\\_heapify(A, 0)$ to swap elements from the 
    root up to the current $heap\\_size$ exclusively.
+3. Decrement the heap size by $1$.
 4. Repeat step $1$ to $3$ until the last subroot is processed.
 
 ```py
@@ -159,14 +159,14 @@ def heapsort(A):
     # Swap the root node to the last node
     swap(A[1], A[i])
     
+    # Run the `max_heapify` procedure, fixing the tree from
+    # the root node downwards until `heap_size` exclusive.
+    max_heapify(A, 0)
+    
     # Reduce the heap_size so the sorting procedure
     # doesn't swap it against unvisited nodes; it stays
     # in its final position
     A.heap_size = A.heap_size - 1
-    
-    # Run the `max_heapify` procedure, fixing the tree from
-    # the root node downwards until `heap_size` exclusive.
-    max_heapify(A, 0)
 ```
 
 See: [Wikipedia: Heapsort Example](https://en.wikipedia.org/wiki/Heapsort#Example) to view how the heapsort algorithm works visually.
