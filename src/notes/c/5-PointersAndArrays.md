@@ -331,3 +331,86 @@ int main() {
   print_things(&i, 'i');
 }
 ```
+
+It should be noted that is illegal to derefence void pointers as they don't have any 
+meaningful way to represent the data that they hold.
+
+Consequently, indexing void pointers like so:
+
+```c
+void for_each(void *array) {
+  int i = 0;
+  // Error!
+  array[i];
+}
+```
+
+Is also illegal since semantically, `array[i]` here means the same as:
+
+```c
+*(array + i)
+```
+
+### Pointer arithmetic on void pointers
+
+It should also be noted that doing pointer arithmetic to void pointers requires the size 
+of a known type since `sizeof(void)` is undefined.
+
+For example, the ff. is incorrect:
+
+```c
+#include <stdio.h>
+#include <stddef.h>
+
+#define SIZE(array) (sizeof(array))/(sizeof(array[0]))
+
+void for_each(void *array, size_t array_length, void (*callback)(void *item));
+
+void print_int(void *item);
+
+int main() {
+  int numbers[] = { 1, 2, 3, 4, 5 };
+  for_each(numbers, SIZE(numbers), print_int);
+  printf("\n");
+  return 0;
+}
+
+void for_each(void *array, size_t array_length, void (*callback)(void *item)) {
+  size_t i;
+  for (i = 0; i < array_length; i++) {
+    // Illegal.
+    callback(array + i);
+  }
+}
+
+void print_int(void *item) {
+  // This will produce errors.
+  printf("%d ", *(int *)item);
+}
+```
+
+The issue on the previous example is because the `array` void pointer variable is being 
+incremented with `i`. However, since `void` doesn't really have a size then the program 
+won't really know how much size (bytes) to move the pointer.
+
+To fix this, the `for_each` function needs to know about some size of a known type.
+
+This way the program can move the void pointer to a valid location in memory when it is 
+being used.
+
+In this case:
+
+```c
+void for_each(void *array, size_t array_length, size_t item_size, void (*callback)(void *item)) {
+  size_t i;
+  for (i = 0; i < array_length; i++) {
+    // Multiply the index to the size of the item.
+    callback(array + (i * item_size));
+  }
+}
+```
+
+```c
+// Give it the size of `int` in this case.
+for_each(numbers, SIZE(numbers), sizeof(numbers[0]), print_int);
+```
