@@ -57,3 +57,7 @@ div.note-text-container > p {
   margin: 0;
   font-size: 0.75em;
 }
+
+header.note-header > h1 > img {
+  height: 256px;
+}

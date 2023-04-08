@@ -14,3 +14,7 @@ header.note-header > h1 {
 header.note-header > p {
   color: var(--text-muted);
 }
+
+header.note-header > h1 > img {
+  height: 256px;
+}
