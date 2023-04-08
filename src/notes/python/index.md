@@ -11,3 +11,4 @@ Resource: [Python's official tutorial docs](https://docs.python.org/3/tutorial/i
 
 * [Chapter 1: Basics](1-PythonBasics)
 * [Chapter 2: Control Flow](2-PythonControlFlow)
+* [Chapter 3: Data Structures](3-PythonDataStructures)

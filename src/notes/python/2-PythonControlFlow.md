@@ -115,3 +115,22 @@ Are anonymous functions that have the form:
 ```py
 lambda <args>: <expression>
 ```
+
+For example:
+
+```py
+def map(list, callback):
+    new_list = []
+    for item in list:
+        new_list.append(callback(item))
+    return new_list
+
+numbers = [1,2,3,4]
+squares = map(numbers, lambda x: x ** 2)
+
+# [1,2,3,4]
+print(numbers)
+
+# [1,4,9,16]
+print(squares)
+```
