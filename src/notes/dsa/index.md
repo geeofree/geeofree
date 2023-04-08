@@ -10,4 +10,5 @@ Reference: [Introduction to Algorithms (4th ed.) - CLRS](https://www.amazon.com/
 ### Table of Contents
 
 * [Chapter 1: Introduction to Algorithms, Techniques, and Analysis](1-AlgorithmsIntro)
-* [Chapter 2: Sorting Algorithms](2-Sorting)
+* [Chapter 2: Sorting Algorithms](2-Sorting/2.0-SortingIntro)
+  * [Chapter 2.1: Heapsort](2-Sorting/2.1-Heapsort)
