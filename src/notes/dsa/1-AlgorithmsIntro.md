@@ -30,45 +30,35 @@ control-flow structures.
 
 For example:
 
-**Variables**
+```py
+# Variables
+x := 4
+y := x
 
-$\text{x := 4}$
+# Arithmetic Operations
+x + y
+x - y
+x * y
+x / y
+x % y
 
-$\text{y := x}$
+# Branching Statements
 
-**Arithmetic Operators**
+if P:
+  # body of if-statement
+else if S:
+  # body of else-if-statement
+else:
+  # body of else-statement
+  
+# Loops
 
-$\text{+, -, *, /, \\%}$
+for i to n:
+  # body of for-loop
 
-**Logical Operators**
-
-$\text{>, <, ==, !=, >=, <=}$
-
-**Branching Statements**
-
-$\text{if P then}$
-
-$\hspace{1em} \text{\\# Expression(s) or statement(s)}$
-
-$\text{else if M then}$
-
-$\hspace{1em} \text{\\# Expression(s) or statement(s)}$
-
-$\text{else}$
-
-$\hspace{1em} \text{\\# Expression(s) or statement(s)}$
-
-**While Loop**
-
-$\text{while P then}$
-
-$\hspace{1em} \text{\\# Expression(s) or statement(s)}$
-
-**For Loop**
-
-$\text{for i := a to n}$
-
-$\hspace{1em} \text{\\# Expression(s) or statement(s)}$
+while P:
+  # body of while-loop
+```
 
 ## Analysis
 

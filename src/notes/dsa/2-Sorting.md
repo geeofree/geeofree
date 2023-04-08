@@ -45,7 +45,7 @@ always be less than or equal to the array's length size.
 More formally:
 
 $$
-0 \leq A.heap\\_size \leq A.length\\_size
+0 \leq A.heap\_size \leq A.length\_size
 $$
 
 ![Figure 1: Heap Structure](/images/figures/dsa/heaps.png)
@@ -85,21 +85,21 @@ There are two kinds of heaps, namely:
    
    More formally:
    
-   For an array $A$, a max-heap always has $A[parent\\_index(i)] \geq A[i]$
+   For an array $A$, a max-heap always has $A[parent\_index(i)] \geq A[i]$
 
 2. **Min-Heaps** are the opposite of max-heaps in that the parent nodes are always 
    smaller than or equal any of its child nodes.
    
    More formally:
    
-   For an array $A$, a min-heap always has $A[parent\\_index(i)] \leq A[i]$
+   For an array $A$, a min-heap always has $A[parent\_index(i)] \leq A[i]$
 
 > For this chapter max-heap is used for demonstration, however  the same 
 > method should work with min-heaps only in reverse.
 
 ### Maintaining the max-heap property
 
-In order to maintain the max-heap property where $A[parent\\_index(i)] \geq A[i]$, 
+In order to maintain the max-heap property where $A[parent\_index(i)] \geq A[i]$, 
 we must have a procedure that exactly does this, like so:
 
 ```py
@@ -127,7 +127,7 @@ it encounters a leaf node.
 ### Building the max-heap
 
 A property of heaps is that $A[(\lfloor{n/2}\rfloor) ... n]$ are all leaves of 
-the tree where $n = A.heap\\_size$.
+the tree where $n = A.heap\_size$.
 
 Consequently with this property we can determine that $A[0] ... A[\lfloor{n/2}\rfloor - 1]$ 
 will either be a root or subroot node which can allow us to build the max-heap 
@@ -147,9 +147,9 @@ the last subroot up to the root node.
 The heapsort algorithm sorts a max-heap structure by:
 
 1. Swapping the root node with the last node.
-2. Fix the tree by calling $max\\_heapify(A, 0)$ to swap elements from the 
-   root up to the current $heap\\_size$ exclusively.
-3. Decrement the heap size by $1$.
+2. Fixing the heap structure by calling $max\_heapify(A, 0)$ to swap elements 
+   from the root up to, but not including, the current $heap\_size$.
+3. Decrementing the heap size by $1$.
 4. Repeat step $1$ to $3$ until the last subroot is processed.
 
 ```py
