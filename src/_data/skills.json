@@ -6,7 +6,8 @@
   {
     "name": "Programming Languages",
     "values": [
-      "JavaScript/TypeScript",
+      "JS/TS",
+      "Python",
       "C",
       "Lua",
       "Bash",
