@@ -2,7 +2,7 @@
 tagID: python
 tags: notes
 title: Python
-description: Trying to learn Python.
+description: Trying to [re]learn Python.
 ---
 
 Resource: [Python's official tutorial docs](https://docs.python.org/3/tutorial/index.html).
