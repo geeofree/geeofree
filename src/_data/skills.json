@@ -49,7 +49,7 @@
   },
   {
     "name": "Web Servers",
-    "values": ["NodeJS/Express", "PHP/Laravel", "Ruby/Rails"]
+    "values": ["ExpressJS", "Laravel", "Flask", "Rails"]
   },
   {
     "name": "Databases",
