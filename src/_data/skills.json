@@ -20,6 +20,7 @@
     "name": "UI Frameworks/Libraries",
     "values": [
       "React",
+      "NextJS",
       "AngularJS",
       "Eleventy",
       "AlpineJS"
