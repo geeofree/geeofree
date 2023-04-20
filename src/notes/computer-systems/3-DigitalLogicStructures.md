@@ -6,7 +6,7 @@ description: Transistors, Circuits, and Logic Gates.
 ## The Transistor
 
 Transistors are *semiconductor* devices that can amplify or toggle (switch) electrical 
-signals and are the basic units in any modern Computing Systems.
+signals and are the basic units in any modern Computing System.
 
 There are two types of transistors that are commonly in used:
 
@@ -15,13 +15,13 @@ There are two types of transistors that are commonly in used:
 
 Some of their main differences are:
 
-| BJT                                     | FET                                     |
-|-----------------------------------------|-----------------------------------------|
-| Current is controlled with **current**. | Current is controlled with **voltage**. |
-| Affected by temperature quickly.        | Affected by temperature less.           |
-| Breaks quickly.                         | Durable.                                |
-| Suitable for hobby electronic devices.  | Suitable for commercial products.       |
-| Low switching speed.                    | High switching speed.                   |
+| BJT                                                | FET                                                |
+|----------------------------------------------------|----------------------------------------------------|
+| Electrical current is controlled with **current**. | Electrical current is controlled with **voltage**. |
+| Affected by temperature quickly.                   | Affected by temperature less.                      |
+| Breaks quickly.                                    | Durable.                                           |
+| Suitable for hobby electronic devices.             | Suitable for commercial products.                  |
+| Low switching speed.                               | High switching speed.                              |
 
 In both cases these transistors have three [terminals](https://en.wikipedia.org/wiki/Terminal_(electronics)) that have the same characteristics:
 
@@ -43,8 +43,8 @@ the current flowing to the transistor based on the configuration:
 
 In general, N-Type and P-Type transistors are *complimentary* of each other:
 
-* N-Type transistors **allows** the flow of current if a given voltage is provided.
-* P-Type transistors **stops** the flow of current if a given voltage is given.
+* N-Type transistors **allows** the flow of electrical current if voltage is given.
+* P-Type transistors **stops** the flow of electrical current if voltage is given.
 
 A common circuit design that takes advantage of these properties of transistors is 
 called the **CMOS (Complimentary Metal-Oxide Semiconductor)** circuit and is the basis 
