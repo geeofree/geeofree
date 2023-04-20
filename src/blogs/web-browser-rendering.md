@@ -1,6 +1,6 @@
 ---
 title: 'Web Browser Rendering'
-description: 'A look into how web browsers render resources such as HTML/CSS into pixels on the screen.'
+description: 'A brief look into how web browsers render resources such as HTML/CSS into pixels on the screen.'
 ---
 
 ## High-Level Components Of Web Browsers
@@ -188,21 +188,27 @@ category.
 
 ## Render Tree
 
-TBD: Give a brief description of what occurs during the render tree construction phase
+Once the DOM and CSSOM trees have been generated, the *render tree* can now be constructed. 
+
+This process involves determinating all **visible** DOM nodes and also calculating the style 
+properties of each visible DOM node.
+
+For example, DOM nodes that have a style property of `display: none` will be removed from 
+the render tree construction while DOM nodes that contain `visible: hidden` will still 
+be added to the render tree.
+
+This is simply because `display: none` indicates the removal of the DOM node while `visible: hidden` 
+only indicates the *opacity* of the DOM node.
 
 ## Layout
 
-TBD: Give a summary of what occurs during the layout phase. Discuss the CSS box model.
+Once the render tree is constructed, the layout or final position of each node within this tree 
+is calculated in relation to the viewport and all other nodes within the tree.
 
 ## Paint
 
-TBD: Give an example of what the final output is on the viewport for the previous 
-HTML/CSS code samples.
-
-## Analyzing The Rendering Process
-
-TBD: Give a description on how to analyze the rendering process using the browser dev tools 
-(specifically using Google Chrome).
+Finally, once the DOM, CSSOM, render tree, and layout have been constructed and calculated, the 
+elements are now drawn into the viewport.
 
 ## References
 
