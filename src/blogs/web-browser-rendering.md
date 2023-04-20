@@ -212,5 +212,5 @@ elements are now drawn into the viewport.
 
 ## References
 
-- [web.dev: How Browsers Work](https://web.dev/howbrowserswork/#style-sheet-cascade-order)
+- [web.dev: How Browsers Work](https://web.dev/howbrowserswork)
 - [Ilya Grigorik: Constructing The Object Model](https://web.dev/critical-rendering-path-constructing-the-object-model/)
