@@ -1,6 +1,6 @@
 ---
 title: 'Web Browser Rendering'
-description: 'A look into how a web browsers render resources such as HTML/CSS into pixels on the screen.'
+description: 'A look into how web browsers render resources such as HTML/CSS into pixels on the screen.'
 ---
 
 ## High-Level Components Of Web Browsers
@@ -80,7 +80,111 @@ May get generated as the ff. DOM tree:
 
 ### CSS Object Model (CSSOM) Tree
 
-TBD: Give an example of the CSSOM Tree
+For a given CSS stylesheet resource like the ff.:
+
+```css
+body {
+  font-size: 16px;
+}
+
+span {
+  color: yellow;
+}
+
+p {
+  font-weight: bold;
+}
+
+p > span {
+  color: red;
+}
+
+h1 {
+  font-size: 24px;
+}
+```
+
+This should generate a CSSOM tree like so:
+
+![Figure 4: CSSOM Tree Example](/images/cssom-tree-example.png)
+
+For each child node in the tree it *inherits* [most] style properties from 
+its parent if not declared.
+
+For example, all child elements of the `body` node in this example will get 
+a `font-size` of `16px`, specifically these are the `p` and `span` elements.
+
+The `h1` element in this case however will receive a `font-size` of `24px` since 
+it has a specific style rule indicating this.
+
+#### Specificity
+
+*Specificity* is the algorithm browsers use to determine which style rules to apply 
+to competing style declarations.
+
+The algorithm uses four (4) categories, each containing either $0$ or a positive 
+integer, all each of which are set to $0$ by default.
+
+Values in each category are *increased* based on the ff.:
+
+1. Any selector that is defined in an element's `style` attribute will increase 
+   the specificity value of its **first** category by $1$.
+2. ID selectors will increase the specificity value of its **second** category by $1$.
+3. Other selector attributes or pseudo-classes in the selector will increase 
+   the specificity value of its **third** category by 1.
+4. Element name selectors or pseudo-elements increases the specificity value of its 
+   **fourth** category by 1.
+
+For example:
+
+```css
+/** 0-0-0-1 */
+p {}
+
+/** 0-0-1-0 */
+[name="foo"] {}
+
+/** 0-0-1-0 */
+.bar {}
+
+/** 0-1-0-0 */
+#thing {}
+
+/** 0-1-1-0 */
+#thing.foo {}
+
+/** 0-1-1-1 */
+p#thing.foo {}
+```
+
+The algorithm selects the declaration based on the category with the 
+highest value from first to fourth category.
+
+So for example:
+
+```css
+/** 0-0-3-0 */
+p.foo.foo.foo {
+  color: red;
+}
+
+/** 0-1-0-0 */
+p#bar {
+  color: blue;
+}
+```
+
+```html
+<p id="bar" class="foo">hello</p>
+```
+
+Here, the `p` element will get a `blue` color since `p#bar` has higher category precedence 
+than `p.foo.foo.foo` even though the latter contains a specificity value of $3$ for its 
+category.
+
+> For more information on specificity please see: 
+> - [MDN: Specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
+> - [CSS Spec: Specificity](https://www.w3.org/TR/CSS2/cascade.html#specificity)
 
 ## Render Tree
 
