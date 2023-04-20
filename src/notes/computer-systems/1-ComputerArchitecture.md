@@ -21,7 +21,7 @@ can work with.
 * **Data Type** the representation of a data *ie.* *integer*, *float*, *char*
 * **Addressing Mode** identifies operands in a computer.
 
-There are also two classifications of instruction sets, namely:
+ISAs can also be classified into two categories, namely:
 
 #### Complex Instruction Set Computer (RISC)
 
