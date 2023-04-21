@@ -46,12 +46,40 @@ In general, N-Type and P-Type transistors are *complimentary* of each other:
 * N-Type transistors **allows** the flow of electrical current if voltage is given.
 * P-Type transistors **stops** the flow of electrical current if voltage is given.
 
-A common circuit design that takes advantage of these properties of transistors is 
-called the **CMOS (Complimentary Metal-Oxide Semiconductor)** circuit and is the basis 
-for most *Logic Gates*.
+A common circuit design that takes advantage of these properties of transistors 
+is called the **CMOS (Complimentary Metal-Oxide Semiconductor)** circuit and 
+is the basis for most *Logic Gates*.
 
 ## Logic Gates
 
 Logical operators built from transistors.
 
 ![Logic Gates](/images/figures/computer-systems/logic-gates.png)
+
+> TODO: Provide sample schematics for different boolean logic gates using 
+> CMOS circuits.
+
+## Combinational Logic Circuits
+
+A *combinational* (sometimes called *combinatorial*) logic circuit is a type 
+of [digital logic](https://en.wikipedia.org/wiki/Digital_logic) whose operations are [pure](https://en.wikipedia.org/wiki/Pure_function) ie. it doesn't have state or 
+use memory and only generates outputs.
+
+### Decoder
+
+A decoder is a combinational logic circuit that contains $2^n$ outputs where 
+$n$ is the number of inputs.
+
+Each output terminal in a decoder corresponds to the bit permutation of the 
+input terminals.
+
+![Decoder Schematic](/images/figures/computer-systems/decoder.png)
+
+Decoder truth table:
+
+| a   | b   | s0  | s1  | s2  | s3  |
+|-----|-----|-----|-----|-----|-----|
+| $0$ | $0$ | $1$ | $0$ | $0$ | $0$ |
+| $0$ | $1$ | $0$ | $1$ | $0$ | $0$ |
+| $1$ | $0$ | $0$ | $0$ | $1$ | $0$ |
+| $1$ | $1$ | $0$ | $0$ | $0$ | $1$ |
