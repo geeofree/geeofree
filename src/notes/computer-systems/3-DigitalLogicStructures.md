@@ -106,3 +106,30 @@ and whenever $s0$ is $1$ the output of the multiplexer is whatever value $b$ has
 
 Conversely there is also the [demultiplexer](https://en.wikipedia.org/wiki/Multiplexer#Digital_demultiplexers) which contains a single input, 
 $2^n$ outputs, and $n$ select terminals.
+
+### Full-Adder
+
+A full-adder (or *1-bit adder*) is a combinational logic circuit that contains:
+
+1. Three (3) input terminals: two (2) of which are the operands for the sum 
+   operation and the other is the *carry-over* bit.
+2. Two (2) output terminals: one (1) for the *carry* bit and the other the 
+   sum bit.
+
+![Full-Adder Schematic](/images/figures/computer-systems/full-adder.png)
+
+Full-adder truth table:
+
+| $a$ | $b$ | $C$ | $S$ | $Cr$ |
+|-----|-----|-----|-----|------|
+| $0$ | $0$ | $0$ | $0$ | $0$  |
+| $0$ | $0$ | $1$ | $1$ | $0$  |
+| $0$ | $1$ | $0$ | $1$ | $0$  |
+| $0$ | $1$ | $1$ | $0$ | $1$  |
+| $1$ | $0$ | $0$ | $1$ | $0$  |
+| $1$ | $0$ | $1$ | $0$ | $1$  |
+| $1$ | $1$ | $0$ | $0$ | $1$  |
+| $1$ | $1$ | $1$ | $1$ | $1$  |
+
+There is also the notion of a [half-adder](https://en.wikipedia.org/wiki/Adder_(electronics)#Half_adder) which is essentially a 
+full-adder but without a *carry-over* input terminal.
