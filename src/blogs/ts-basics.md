@@ -62,7 +62,7 @@ let nothing: void = undefined // undefined value
 
 #### Arrays
 
-There are two syntaxes to define arrays in TypeScript:
+There are two syntaxes to define arrays of things in TypeScript:
 
 ```ts
 let fib: number[] = [1, 2, 3, 5, 8]
@@ -280,7 +280,7 @@ let dog: Dog = {
   name: 'Lexie',
   age: 2,
   breed: 'Shih Tzu',
-  furColors: ['black', 'white, 'brown'], // Error, `furColors` is not in type `Dog`
+  furColors: ['black', 'white', 'brown'], // Error, `furColors` is not in type `Dog`
 }
 ```
 
