@@ -83,3 +83,26 @@ Decoder truth table:
 | $0$ | $1$ | $0$ | $1$ | $0$ | $0$ |
 | $1$ | $0$ | $0$ | $0$ | $1$ | $0$ |
 | $1$ | $1$ | $0$ | $0$ | $0$ | $1$ |
+
+### Multiplexer (Mux)
+
+A multiplexer (or *mux*) is a combinational logic circuit that contains $2^n$ inputs, 
+$n$ select terminals, and $1$ output terminal.
+
+A multiplexer's output is determined by the permutation of the select signals 
+from given input signals.
+
+![Multiplexer Schematic](/images/figures/computer-systems/multiplexer.png)
+
+Multiplexer truth table:
+
+| s0  | C   |
+|-----|-----|
+| $0$ | $a$ |
+| $1$ | $b$ |
+
+Here, whenever $s0$ is $0$ the output of the multiplexer is whatever value $a$ has, 
+and whenever $s0$ is $1$ the output of the multiplexer is whatever value $b$ has.
+
+Conversely there is also the [demultiplexer](https://en.wikipedia.org/wiki/Multiplexer#Digital_demultiplexers) which contains a single input, 
+$2^n$ outputs, and $n$ select terminals.
