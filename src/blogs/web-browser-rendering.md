@@ -190,7 +190,7 @@ category.
 
 Once the DOM and CSSOM trees have been generated, the *render tree* can now be constructed. 
 
-This process involves determinating all **visible** DOM nodes and also calculating the style 
+This process involves determining all **visible** DOM nodes and also calculating the style 
 properties of each visible DOM node.
 
 For example, DOM nodes that have a style property of `display: none` will be removed from 
