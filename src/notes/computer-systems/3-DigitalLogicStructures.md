@@ -188,4 +188,4 @@ which consequently will set $b = 1$.
 Once at this state, $C$ will always be $1$ regardless of the value of $a$.
 
 > **NOTE**: Please see [Ben Eater: SR Latch](https://www.youtube.com/watch?v=KM0DdEaY5sY0) for a video demonstration of this and a 
-> more indepth explanation on the SR Latch.
+> more indepth discussion on the SR Latch.
