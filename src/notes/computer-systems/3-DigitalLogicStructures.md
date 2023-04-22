@@ -133,3 +133,42 @@ Full-adder truth table:
 
 There is also the notion of a [half-adder](https://en.wikipedia.org/wiki/Adder_(electronics)#Half_adder) which is essentially a 
 full-adder but without a *carry-over* input terminal.
+
+## Basic Storage Elements
+
+The ff. are digital logic structures that can store/persist values which are 
+building blocks for memory devices.
+
+### SR Latch
+
+The SR (set/reset) Latch is a digital logic structure that *persists* a
+single bit of information.
+
+One of the most common way to implement SR Latches in a digital circuit 
+is to use two (2) NAND gates whose output of each is one of the inputs 
+of the other.
+
+![SR Latch Schematic](/images/figures/computer-systems/sr-latch.png)
+
+To build a basic intuition about how this can work we can imagine an 
+OR gate whose output feeds into one of its input:
+
+![OR Gate Persistence](/images/figures/computer-systems/or-gate-persistance.png)
+
+Recall that the truth table of the OR logical operator is as follows:
+
+| $a$ | $b$ | $C$ |
+|-----|-----|-----|
+| $0$ | $0$ | $0$ |
+| $0$ | $1$ | $1$ |
+| $1$ | $0$ | $1$ |
+| $1$ | $1$ | $1$ |
+
+For the OR gate in this case: if the input terminal $a$ is given a high input 
+signal (a value of 1), then the output $C$ will equal to $1$ as $a \lor b = 1 \lor 0 = 1$ 
+which consequently will set $b = 1$.
+
+Once at this state, $C$ will always be $1$ regardless of the value of $a$.
+
+Please see [Ben Eater: SR Latch](https://www.youtube.com/watch?v=KM0DdEaY5sY0) for a video demonstration of this and a more 
+indepth explanation of the SR Latch.
