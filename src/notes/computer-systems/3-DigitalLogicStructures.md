@@ -111,8 +111,8 @@ $2^n$ outputs, and $n$ select terminals.
 A full-adder (or *1-bit adder*) is a combinational logic circuit that contains:
 
 1. Three (3) input terminals: two (2) of which are the operands for the sum 
-   operation and the other is the *carry-over* bit.
-2. Two (2) output terminals: one (1) for the *carry* bit and the other the 
+   operation and the other is the *carry* bit.
+2. Two (2) output terminals: one (1) for the *carry-over* bit and the other the 
    sum bit.
 
 ![Full-Adder Schematic](/images/figures/computer-systems/full-adder.png)
@@ -131,7 +131,7 @@ Full-adder truth table:
 | $1$ | $1$ | $1$ | $1$ | $1$  |
 
 There is also the notion of a [half-adder](https://en.wikipedia.org/wiki/Adder_(electronics)#Half_adder) which is essentially a 
-full-adder but without a *carry-over* input terminal.
+full-adder but without a *carry* input terminal.
 
 ## Basic Storage Elements
 
