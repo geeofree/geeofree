@@ -189,3 +189,18 @@ Once at this state, $C$ will always be $1$ regardless of the value of $a$.
 
 > **NOTE**: Please see [Ben Eater: SR Latch](https://www.youtube.com/watch?v=KM0DdEaY5sY0) for a video demonstration of this and a 
 > more indepth discussion on the SR Latch.
+
+### D-Latch
+
+The D-Latch (or *Data Latch*) is a digital logic structure that is an 
+extension of the SR Latch.
+
+The D-Latch uses a single input to toggle the state of the SR latch with an 
+auxiliary input called the *write-enable (WE)* input.
+
+The D-Latch can only change the state of the latch if the WE input is on.
+
+![D-Latch Schematic](/images/figures/computer-systems/d-latch.png)
+
+> **NOTE**: Please see [Ben Eater: D-Latch](https://www.youtube.com/watch?v=KM0DdEaY5sY0) on youtube for more information 
+> about the D-Latch digital logic circuit.
