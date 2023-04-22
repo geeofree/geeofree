@@ -52,18 +52,17 @@ is the basis for most *Logic Gates*.
 
 ## Logic Gates
 
-Logical operators built from transistors.
+Logical operators built from transistors; digital logic circuits.
+
+The ff. are schematic symbols of digital logical operators:
 
 ![Logic Gates](/images/figures/computer-systems/logic-gates.png)
 
-> TODO: Provide sample schematics for different boolean logic gates using 
-> CMOS circuits.
-
 ## Combinational Logic Circuits
 
-A *combinational* (sometimes called *combinatorial*) logic circuit is a type 
-of [digital logic](https://en.wikipedia.org/wiki/Digital_logic) whose operations are [pure](https://en.wikipedia.org/wiki/Pure_function) ie. it doesn't have state or 
-use memory and only generates outputs.
+A *combinational* (or *combinatorial*) logic circuit is a type of [digital logic](https://en.wikipedia.org/wiki/Digital_logic) 
+whose operations are [pure](https://en.wikipedia.org/wiki/Pure_function) ie. it doesn't have state or use memory and only 
+generates outputs based from its inputs.
 
 ### Decoder
 
