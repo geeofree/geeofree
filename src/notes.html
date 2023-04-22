@@ -21,7 +21,7 @@ css: notes.css
       </div>
       <div class="note-text-container">
         <h4>{{ note.data.title }}</h4>
-        <p>{{ collections[note.data.tagID].length }} note(s) written.</p>
+        <p>{{ collections[note.data.tagID].length | minusOne }} note(s) written.</p>
       </div>
     </section>
   </a>

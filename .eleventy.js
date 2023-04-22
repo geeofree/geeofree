@@ -56,6 +56,7 @@ module.exports = (eleventyConfig) => {
 
   // Filters
   eleventyConfig.addFilter('formatDate', date => formatDate(date, 'P KK:mma z'))
+  eleventyConfig.addFilter('minusOne', num => num - 1)
 
   // Libraries
   eleventyConfig.setLibrary('md', markdownLibrary)
