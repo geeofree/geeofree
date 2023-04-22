@@ -149,8 +149,26 @@ of the other.
 
 ![SR Latch Schematic](/images/figures/computer-systems/sr-latch.png)
 
-To build a basic intuition about how this can work we can imagine an 
-OR gate whose output feeds into one of its input:
+In an SR Latch, the $S$ or *set* input sets the state of the latch (in this 
+case the output $a$) to a $1$, whereas the $R$ or *reset* input resets or 
+clears the state of the latch to a $0$.
+
+Assuming that the initial state of a circuit like this is the ff.:
+
+- $S = 0$
+- $R = 0$
+- $a = 1$
+- $b = 0$
+
+In this case:
+
+- $a$ will remain with a value of $1$ regardless of what the value of $S$ is 
+  iff. $R$ is $0$.
+- $a$ will remain with a value of $0$ regardless of what the value of $R$ is 
+  iff. $S$ is $0$.
+
+To build a basic intuition about how this works we can imagine an OR gate 
+whose output feeds into one of its input:
 
 ![OR Gate Persistence](/images/figures/computer-systems/or-gate-persistance.png)
 
