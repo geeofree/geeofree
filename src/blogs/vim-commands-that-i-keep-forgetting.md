@@ -1,5 +1,5 @@
 ---
-title: "Some Neat Vim Commands"
+title: "Some Vim Commands"
 description: "A list of neat vim commands that I keep forgetting about."
 ---
 
