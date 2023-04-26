@@ -1,6 +1,6 @@
 ---
 title: TypeScript Basics
-description: Everything you need to know to get started with TypeScript.
+description: Basic concepts in TypeScript.
 tags:
   - guides
   - typescript
