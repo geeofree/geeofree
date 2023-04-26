@@ -3,8 +3,8 @@ title: Git Gud
 description: A summary of selected topics discussed in the book "Pro Git" by Scott C. & Ben S.
 ---
 
-This post is a summary or excerpt of selected topics discussed in the 
-free e-book: [Pro Git](https://git-scm.com/book/en/v2) by Scott Chacon & Ben Straub.
+This post is an excerpt of selected topics discussed in the free e-book: 
+[Pro Git](https://git-scm.com/book/en/v2) by Scott Chacon & Ben Straub.
 
 Please see the referenced materials to learn more.
 
