@@ -54,8 +54,12 @@ div.note-text-container > h4 {
 
 div.note-text-container > p {
   color: var(--text-muted);
-  margin: 0;
+  margin: 0.25em 0;
   font-size: 0.75em;
+}
+
+div.note-text-container > p:last-child {
+  font-size: 0.65em;
 }
 
 header.note-header > h1 > img {

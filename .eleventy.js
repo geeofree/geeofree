@@ -1,6 +1,7 @@
 const path = require('path')
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const formatDate = require('date-fns/format')
+const maxDate = require('date-fns/max')
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItMathjax = require("markdown-it-mathjax3");
@@ -44,6 +45,15 @@ module.exports = (eleventyConfig) => {
       if (a.data.title > b.data.title) return 1;
       if (a.data.title < b.data.title) return -1;
       return 0;
+    })
+    .map(note => {
+      const lastUpdatedDate = maxDate(
+        collection
+          .getFilteredByTag(note.data.tagID)
+          .map(noteCollection => noteCollection.date)
+      )
+      note.lastUpdatedDate = lastUpdatedDate;
+      return note;
     })
   ))
 
