@@ -5,8 +5,6 @@ tags:
   - guides
 ---
 
-## Introduction
-
 This is a post on some basic concepts of Make that I wanted to write 
 so that I can easily get myself started whenever I come back to writing 
 C programs (or any other compiled programs in the future).
