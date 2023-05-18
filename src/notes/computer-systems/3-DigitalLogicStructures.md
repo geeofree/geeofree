@@ -204,3 +204,53 @@ The D-Latch can only change the state of the latch if the WE input is on.
 
 > **NOTE**: Please see [Ben Eater: D-Latch](https://www.youtube.com/watch?v=KM0DdEaY5sY0) on youtube for more information 
 > about the D-Latch digital logic circuit.
+
+## The Concept of Memory
+
+Computer memory is made up of (a large) number of locations that are 
+each uniquely identifiable and can store a number of bits of information.
+
+### Address Cell, Address, and Addressability
+
+An *address cell* is a single unit or item within a memory device.
+
+A *memory address* or just *address* is a location of an address cell in 
+the memory.
+
+The *address size* or *addressability* of a memory is the number of bits 
+of information that can be stored in an address cell.
+
+So for example, a computer that is advertised to have 2 GB of memory 
+may mean that it has 2 billion addresses to uniquely identify each cell 
+where each can store a byte of information.
+
+### Address Space
+
+The *address space* refers to the total number of addresses that can uniquely 
+identify an address cell in a memory device.
+
+Given $n$ bits, we can uniquely identify $2^n$ address cells ie. $10$ bits 
+can be used to uniquely identify $2^{10} = 1024$ address cells.
+
+### Addressability
+
+As mentioned earlier, addressability refers to the number of bits that 
+can be stored in each memory address.
+
+A *byte-addressable* memory is a device that contains 8-bits or a byte in 
+each *address cell*.
+
+A *word-addressable* memory is a device that contains the same *word*-length 
+as the CPU in each address cell.
+
+> A *word* is a size that is dependent on each CPU design/implementation.
+
+### A Memory Diagram
+
+The ff. is a memory diagram depicting the different parts of an abstract 
+memory device.
+
+The diagram contains sections for the address cell, an $n$-length address 
+space, and the address size or addressability of each address cell.
+
+![Memory Diagram](/images/figures/computer-systems/memory-diagram.png)
