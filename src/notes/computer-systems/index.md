@@ -12,3 +12,4 @@ Reference material: [Introduction To Computing Systems: From Bits & Gates To C/C
 * [Chapter 1: Computer Architecture](1-ComputerArchitecture)
 * [Chapter 2: Bits And Data Types](2-BitsAndDataTypes)
 * [Chapter 3: Digital Logic Structures](3-DigitalLogicStructures)
+* [Chapter 4: The von Neumann Model](4-TheVonNeumannModel)
