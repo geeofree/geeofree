@@ -5,25 +5,37 @@ order: 1
 title: Home
 description: This is the home page.
 css: index.css
-js: index.js
 ---
 
-<div class="home-profile">
-	<a href="https://github.com/geeofree" target="_blank" rel="noopener noreferrer">
-		<img src="/images/nagara.jpg" />
-	</a>
-	<p>ジョフリ</p>
-</div>
+<p>Hello. I am a Software Engineer from the Philippines.</p>
 
-<div class="home-copyright">
-	<p>Nagara, Sonny Boy</p>
-	<p>Created By Natsume, Shingo</p>
-	<p>Licensed By Funimation</p>
-</div>
+<p>I had my Bachelor's Degree in Information Technology back in May 2017.</p>
 
-<div class="home-name">
-	<h1>GEO</h1>
-	<h1>GLGRN.</h1>
-</div>
+<p>
+  My career started back in September 2017 and I mostly work on Web 
+  Development: building web clients, API services, and have a bit of 
+  experience in DevOps.
+</p>
 
-<canvas class="home-graphic"></canvas>
+<img src="https://i.imgur.com/GgI0RCq.png" alt="Mint XFCE" />
+
+<p>
+  My <a href="https://leetcode.com/geeofree/" target="_blank" rel="noreferrer noopener">Leetcode</a> profile.
+</p>
+
+<p>
+	The following is a list of skills and technologies that I know and/or 
+	have used:
+</p>
+
+
+<div class="grid">
+  {% for skill in skills %}
+	<div>
+    <h5>{{ skill.name }}</h5>
+    {% for value in skill.values %}
+    <p>{{ value }}</p>
+    {% endfor %}
+	</div>
+  {% endfor %}
+</div>
