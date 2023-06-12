@@ -15,6 +15,7 @@
   --text-muted: #727169;
 	--accent: #7e9cd8;
   --gray-bg: #e7e7e7;
+  --special: #47656f;
 }
 
 body {
@@ -24,6 +25,9 @@ body {
 nav.base-nav {
 	display: flex;
   flex-wrap: wrap;
+  column-gap: 1em;
+  row-gap: 0.5em;
+	margin-top: 1rem;
 }
 
 @media only screen and (min-width: 720px) {
@@ -34,7 +38,6 @@ nav.base-nav {
 
 nav.base-nav > a,a:visited {
 	position: relative;
-	margin-top: 1rem;
 	text-decoration: none;
 }
 
@@ -47,10 +50,13 @@ nav.base-nav > a.active-link:after {
 	left: 0;
 }
 
-nav.base-nav > a:not(:last-child) {
-	margin-right: 1rem;
-}
-
 tr, tr:nth-child(2n), th {
   background-color: transparent;
+}
+
+nav.base-nav > span {
+  background-color: var(--special);
+  color: white;
+  border-radius: 4px;
+  padding: 0.1em 0.5em;
 }
