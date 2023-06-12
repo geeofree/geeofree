@@ -1,6 +1,5 @@
 :root {
-	--sans-font: "Inter",
-		-apple-system,BlinkMacSystemFont,
+	--sans-font: -apple-system,BlinkMacSystemFont,
 		"Avenir Next",
 		Avenir,
 		"Nimbus Sans L",
