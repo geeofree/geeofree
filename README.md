@@ -1,5 +1,5 @@
 <a href="https://geeofree.vercel.app/" target="_blank" rel="noreferrer noopener">
-  <img src="https://i.imgur.com/GgI0RCq.png" alt="Mint XFCE">
+  <img src="src/images/mint-rice.webp" alt="Mint XFCE">
 </a>
 
 <p align="center">
