@@ -59,3 +59,8 @@ nav.base-nav > span {
   border-radius: 4px;
   padding: 0.1em 0.5em;
 }
+
+section {
+  padding-left: 0;
+  padding-right: 0;
+}
