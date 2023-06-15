@@ -67,6 +67,22 @@ module.exports = (eleventyConfig) => {
   // Filters
   eleventyConfig.addFilter('formatDate', date => formatDate(date, 'P KK:mma z'))
   eleventyConfig.addFilter('minusOne', num => num - 1)
+  eleventyConfig.addFilter('onlyConfidentSkills', skills =>
+    skills
+    .map(skill => ({
+      ...skill,
+      items: skill.items.filter(skillItem => skillItem.rating > 1)
+    }))
+    .filter(skill => skill.items.length > 0)
+  )
+  eleventyConfig.addFilter('sortSkillsByDescRate', skills =>
+    skills
+    .map(skill => ({
+      ...skill,
+      items: skill.items.slice().sort((skillA, skillB) => skillB.rating - skillA.rating)
+    }))
+    .filter(skill => skill.items.length > 0)
+  )
 
   // Libraries
   eleventyConfig.setLibrary('md', markdownLibrary)

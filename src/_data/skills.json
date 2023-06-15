@@ -1,71 +1,97 @@
 [
   {
-    "name": "Languages",
-    "values": ["Tagalog", "English"]
-  },
-  {
     "name": "Programming Languages",
-    "values": [
-      "JS/TS",
-      "Python",
-      "C",
-      "Lua",
-      "Bash",
-      "PHP",
-      "CSS",
-      "HTML"
+    "items": [
+      { "name": "JavaScript/TypeScript", "rating": 4 },
+      { "name": "HTML", "rating": 3 },
+      { "name": "CSS", "rating": 3 },
+      { "name": "Python", "rating": 2 },
+      { "name": "Bash", "rating": 3 },
+      { "name": "C", "rating": 3 },
+      { "name": "Lua", "rating": 2 },
+      { "name": "PHP", "rating": 2 }
     ]
   },
   {
     "name": "UI Frameworks/Libraries",
-    "values": [
-      "React",
-      "NextJS",
-      "AngularJS",
-      "Eleventy",
-      "AlpineJS"
+    "items": [
+      { "name": "ReactJS", "rating": 4 },
+      { "name": "NextJS", "rating": 2 },
+      { "name": "Eleventy", "rating": 2 },
+      { "name": "AngularJS", "rating": 1 }
     ]
   },
   {
     "name": "Styling",
-    "values": [
-      "Tailwind",
-      "Bootstrap",
-      "SCSS/SASS",
-      "CSS Modules",
-      "Styled Components"
+    "items": [
+      { "name": "Tailwind", "rating": 2 },
+      { "name": "Bootstrap", "rating": 2 },
+      { "name": "SCSS/SASS", "rating": 2 },
+      { "name": "CSS Modules", "rating": 2 },
+      { "name": "Styled Components", "rating": 2 }
     ]
   },
   {
     "name": "State Management",
-    "values": ["Redux", "Zustand", "XState"]
+    "items": [
+      { "name": "Zustand", "rating": 2 },
+      { "name": "Redux", "rating": 2 },
+      { "name": "XState", "rating": 1 }
+    ]
   },
   {
     "name": "Testing",
-    "values": ["Jest", "Playwright", "Cypress"]
+    "items": [
+      { "name": "Jest", "rating": 2 },
+      { "name": "Playwright", "rating": 2 },
+      { "name": "Cypress", "rating": 1 }
+    ]
   },
   {
     "name": "Bundlers",
-    "values": ["Webpack", "Parcel", "Rollup"]
+    "items": [
+      { "name": "Webpack", "rating": 1 },
+      { "name": "Parcel", "rating": 2 },
+      { "name": "Rollup", "rating": 1 }
+    ]
   },
   {
     "name": "Web Servers",
-    "values": ["ExpressJS", "Laravel", "Flask", "Rails"]
+    "items": [
+      { "name": "ExpressJS", "rating": 2 },
+      { "name": "Laravel", "rating": 2 },
+      { "name": "Flask", "rating": 2 },
+      { "name": "NestJS", "rating": 1 },
+      { "name": "Rails", "rating": 1 }
+    ]
   },
   {
     "name": "Databases",
-    "values": ["MySQL", "PostgreSQL", "SQLite"]
+    "items": [
+      { "name": "MySQL", "rating": 2 },
+      { "name": "PostgreSQL", "rating": 2 },
+      { "name": "SQLite", "rating": 2 }
+    ]
   },
   {
     "name": "Infrastructure",
-    "values": ["AWS", "Ansible", "Docker"]
+    "items": [
+      { "name": "AWS", "rating": 2 },
+      { "name": "Ansible", "rating": 1 },
+      { "name": "Docker", "rating": 2 }
+    ]
   },
   {
     "name": "Monorepos",
-    "values": ["Nx", "Lerna"]
+    "items": [
+      { "name": "Nx", "rating": 1 },
+      { "name": "Lerna", "rating": 1 }
+    ]
   },
   {
     "name": "Prototyping",
-    "values": ["Figma"]
+    "items": [
+      { "name": "Figma", "rating": 2 }
+    ]
   }
 ]

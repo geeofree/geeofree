@@ -9,10 +9,7 @@ css: index.css
 
 <h1>GEO GLGRN.</h1>
 
-<p>
-  Hello. I am <a href="https://github.com/geeofree" target="_blank" rel="noreferrer noopener">Geo</a>, 
-  a Software Engineer from the Philippines.
-</p>
+<p>Hello. I am a Software Engineer from the Philippines.</p>
 
 <p>I had my Bachelor's Degree in Information Technology back in May 2017.</p>
 
@@ -31,18 +28,21 @@ css: index.css
   My <a href="https://leetcode.com/geeofree/" target="_blank" rel="noreferrer noopener">Leetcode</a> profile.
 </p>
 
+<h3>Skills</h3>
+
+<p>The following are tools that I can work with or can confidently use.</p>
+
 <p>
-	The following is a list of skills and technologies that I know and/or 
-	have used:
+  For a more comprehensive and detailed list of tools I work with go to <a href="/skills">my skills</a> page.
 </p>
 
-
 <div class="grid">
-  {% for skill in skills %}
+  {% assign confidentSkills = skills | onlyConfidentSkills %}
+  {% for skill in confidentSkills %}
 	<div>
     <h5>{{ skill.name }}</h5>
-    {% for value in skill.values %}
-    <p>{{ value }}</p>
+    {% for skillItem in skill.items %}
+    <p>{{ skillItem.name }}</p>
     {% endfor %}
 	</div>
   {% endfor %}
