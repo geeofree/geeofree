@@ -31,3 +31,24 @@ div.grid > div > p {
 footer {
   font-size: 0.75rem;
 }
+
+ul.socials {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 0.5em;
+}
+
+
+ul.socials > li > a {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+ul.socials > li > a > img {
+  --social-icon: 24px;
+  width: var(--social-icon);
+  height: var(--social-icon);
+  background-color: #d7d7d7;
+}
