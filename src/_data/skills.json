@@ -61,7 +61,7 @@
       { "name": "ExpressJS", "rating": 2 },
       { "name": "Laravel", "rating": 2 },
       { "name": "Flask", "rating": 2 },
-      { "name": "NestJS", "rating": 1 },
+      { "name": "NestJS", "rating": 2 },
       { "name": "Rails", "rating": 1 }
     ]
   },
@@ -76,8 +76,8 @@
   {
     "name": "Infrastructure",
     "items": [
-      { "name": "AWS", "rating": 2 },
-      { "name": "Ansible", "rating": 1 },
+      { "name": "AWS", "rating": 3 },
+      { "name": "Ansible", "rating": 2 },
       { "name": "Docker", "rating": 2 }
     ]
   },
@@ -91,7 +91,7 @@
   {
     "name": "Prototyping",
     "items": [
-      { "name": "Figma", "rating": 2 }
+      { "name": "Figma", "rating": 1 }
     ]
   }
 ]
