@@ -37,29 +37,6 @@ css: index.css
   <img src="/images/mint-rice.webp" alt="Mint XFCE" />
 </section>
 
-<section>
-  <h3>Skills</h3>
-
-  <p>The following are tools that I highly prefer or can work it.</p>
-
-  <p>
-    For a more detailed and comprehensive view about the technologies I can use please go to my 
-    <a href="/skills">skills</a> page.
-  </p>
-
-  <div class="grid">
-    {% assign confidentSkills = skills | onlyConfidentSkills %}
-    {% for skill in confidentSkills %}
-    <div>
-      <h5>{{ skill.name }}</h5>
-      {% for skillItem in skill.items %}
-      <p>{{ skillItem.name }}</p>
-      {% endfor %}
-    </div>
-    {% endfor %}
-  </div>
-</section>
-
 <footer>
   <ol>
     <li id="footnote-1">Total work length is non-contiguous since that date.</li>
