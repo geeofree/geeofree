@@ -1,10 +1,31 @@
 [
   {
     "name": "Kalendaryo",
-    "description": "An unopinionated React component for building calendars.",
+    "description": "A React component for building calendars with unopinionated styling.",
     "links": [
       { "icon": "npm.png", "url": "https://www.npmjs.com/package/kalendaryo" },
       { "icon": "github.png", "url": "https://github.com/geeofree/kalendaryo" }
+    ]
+  },
+  {
+    "name": "BMI Calculator",
+    "description": "A simple BMI calculator built in ReactJS and NestJS.",
+    "links": [
+      { "icon": "github.png", "url": "https://github.com/geeofree/bmi" }
+    ]
+  },
+  {
+    "name": "Payments",
+    "description": "A digital payments service built in NestJS.",
+    "links": [
+      { "icon": "github.png", "url": "https://github.com/geeofree/payments" }
+    ]
+  },
+  {
+    "name": "Personal Website",
+    "description": "This website.",
+    "links": [
+      { "icon": "github.png", "url": "https://github.com/geeofree/geeofree" }
     ]
   },
   {
@@ -16,26 +37,11 @@
     ]
   },
   {
-    "name": "UI Workout",
-    "description": "Personal website to practice, showcase, and implement UI challenges",
-    "links": [
-      { "icon": "www.png", "url": "https://ui-workout-rho.vercel.app/" },
-      { "icon": "github.png", "url": "https://github.com/geeofree/ui-workout" }
-    ]
-  },
-  {
     "name": "ishould",
     "description": "Interactive CLI TODO list on NodeJS.",
     "links": [
       { "icon": "npm.png", "url": "https://www.npmjs.com/package/ishould" },
       { "icon": "github.png", "url": "https://github.com/geeofree/ishould" }
-    ]
-  },
-  {
-    "name": "Personal Website",
-    "description": "This website.",
-    "links": [
-      { "icon": "github.png", "url": "https://github.com/geeofree/geeofree" }
     ]
   }
 ]
