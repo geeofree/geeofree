@@ -325,3 +325,17 @@ FROM (
 )
 WHERE YEAR(date_of_birth) >= 2000;
 ```
+
+When using subqueries on the `select` clause of a SQL statement it's required that the 
+subquery contain a single column and a single row:
+
+```sql
+SELECT
+  first_name,
+  last_name,
+  date_of_birth,
+  (SELECT COUNT(*)
+   FROM employees
+   WHERE employees.manager_id = users.id) as total_employees
+FROM users;
+```
