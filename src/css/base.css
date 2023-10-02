@@ -27,6 +27,7 @@ nav.base-nav {
   column-gap: 1em;
   row-gap: 0.5em;
 	margin-top: 1rem;
+  align-items: center;
 }
 
 @media only screen and (min-width: 720px) {
@@ -53,11 +54,9 @@ tr, tr:nth-child(2n), th {
   background-color: transparent;
 }
 
-nav.base-nav > span {
-  background-color: var(--special);
-  color: white;
-  border-radius: 4px;
-  padding: 0.1em 0.5em;
+nav.base-nav > img {
+  width: 3rem;
+  margin-right: -0.5rem;
 }
 
 section {

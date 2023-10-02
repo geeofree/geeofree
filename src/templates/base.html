@@ -44,7 +44,7 @@
   <body>
     {% if page.url != "/" %}
     <nav class="base-nav">
-      <span>∅</span>
+      <img src="/images/icon.webp" alt="Site icon.">
       {%- for parent in collections.parents -%}
       <a href="{{ parent.url }}" class="{% isActiveLink parent.url %}">{{ parent.data.title }}</a>
       {%- endfor %}
