@@ -11,3 +11,4 @@ Reference material: [Database System Concepts - A. Silberschatz](https://www.ama
 
 * [Chapter 1: Introduction to the Relational Model](1-RelationalModelIntro)
 * [Chapter 2: Structured Query Language (SQL)](2-SQL)
+* [Chapter 3: Intermediate SQL](3-IntermediateSQL)
