@@ -1,6 +1,6 @@
 ---
 title: "Chapter 3: Intermediate SQL"
-description: "Join queries, transactions, indices, constraints, and schemas."
+description: "Join queries, transactions, constraints, and indexing."
 ---
 
 ## Join Expressions
@@ -103,3 +103,20 @@ In most SQL implementations, the `OUTER` keyword can be omitted.
 If a record does not match, then the columns for those records are set to `NULL` ie. if 
 no values are matched using the `LEFT JOIN` clause, then the columns of the table on the 
 right-hand side of the clause are set to `NULL`.
+
+## Transactions
+
+A [transaction](https://en.wikipedia.org/wiki/Database_transaction) is a unit of work that consists of multiple operations and have 
+[ACID](https://en.wikipedia.org/wiki/ACID) properties:
+
+- **Atomicity**: Multiple operations are treated as a single unit and must either work 
+  completely or not at all when even one operation fails within the set of operations.
+
+- **Consistency**: The changes must adhere to the rules and constraints defined in 
+  the database such that it brings the database from one consistent state to another.
+
+- **Isolation**: Transactions are independent of one another and are often executed 
+  concurrently and must ensure that the database is left in the same state as if 
+  they were executed sequentially.
+  
+- **Durability**: Transactions, once committed, must be written in persistent storage.
