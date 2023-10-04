@@ -182,3 +182,21 @@ CREATE TABLE addresses (
   FOREIGN KEY (user_id) REFERENCES persons(id)
 );
 ```
+
+## Index Definitions
+
+An [index](https://en.wikipedia.org/wiki/Database_index) is a separate data structure within a DBMS used for efficient querying.
+
+An index is defined on an (or on multiple) attribute(s).
+
+To create an index in a relation:
+
+```sql
+CREATE INDEX <index-name> ON <relation-name> (<attribute-list>);
+```
+
+To remove an index:
+
+```sql
+DROP INDEX <index-name>;
+```
