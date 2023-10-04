@@ -120,3 +120,65 @@ A [transaction](https://en.wikipedia.org/wiki/Database_transaction) is a unit of
   they were executed sequentially.
   
 - **Durability**: Transactions, once committed, must be written in persistent storage.
+
+## Integrity Constraints
+
+Integrity constraints ensures that a relation does not contain an invalid values within 
+its records that do not adhere to its defined rules.
+
+The ff. are some integrity constraints that can be set to a relation's schema:
+
+### Not Null
+
+Defines that an attribute cannot be set to the value `NULL`.
+
+```sql
+CREATE TABLE users (full_name NOT NULL);
+```
+
+### Unique
+
+Defines that an attribute must be unique among all other values within the relation's 
+instance.
+
+```sql
+CREATE TABLE users (username UNIQUE);
+```
+
+Note that attributes can be set to `UNIQUE` but can still be provided `NULL` values.
+
+### Check
+
+Defines that an attribute's value must be true for a given predicate $P$.
+
+```sql
+CREATE TABLE fruits (
+  name varchar(30),
+  CHECK(name in ('apple', 'banana', 'orange'))
+);
+```
+
+### Referential Integrity
+
+Defines that a value of an attribute within a relation must correspond to the same 
+value on some attribute in another relation.
+
+To define referential integrity constraints we use the foreign key constraint statement:
+
+```sql
+CREATE TABLE persons (
+  id UNSIGNED INT PRIMARY KEY,
+  full_name VARCHAR(255),
+  date_of_birth DATETIME
+);
+
+CREATE TABLE addresses (
+  id UNSIGNED INT PRIMARY KEY,
+  user_id UNSIGNED INT,
+  line_1 VARCHAR(255),
+  line_2 VARCHAR(255),
+  city VARCHAR(255),
+  province VARCHAR(255),
+  FOREIGN KEY (user_id) REFERENCES persons(id)
+);
+```
