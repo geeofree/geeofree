@@ -76,4 +76,61 @@ as NFS or CIFS.
 
 ## Magnetic Disks
 
-TBD
+![Magnetic Drive Schema, Database System Concepts (2019), A. Silberschatz, Ch. 12, p. 564](/images/figures/database/magnetic-drive-schema.png)
+
+A magnetic disk contains flat circular _disk platters_ that each contain a magnetic 
+material on both sides and where a read-write head positioned just above the surface 
+of each disk reads from or writes to the platter.
+
+The disk motor spins these platters at a constant high speed, typically $5,400$ to 
+$10,000$ revolutions per minute (RPM) depending on the model.
+
+Each platter surface is logically divided into _tracks_ and each track are subdivided 
+into _sectors_.
+
+A sector is the smallest unit of information that can be read from or written to the 
+disk and typically have a size of $512$ bytes. Most modern disks have between $2$ billion 
+to $24$ billion sectors.
+
+The read-write head (or just head) of the magnetic disk move together in tandem so when 
+a head moves to the $j$th sector at the $i$th track then all of the heads are also at the 
+$j$th sector at the $i$th track.
+
+A **disk controller** interfaces between the computer system and the hardware of the 
+disk drive, allowing the computer system to direct the operations of the drive.
+
+The disk controller also attaches a _checksum_ to data written to a sector. When 
+the checksum fails during a read it will retry severals times before the controller 
+will signal a read failure.
+
+Disk controllers also perform _remapping of bad sectors_ where it logically maps a write 
+on a bad sector to a different working sector on the disk.
+
+### Disk Performance Measures & Units
+
+A disk is measured based on the ff. criteria:
+
+- **Seek Time**: The time it takes for the disk arm to move so that it is positioned over 
+  the correct track and sector.
+
+- **Access Time**: The time from when a read or write request is issued to when the data 
+  transfer begins.
+
+- **Capacity**: The amount of data that can be stored in the disk.
+
+- **Data-Transfer Rate**: The amount of data that can be transferred to or from the disk
+  at a given time. Most modern disks support transfer rates of $50$ to $200$ MB/s and 
+  are significantly lower on inner tracks.
+
+A **disk block** is a logical unit of storage allocation and retrieval specified by the 
+Operating System and must be a multiple of the sector size.
+
+#### Access Patterns
+
+A disk access may either be classified as a **sequential** or **random** access pattern.
+
+Sequential access means that blocks are accessed sequentially on the same track while 
+random access means that blocks are accessed at different tracks.
+
+The number of **I/O operations per second** (IOPS) is the number of random block accesses 
+that can be done by a disk in a second.
