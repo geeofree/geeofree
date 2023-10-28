@@ -13,3 +13,4 @@ Reference material: [Database System Concepts - A. Silberschatz](https://www.ama
 * [Chapter 2: Structured Query Language (SQL)](2-SQL)
 * [Chapter 3: Intermediate SQL](3-IntermediateSQL)
 * [Chapter 4: Physical Storage Systems](4-PhysicalStorageSystems)
+* [Chapter 5: Data Storage Structures](5-DataStorageStructures)
