@@ -8,27 +8,6 @@
     ]
   },
   {
-    "name": "BMI Calculator",
-    "description": "A simple BMI calculator built in ReactJS and NestJS.",
-    "links": [
-      { "icon": "github.png", "url": "https://github.com/geeofree/bmi" }
-    ]
-  },
-  {
-    "name": "Payments",
-    "description": "A digital payments service built in NestJS.",
-    "links": [
-      { "icon": "github.png", "url": "https://github.com/geeofree/payments" }
-    ]
-  },
-  {
-    "name": "Quizler",
-    "description": "A quiz/exam manager service built in NestJS.",
-    "links": [
-      { "icon": "github.png", "url": "https://github.com/geeofree/quizler" }
-    ]
-  },
-  {
     "name": "Personal Website",
     "description": "This website.",
     "links": [
