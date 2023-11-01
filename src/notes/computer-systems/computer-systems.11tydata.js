@@ -1,4 +1,4 @@
 module.exports = {
-  icon: '/images/icon-note-computer-systems.png',
+  icon: '/images/icon-note-computer-systems.svg',
   tags: 'computer-systems',
 }

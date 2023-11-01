@@ -4,11 +4,11 @@ css: note.css
 ---
 
 <header class="note-header">
-  <h1>
-    <img src="{{ icon }}" alt="{{ description }}">
-    <span>{{ title }}</span>
-  </h1>
-  <p>{{ description }}</p>
+  <img src="{{ icon }}" alt="{{ description }}">
+  <div>
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
+  </div>
 </header>
 
 {{ content }}

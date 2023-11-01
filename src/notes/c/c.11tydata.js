@@ -1,4 +1,4 @@
 module.exports = {
-  icon: '/images/icon-note-c-language.png',
+  icon: '/images/icon-note-c-language.svg',
   tags: 'c-language',
 }

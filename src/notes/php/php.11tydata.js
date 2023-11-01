@@ -1,4 +1,4 @@
 module.exports = {
-  icon: '/images/icon-note-php.png',
+  icon: '/images/icon-note-php.svg',
   tags: 'php',
 }
