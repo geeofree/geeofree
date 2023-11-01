@@ -19,15 +19,15 @@ css: projects.css
       {{ project.name }}
     </a>
   </h4>
-	<ul class="links">
+  <p>{{ project.description }}</p>
+  <ul class="links">
     {% for link in project.links %}
-		<li>
+    <li>
       <a href="{{ link.url }}" target="_blank" rel="noreferrer noopener">
         <img src="/images/{{ link.icon }}" />
-			</a>
-		</li>
+      </a>
+    </li>
     {% endfor %}
-	</ul>
-  <p>{{ project.description }}</p>
+  </ul>
 </div>
 {% endfor %}

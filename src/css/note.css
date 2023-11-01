@@ -18,3 +18,23 @@ header.note-header > p {
 header.note-header > h1 > img {
   height: 256px;
 }
+
+h1 {
+  font-size: 1.875rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.575rem;
+}
+
+h4 {
+  font-size: 1.35rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}

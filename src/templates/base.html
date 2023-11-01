@@ -35,6 +35,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <link rel="manifest" href="/images/site.webmanifest">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-hopscotch.min.css">
 		<link rel="stylesheet" href="/css/simple.min.css">
@@ -42,17 +46,23 @@
 		{% if css %}<link rel="stylesheet" href="/css/{{ css }}">{% endif %}
 	</head>
   <body>
-    {% if page.url != "/" %}
     <nav class="base-nav">
-      <img src="/images/icon.webp" alt="Site icon.">
+      <figure>
+        <img src="/images/icon.webp" alt="Site icon.">
+        <figcaption>
+          <span>GEO</span>
+          <span>GLGRN.</span>
+        </figcaption>
+      </figure>
+      <ul>
       {%- for parent in collections.parents -%}
-      <a href="{{ parent.url }}" class="{% isActiveLink parent.url %}">{{ parent.data.title }}</a>
+        <li>
+          <a href="{{ parent.url }}" class="{% isActiveLink parent.url %}">{{ parent.data.title }}</a>
+        </li>
       {%- endfor %}
+      </ul>
     </nav>
     <main>{{ content }}</main>
-    {% else %}
-    {{ content }}
-    {% endif %}
     {% if js %}<script src="/js/{{ js }}"></script>{% endif %}
   </body>
 </html>

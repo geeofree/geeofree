@@ -3,18 +3,22 @@ tags: parents
 order: 4
 layout: base.html
 title: Blogs
-description: Essays, guides, and opinions about technologies and concepts.
+description: Essays, guides, and opinions.
 css: blogs.css
 ---
 
-<h1>BLOGS</h1>
-<p>{{ description }}</p>
+<header>
+  <h1>BLOGS</h1>
+  <p>{{ description }}</p>
+</header>
 
 {%- for blog in collections.blogs reversed -%}
 <section class="blog">
-  <a href="{{ blog.url }}" class="blog-anchor">
-    <h3 class="blog-title">{{ blog.data.title }}</h3>
-  </a>
+  <h4 class="blog-title">
+    <a href="{{ blog.url }}" class="blog-anchor">
+      {{ blog.data.title }}
+    </a>
+  </h4>
   <p class="blog-date">Last Modified: {{ blog.date | formatDate }}</p>
   <p class="blog-description">{{ blog.data.description }}</p>
 </section>

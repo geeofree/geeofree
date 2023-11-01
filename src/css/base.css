@@ -1,5 +1,5 @@
 :root {
-	--sans-font: -apple-system,BlinkMacSystemFont,
+	--sans-font: "Inter", -apple-system,BlinkMacSystemFont,
 		"Avenir Next",
 		Avenir,
 		"Nimbus Sans L",
@@ -10,10 +10,14 @@
 		"Helvetica Neue",
 		sans-serif;
 	--bg: white;
-	--text: #1f1f28;
-  --text-muted: #727169;
-	--accent: #7e9cd8;
-  --gray-bg: #e7e7e7;
+	--text: #09090b;
+  --text-muted: #71717a;
+  --text-light: #52525b;
+	--accent: #1d4ed8;
+  --accent-light: #dbeafe;
+  --visited: #3730a3;
+  --gray-bg: #a1a1aa;
+  --gray-bg2: #4b5563;
   --special: #47656f;
 }
 
@@ -28,38 +32,69 @@ nav.base-nav {
   row-gap: 0.5em;
 	margin-top: 1rem;
   align-items: center;
+  justify-content: space-between;
 }
 
-@media only screen and (min-width: 720px) {
-	section.notes {
-		grid-template-columns: repeat(3, 1fr);
-	}
+nav.base-nav > ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
-nav.base-nav > a,a:visited {
-	position: relative;
-	text-decoration: none;
+nav.base-nav > ul > li > a.active-link {
+  background-color: var(--accent-light);
 }
 
-nav.base-nav > a.active-link:after {
-	content: '';
-	position: absolute;
-	bottom: 0px;
-	border: 1px solid var(--accent);
-	width: 100%;
-	left: 0;
+nav.base-nav > figure {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+nav.base-nav > figure > img {
+  width: 4rem;
+}
+
+nav.base-nav > figure > figcaption {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0;
+  color: var(--text);
+  line-height: 1.75rem;
+}
+
+section {
+  border: none;
+  padding: 0;
 }
 
 tr, tr:nth-child(2n), th {
   background-color: transparent;
 }
 
-nav.base-nav > img {
-  width: 3rem;
-  margin-right: -0.5rem;
+a {
+  color: var(--accent);
+  text-decoration: none;
 }
 
-section {
-  border: none;
-  padding: 0;
+a:hover {
+  background-color: var(--accent-light);
+}
+
+a:active {
+  outline: 1px solid var(--accent);
+}
+
+header > h1 {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+header > p {
+  margin: 0;
 }

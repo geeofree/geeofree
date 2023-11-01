@@ -35,7 +35,7 @@ section.note {
 }
 
 section.note:hover {
-  border-color: var(--text);
+  border-color: var(--gray-bg2);
 }
 
 div.note-icon-container {
@@ -53,12 +53,13 @@ div.note-text-container > h4 {
 }
 
 div.note-text-container > p {
-  color: var(--text-muted);
+  color: var(--text);
   margin: 0.25em 0;
   font-size: 0.75em;
 }
 
 div.note-text-container > p:last-child {
+  color: var(--text-muted);
   font-size: 0.65em;
 }
 

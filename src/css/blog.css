@@ -17,3 +17,23 @@ main a {
 main a:hover {
   text-decoration: underline;
 }
+
+h1 {
+  font-size: 1.875rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.575rem;
+}
+
+h4 {
+  font-size: 1.35rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}

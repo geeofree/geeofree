@@ -7,14 +7,21 @@ description: Hello world.
 css: index.css
 ---
 
-<main>
-  <header>
-    <img src="/images/icon.webp" alt="Site icon.">
-    <h1>GEO<BR/>GLGRN.</H1>
-  </header>
-  <nav>
-    {%- for parent in collections.parents -%}
-    <a href="{{ parent.url }}" class="{% isActiveLink parent.url %}">{{ parent.data.title }}</a>
-    {%- endfor %}
-  </nav>
-</main>
+<header>
+  <h1>HELLO</h1>
+  <p>I am Geo, a Software Engineer from the Philippines.</p>
+</header>
+
+<img src="/images/mint-rice.webp" alt="Mint Rice">
+
+<ul class="home-links">
+  {%- for parent in collections.parents -%}
+  {% if parent.url != "/" %}
+  <li>
+    <p>
+      <a href="{{ parent.url }}">{{ parent.data.title }}</a>: {{ parent.data.description }}
+    </p>
+  </li>
+  {% endif %}
+  {%- endfor %}
+</ul>
