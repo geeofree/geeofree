@@ -39,9 +39,14 @@ nav.base-nav {
 nav.base-nav > ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   margin: 0;
   padding: 0;
+}
+
+nav.base-nav > ul > li > a {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
 }
 
 nav.base-nav > ul > li > a.active-link {
