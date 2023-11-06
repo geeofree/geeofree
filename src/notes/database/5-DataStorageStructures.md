@@ -20,8 +20,7 @@ structure variable-length records in a block:
 
 ### Variable-Length Records
 
-There are many ways to structure records that have variable-length sizes. The ff. are 
-ways (out of many available) to structure variable-length records:
+The ff. are ways (out of many available) to structure variable-length records:
 
 #### Fixed-Length Prefix, Variable-Length Suffix
 
@@ -42,7 +41,7 @@ at the offset position of $21$ and having a length of $5$.
 
 The most common layout for variable-length records.
 
-This structure contains three sections: a header section, the *free* section, and 
+This structure contains three sections: the header section, the *free* section, and 
 the record list section.
 
 The block header commonly contains the ff. information:
