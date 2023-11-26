@@ -21,8 +21,8 @@ different one, like so:
 $stash \rightarrow checkout \rightarrow recheckout \rightarrow unstash$
 
 With worktrees the process is more seamless as we no longer have to stash 
-then unstash the current work since it's only a matter of switching directories 
-instead of changing branches on the same worktree.
+then unstash our current work since it's only a matter of switching worktree 
+directories instead of changing branches on the same worktree.
 
 > *Why not just use `git-clone`?*
 > 
@@ -30,5 +30,5 @@ instead of changing branches on the same worktree.
 > between each worktree.
 > 
 > This means that the git config, metadata, commit history, branches, etc. are all 
-> shared to each which means this removes the overhead of trying to synchronize them 
+> shared to each worktree which removes the overhead of trying to synchronize them 
 > to each worktree.
