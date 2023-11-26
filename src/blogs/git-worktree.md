@@ -15,7 +15,7 @@ directory that can be checked out to different branches in the repository.
 The most common use case for this command is a more convenient alternative 
 to the common context switching flow that we do during development.
 
-That is, when we have to stash then unstashed unfinished work in order to do a 
+That is, when we have to stash then unstash unfinished work in order to do a 
 different one, like so:
 
 $stash \rightarrow checkout \rightarrow recheckout \rightarrow unstash$
