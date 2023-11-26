@@ -1,6 +1,6 @@
 ---
 title: "Git Worktree"
-description: "A quick showcase of the git-worktree command."
+description: "A quick introduction to the git-worktree command."
 ---
 
 [git-worktree](https://git-scm.com/docs/git-worktree) is a command that allows you to checkout and work 
