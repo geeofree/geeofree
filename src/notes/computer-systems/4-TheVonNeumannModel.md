@@ -34,8 +34,7 @@ The model describes five (5) components for a computer:
 
 ### Memory
 
-The component for storing instructions to be executed or data to be 
-operated on.
+The component for storing the instructions or the data to be operated on.
 
 The memory contains two (2) registers:
 
@@ -46,7 +45,7 @@ The memory contains two (2) registers:
 
 ### Processing Unit
 
-The component that operates on values that transform them into other values.
+The component that operates on values, transforming them into other values.
 
 The simplest processing unit in the von Neumann model is called the [Arithemtic Logic Unit (ALU)](https://en.wikipedia.org/wiki/Arithmetic_logic_unit)
 and can do arithmetic and boolean operations.
