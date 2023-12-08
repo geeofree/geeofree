@@ -313,7 +313,7 @@ def bubble_sort(A):
 
   while should_loop:
     should_loop := False
-    for 1 to A.length - 1:
+    for i := 1 to A.length - 1:
       if A[i - 1] > A[i]:
         # Swap A[i - 1] and A[i]
         temp = A[i]
@@ -461,7 +461,7 @@ def merge(Left, Right):
       
   while (left_index < Left.length):
     left = Left[left_index]
-    right_index += 1
+    left_index += 1
     sorted.push(left)
     
   while (right_index < Right.length):
