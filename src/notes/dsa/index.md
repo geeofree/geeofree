@@ -13,3 +13,5 @@ Reference: [Introduction to Algorithms (4th ed.) - CLRS](https://www.amazon.com/
 * [Chapter 2: Sorting Algorithms](2-Sorting/2.0-SortingIntro)
   * [Chapter 2.1: Heapsort](2-Sorting/2.1-Heapsort)
   * [Chapter 2.2: Quicksort](2-Sorting/2.2-Quicksort)
+* Chapter 3: Data Structures
+  * [Chapter 3.1: Elementary Data Structures](3-DataStructures/3.1-ElementaryDataStructures)
