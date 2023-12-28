@@ -15,3 +15,4 @@ Reference: [Introduction to Algorithms (4th ed.) - CLRS](https://www.amazon.com/
   * [Chapter 2.2: Quicksort](2-Sorting/2.2-Quicksort)
 * Chapter 3: Data Structures
   * [Chapter 3.1: Elementary Data Structures](3-DataStructures/3.1-ElementaryDataStructures)
+  * [Chapter 3.2: Hash Tables](3-DataStructures/3.2-HashTables)
