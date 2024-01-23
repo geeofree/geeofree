@@ -367,3 +367,105 @@ limit.
 
 When a new process is created with `fork()` it also inherits copies of its parents resource 
 limits.
+
+## Memory Mappings
+
+The `mmap()` system call creates a new _memory mapping_ in the calling process' virtual 
+address space.
+
+Mappings fall into two categories:
+
+- A _file mapping_ maps a region of file to a process' virtual memory.
+- An _anonymous mapping_ doesn't have a corresponding file. Instead, the pages of the 
+  mapping are initialized to 0.
+
+Mappings can also be set as either _shared_ or _private_ that makes modifications to the 
+contents of the mapped file visible (persists) or invisible to other processes sharing 
+the same mapped file respectively.
+
+## Static and Shared libraries
+
+An _object library_ is a file containing reusable object code for a set of functions 
+that may be called from application programs.
+
+There are two types of object libraries:
+
+- **Static libraries** also known as _archives_, are object libraries whose referenced 
+  functions are copied by the linker into the executable during compilation (this is 
+  known as a _statically linked_ program).
+
+- **Shared libraries** on the other hand only references functions in an object library 
+  during runtime. This is done by the _dynamic linker_ which ensures that the referenced 
+  module in the executable exists and is in memory which it then performs run-time 
+  linking to.
+
+## Interprocess Communication and Synchronization (IPC)
+
+IPCs allow processes to communicate and cooperate with each other.
+
+In UNIX systems, the ff. are some mechanisms that can be used for IPC:
+
+- **Signals** are used for indicating events that have occured.
+
+- **Pipes** and **FIFOs** can be used for transferring data between processes.
+
+- **Sockets** can be used to transfer from one process to another, either on the same, 
+  host machine or on a remote one.
+
+- **File lock** allows processes to lock regions of a file to prevent other processes 
+  from accessing or updating its contents.
+
+- **Message queues** are used to exchange messages (data packets) between processes.
+
+- **Semaphores** are used to synchronize the actions of processes
+
+- **Shared memory** which allows processes to share a piece of memory.
+
+## Signals
+
+Signals are often described as _software interrupts_ that indicates some event or 
+exception has occurred.
+
+There are different types of signals, each identified as a unique integer defined by a 
+symbolic name in the form `SIGxxxx`.
+
+Signals are sent by the kernel, another process, or by the same process itself.
+
+Within the shell, the `kill` command (and `kill()` system call) can be used to send a 
+signal to a process.
+
+When a process receives a signal, it can do one of the ff.:
+
+- ignore the signal
+- get killed by the signal; or
+- get suspended and be later resumed via a special-purpose signal.
+
+## Threads
+
+A thread is a set of sub-processes that share the same virtual memory, program code 
+execution, and data and heap area of a process.
+
+Each thread however has its own stack containing local variables and function call 
+linkage info.
+
+Threads can communicate with each other via global variables that they share.
+
+_Condition variables_ and _mutexes_ are APIs for threads to enable them to communicate 
+and synchronize with each other (ie. their use of shared variables).
+
+## Process Groups and Shell Job Control
+
+On most major shells there is an interactive feature called a _job control_ that allows 
+the user to simultaneously execute and manipulate multiple commands or pipelines.
+
+In job-control shells, all of the processes in a pipeline are placed in a _new process 
+group_ or _job_.
+
+> In the simplest case, a shell running a single command is actually executing a process 
+> group with that one command.
+
+The processes in a process group share the same _process group ID_, which is an ID taken 
+from one of the IDs of the processes in the group (the _process leader_).
+
+Actions performed in the process group cascade to all process members, ie. a signal 
+sent to the group will be sent to all process members within it.
