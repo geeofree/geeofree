@@ -7,19 +7,19 @@ description: Essays, guides, and opinions.
 css: blogs.css
 ---
 
-<header>
-  <h1>BLOGS</h1>
+<header class="px-4 pt-4 lg:px-0">
+  <h1 class="text-2xl font-bold">BLOGS</h1>
   <p>{{ description }}</p>
 </header>
 
 {%- for blog in collections.blogs reversed -%}
-<section class="blog">
-  <h4 class="blog-title">
-    <a href="{{ blog.url }}" class="blog-anchor">
+<section class="px-4 pt-4 lg:px-0">
+  <h4 class="text-xl font-bold">
+    <a href="{{ blog.url }}" class="text-blue-600 visited:text-indigo-600">
       {{ blog.data.title }}
     </a>
   </h4>
-  <p class="blog-date">Last Modified: {{ blog.date | formatDate }}</p>
-  <p class="blog-description">{{ blog.data.description }}</p>
+  <p class="text-stone-500">Last Modified: {{ blog.date | formatDate }}</p>
+  <p>{{ blog.data.description }}</p>
 </section>
 {%- endfor %}
