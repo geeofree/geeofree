@@ -24,7 +24,6 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(syntaxHighlight)
 
   // Passthroughs
-	eleventyConfig.addPassthroughCopy({ 'src/css': 'css' })
 	eleventyConfig.addPassthroughCopy({ 'src/js': 'js' })
 	eleventyConfig.addPassthroughCopy({ 'src/images': 'images' })
 
