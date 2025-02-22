@@ -36,11 +36,11 @@ markdownLibrary.use(markdownItClass, {
   a: ["text-blue-600 visited:text-indigo-600 my-4"],
   p: ["my-4"],
   code: ["bg-rose-100 text-rose-500 rounded p-1"],
-  table: ["w-full"],
+  table: ["w-full my-4"],
   th: ["text-left p-2 border-b border-gray-200 bg-gray-50"],
   td: ["text-left p-2 border-b border-gray-200"],
-  ul: ["pl-4 list-disc"],
-  ol: ["pl-4 list-decimal"],
+  ul: ["pl-4 list-disc my-4"],
+  ol: ["pl-4 list-decimal my-4"],
   li: ["my-2"],
 });
 
