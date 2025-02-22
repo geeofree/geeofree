@@ -21,13 +21,19 @@ markdownLibrary.use(markdownItAnchor, {
 markdownLibrary.use(markdownItKatex);
 
 markdownLibrary.use(markdownItClass, {
-  h1: ["font-bold text-3xl my-2"],
-  h2: ["font-bold text-2xl my-2"],
-  h3: ["font-bold text-xl my-2"],
-  h4: ["font-bold text-lg my-2"],
-  h5: ["font-bold text-base my-2"],
-  a: ["text-blue-600 visited:text-indigo-600 my-2"],
-  p: ["my-2"],
+  h1: ["font-bold text-3xl my-4"],
+  h2: ["font-bold text-2xl my-4"],
+  h3: ["font-bold text-xl my-4"],
+  h4: ["font-bold text-lg my-4"],
+  h5: ["font-bold text-base my-4"],
+  a: ["text-blue-600 visited:text-indigo-600 my-4"],
+  p: ["my-4"],
+  code: ["bg-rose-100 text-rose-500 rounded p-1"],
+  table: ["w-full"],
+  th: ["text-left p-2 border-b border-gray-200 bg-gray-50"],
+  td: ["text-left p-2 border-b border-gray-200"],
+  ul: ["pl-4"],
+  li: ["my-2"],
 });
 
 module.exports = (eleventyConfig) => {
