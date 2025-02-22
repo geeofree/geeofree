@@ -25,7 +25,6 @@ module.exports = (eleventyConfig) => {
 
   // Passthroughs
 	eleventyConfig.addPassthroughCopy({ 'src/css': 'css' })
-	eleventyConfig.addPassthroughCopy({ 'node_modules/simpledotcss/simple.min.css': 'css/simple.min.css' })
 	eleventyConfig.addPassthroughCopy({ 'src/js': 'js' })
 	eleventyConfig.addPassthroughCopy({ 'src/images': 'images' })
 
@@ -59,9 +58,9 @@ module.exports = (eleventyConfig) => {
 
   // Shortcodes
   eleventyConfig.addShortcode('isActiveLink', function (url) {
-    if (url === this.page.url) return 'active-link'
-    if (url !== '/' && this.page.url.includes(url)) return 'active-link'
-    return ''
+    if (url === this.page.url) return true
+    if (url !== '/' && this.page.url.includes(url)) return true
+    return false
   })
 
   // Filters
