@@ -39,7 +39,8 @@ markdownLibrary.use(markdownItClass, {
   table: ["w-full"],
   th: ["text-left p-2 border-b border-gray-200 bg-gray-50"],
   td: ["text-left p-2 border-b border-gray-200"],
-  ul: ["pl-4"],
+  ul: ["pl-4 list-disc"],
+  ol: ["pl-4 list-decimal"],
   li: ["my-2"],
 });
 
