@@ -41,28 +41,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-one-light.min.css">
-		<link rel="stylesheet" href="/css/simple.min.css">
-		<link rel="stylesheet" href="/css/base.css">
-		{% if css %}<link rel="stylesheet" href="/css/{{ css }}">{% endif %}
+		<link rel="stylesheet" href="/css/output.css">
 	</head>
   <body>
-    <nav class="base-nav">
-      <figure>
-        <img src="/images/icon.webp" alt="Site icon.">
-        <figcaption>
-          <span>GEO</span>
-          <span>GLGRN.</span>
-        </figcaption>
-      </figure>
-      <ul>
-      {%- for parent in collections.parents -%}
-        <li>
-          <a href="{{ parent.url }}" class="{% isActiveLink parent.url %}">{{ parent.data.title }}</a>
-        </li>
-      {%- endfor %}
-      </ul>
-    </nav>
-    <main>{{ content }}</main>
+    <div class="w-full lg:w-1/2 mx-auto">
+      <nav class="flex items-center justify-between px-4 lg:px-0">
+        <figure class="flex items-center">
+          <img src="/images/icon.webp" alt="Site icon." class="w-16">
+          <figcaption class="flex flex-col">
+            <span>GEO</span>
+            <span>GLGRN.</span>
+          </figcaption>
+        </figure>
+        <ul class="flex items-center gap-4">
+          {%- for parent in collections.parents -%}
+          <li>
+            <a
+              href="{{ parent.url }}"
+              data-active="{% isActiveLink parent.url %}"
+              class="flex flex-col text-blue-400 visited:text-indigo-600 after:block after:bottom-0 after:h-1 after:w-full data-[active=true]:text-blue-600 data-[active=true]:after:bg-blue-600 after:skew-x-0 after:skew-y-3 after:rounded"
+            >
+              {{ parent.data.title }}
+            </a>
+          </li>
+          {%- endfor %}
+        </ul>
+      </nav>
+      <main>{{ content }}</main>
+    </div>
     {% if js %}<script src="/js/{{ js }}"></script>{% endif %}
   </body>
 </html>
