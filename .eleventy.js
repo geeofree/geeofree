@@ -6,11 +6,18 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItClass = require("markdown-it-class");
 const markdownItKatex = require("markdown-it-katex");
+const markdownItAttrs = require("markdown-it-attrs");
 
 const markdownLibrary = markdownIt({
   html: true,
   linkify: true
 })
+
+markdownLibrary.use(markdownItAttrs, {
+  leftDelimiter: '{',
+  rightDelimiter: '}',
+  allowedAttributes: ['id', 'class', /^data-\.+=$/]
+});
 
 markdownLibrary.use(markdownItAnchor, {
   permalink: true,
