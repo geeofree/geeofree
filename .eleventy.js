@@ -4,8 +4,8 @@ const formatDate = require('date-fns/format')
 const maxDate = require('date-fns/max')
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
-const markdownItMathjax = require("markdown-it-mathjax3");
 const markdownItClass = require("markdown-it-class");
+const markdownItKatex = require("markdown-it-katex");
 
 const markdownLibrary = markdownIt({
   html: true,
@@ -18,7 +18,7 @@ markdownLibrary.use(markdownItAnchor, {
   permalinkSymbol: "#"
 });
 
-markdownLibrary.use(markdownItMathjax);
+markdownLibrary.use(markdownItKatex);
 
 markdownLibrary.use(markdownItClass, {
   h1: ["font-bold text-3xl my-2"],
