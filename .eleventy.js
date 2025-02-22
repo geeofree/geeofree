@@ -4,12 +4,20 @@ const formatDate = require('date-fns/format')
 const maxDate = require('date-fns/max')
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
-const markdownItMathjax = require("markdown-it-mathjax3");
+const markdownItClass = require("markdown-it-class");
+const markdownItKatex = require("markdown-it-katex");
+const markdownItAttrs = require("markdown-it-attrs");
 
 const markdownLibrary = markdownIt({
   html: true,
   linkify: true
 })
+
+markdownLibrary.use(markdownItAttrs, {
+  leftDelimiter: '{',
+  rightDelimiter: '}',
+  allowedAttributes: ['id', 'class', /^data-\.+=$/]
+});
 
 markdownLibrary.use(markdownItAnchor, {
   permalink: true,
@@ -17,15 +25,30 @@ markdownLibrary.use(markdownItAnchor, {
   permalinkSymbol: "#"
 });
 
-markdownLibrary.use(markdownItMathjax);
+markdownLibrary.use(markdownItKatex);
+
+markdownLibrary.use(markdownItClass, {
+  h1: ["font-bold text-3xl my-4"],
+  h2: ["font-bold text-2xl my-4"],
+  h3: ["font-bold text-xl my-4"],
+  h4: ["font-bold text-lg my-4"],
+  h5: ["font-bold text-base my-4"],
+  a: ["text-blue-600 visited:text-indigo-600 my-4"],
+  p: ["my-4"],
+  code: ["bg-rose-100 text-rose-500 rounded p-1"],
+  table: ["w-full"],
+  th: ["text-left p-2 border-b border-gray-200 bg-gray-50"],
+  td: ["text-left p-2 border-b border-gray-200"],
+  ul: ["pl-4 list-disc"],
+  ol: ["pl-4 list-decimal"],
+  li: ["my-2"],
+});
 
 module.exports = (eleventyConfig) => {
   // Plugins
   eleventyConfig.addPlugin(syntaxHighlight)
 
   // Passthroughs
-	eleventyConfig.addPassthroughCopy({ 'src/css': 'css' })
-	eleventyConfig.addPassthroughCopy({ 'node_modules/simpledotcss/simple.min.css': 'css/simple.min.css' })
 	eleventyConfig.addPassthroughCopy({ 'src/js': 'js' })
 	eleventyConfig.addPassthroughCopy({ 'src/images': 'images' })
 
@@ -59,9 +82,9 @@ module.exports = (eleventyConfig) => {
 
   // Shortcodes
   eleventyConfig.addShortcode('isActiveLink', function (url) {
-    if (url === this.page.url) return 'active-link'
-    if (url !== '/' && this.page.url.includes(url)) return 'active-link'
-    return ''
+    if (url === this.page.url) return true
+    if (url !== '/' && this.page.url.includes(url)) return true
+    return false
   })
 
   // Filters
