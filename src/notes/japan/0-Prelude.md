@@ -1,6 +1,6 @@
 ---
 title: 'Prelude: The Japanese Writing System'
-description: Discover Japan's Writing System.
+description: Hiragana, Katakana, and Kanji.
 ---
 
 # Japan's Writing Systems
