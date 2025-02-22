@@ -4,8 +4,12 @@
   "description": "Personal Website",
   "main": "index.js",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "build": "NODE_ENV=production npx @11ty/eleventy"
+    "start": "run-p eleventy:dev tailwind:dev",
+    "eleventy:dev": "npx @11ty/eleventy --serve",
+    "tailwind:dev": "npx @tailwindcss/cli -i src/css/base.css -o dist/css/output.css --watch",
+    "build": "run-p eleventy:build tailwind:build",
+    "eleventy:build": "NODE_ENV=production npx @11ty/eleventy",
+    "tailwind:build": "NODE_ENV=production npx @tailwindcss/cli -i src/css/base.css -o dist/css/output.css"
   },
   "repository": {
     "type": "git",
@@ -23,11 +27,13 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
+    "@tailwindcss/cli": "4.0.8",
     "date-fns": "^2.29.2",
     "eleventy-plugin-mathjax": "^2.0.3",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.4",
     "markdown-it-mathjax3": "^4.3.2",
-    "simpledotcss": "^2.1.1"
+    "npm-run-all": "4.1.5",
+    "tailwindcss": "4.0.8"
   }
 }
