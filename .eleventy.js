@@ -5,6 +5,7 @@ const maxDate = require('date-fns/max')
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItMathjax = require("markdown-it-mathjax3");
+const markdownItClass = require("markdown-it-class");
 
 const markdownLibrary = markdownIt({
   html: true,
@@ -18,6 +19,16 @@ markdownLibrary.use(markdownItAnchor, {
 });
 
 markdownLibrary.use(markdownItMathjax);
+
+markdownLibrary.use(markdownItClass, {
+  h1: ["font-bold text-3xl my-2"],
+  h2: ["font-bold text-2xl my-2"],
+  h3: ["font-bold text-xl my-2"],
+  h4: ["font-bold text-lg my-2"],
+  h5: ["font-bold text-base my-2"],
+  a: ["text-blue-600 visited:text-indigo-600 my-2"],
+  p: ["my-2"],
+});
 
 module.exports = (eleventyConfig) => {
   // Plugins
