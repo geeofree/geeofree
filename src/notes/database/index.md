@@ -16,3 +16,7 @@ Reference material: [Database System Concepts - A. Silberschatz](https://www.ama
 * [Chapter 3: Intermediate SQL](dsc/3-IntermediateSQL)
 * [Chapter 4: Physical Storage Systems](dsc/4-PhysicalStorageSystems)
 * [Chapter 5: Data Storage Structures](dsc/5-DataStorageStructures)
+
+## PostgreSQL
+
+* [Chapter 1: Introduction to PostgreSQL](postgres/1-Introduction)
