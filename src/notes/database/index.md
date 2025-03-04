@@ -20,3 +20,4 @@ Reference material: [Database System Concepts - A. Silberschatz](https://www.ama
 ## PostgreSQL
 
 * [Chapter 1: Introduction to PostgreSQL](postgres/1-Introduction)
+* [Chapter 2: The Cluster](postgres/2-Cluster)
