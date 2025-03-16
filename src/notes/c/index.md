@@ -5,9 +5,9 @@ title: C
 description: Learning C.
 ---
 
-Resource: [The C Programming Language, 2ed. K&R](https://www.amazon.com/Programming-Language-2nd-Brian-Kernighan/dp/0131103628)
+## The C Programming Language
 
-### Table of Contents
+Resource: [The C Programming Language, 2ed. K&R](https://www.amazon.com/Programming-Language-2nd-Brian-Kernighan/dp/0131103628)
 
 * [Chapter 1: Basics](1-Basics)
 * [Chapter 2: Types, Operators, and Expressions](2-TypesOperatorsAndExpressions)
@@ -16,3 +16,7 @@ Resource: [The C Programming Language, 2ed. K&R](https://www.amazon.com/Programm
 * [Chapter 5: Pointers and Arrays](5-PointersAndArrays)
 * [Chapter 6: Structures](6-Structures)
 * [Chapter 7: Input and Output](7-InputOutput)
+
+## Network Programming with C
+
+* [Chapter 1: Introducing Networks and Protocols](networking/1-Introduction)
