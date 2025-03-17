@@ -20,3 +20,4 @@ Resource: [The C Programming Language, 2ed. K&R](https://www.amazon.com/Programm
 ## Network Programming with C
 
 * [Chapter 1: Introducing Networks and Protocols](networking/1-Introduction)
+* [Chapter 2: Getting Started with Socket APIs](networking/2-SocketAPIs)
