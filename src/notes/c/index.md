@@ -23,3 +23,4 @@ Resource: [The C Programming Language, 2ed. K&R](https://www.amazon.com/Programm
 * [Chapter 2: Getting Started with Socket APIs](networking/2-SocketAPIs)
 * [Chapter 3: In-Depth Overview of TCP Connections](networking/3-TCPConnections)
 * [Chapter 4: Establishing UDP Connections](networking/4-UDPConnections)
+* [Chapter 5: Hostname Resolution and DNS](networking/5-HostnameResolution)
