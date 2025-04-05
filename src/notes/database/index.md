@@ -19,5 +19,7 @@ Reference material: [Database System Concepts - A. Silberschatz](https://www.ama
 
 ## PostgreSQL
 
+Reference material: [Learn PostgreSQL, 2nd Edition](https://www.amazon.com/Learn-PostgreSQL-Second-scalable-databases/dp/1837635641)
+
 * [Chapter 1: Introduction to PostgreSQL](postgres/1-Introduction)
 * [Chapter 2: The Cluster](postgres/2-Cluster)
