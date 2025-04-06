@@ -24,3 +24,4 @@ Reference material: [Learn PostgreSQL, 2nd Edition](https://www.amazon.com/Learn
 * [Chapter 1: Introduction to PostgreSQL](postgres/1-Introduction)
 * [Chapter 2: The Cluster](postgres/2-Cluster)
 * [Chapter 3: Managing Users and Connections](postgres/3-UsersAndConnections)
+* [Chapter 4: Basic Statements](postgres/4-BasicStatements)
