@@ -28,3 +28,4 @@ Reference material: [Learn PostgreSQL, 2nd Edition](https://www.amazon.com/Learn
 * [Chapter 5: Advanced Statements](postgres/5-AdvancedStatements)
 * [Chapter 6: Window Functions](postgres/6-WindowFunctions)
 * [Chapter 7: Partitioning](postgres/7-Partitioning)
+* [Chapter 8: Transactions, MVCC, WALs, and Checkpoints](postgres/8-Transactions)
