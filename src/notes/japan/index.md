@@ -16,6 +16,6 @@ References: [Genki I](https://www.amazon.com/GENKI-Integrated-Elementary-Japanes
 * [Lesson 4: The First Date](4-TheFirstDate)
 
 # Helpful Stuff
-- [Japanese Particle Cheatsheet](https://www.tofugu.com/japanese/japanese-particles-cheatsheet/)
+- [Japanese Particles](https://en.wikipedia.org/wiki/Japanese_particles)
 - [Japanese Numerals](https://en.wikipedia.org/wiki/Japanese_numerals)
 - [Japanese Time](https://japaneseup.com/learn-japanese-time/)
