@@ -12,7 +12,7 @@ References: [Genki I](https://www.amazon.com/GENKI-Integrated-Elementary-Japanes
 * [Prelude: Japanese Writing System](0-Prelude)
 * [Lesson 1: New Friends](1-NewFriends)
 * [Lesson 2: Shopping](2-Shopping)
-* [Lesson 3: Making a Date](3-Date)
+* [Lesson 3: Making a Date](3-MakingADate)
 
 # Helpful Stuff
 - [Japanese Particle Cheatsheet](https://www.tofugu.com/japanese/japanese-particles-cheatsheet/)
