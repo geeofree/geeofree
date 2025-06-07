@@ -13,6 +13,7 @@ References: [Genki I](https://www.amazon.com/GENKI-Integrated-Elementary-Japanes
 * [Lesson 1: New Friends](1-NewFriends)
 * [Lesson 2: Shopping](2-Shopping)
 * [Lesson 3: Making a Date](3-MakingADate)
+* [Lesson 4: The First Date](4-TheFirstDate)
 
 # Helpful Stuff
 - [Japanese Particle Cheatsheet](https://www.tofugu.com/japanese/japanese-particles-cheatsheet/)
