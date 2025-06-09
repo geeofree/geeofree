@@ -14,6 +14,7 @@ References: [Genki I](https://www.amazon.com/GENKI-Integrated-Elementary-Japanes
 * [Lesson 2: Shopping](2-Shopping)
 * [Lesson 3: Making a Date](3-MakingADate)
 * [Lesson 4: The First Date](4-TheFirstDate)
+* [Lesson 5: A Trip to Okinawa](5-OkinawaTrip)
 
 # Helpful Stuff
 - [Japanese Particles](https://en.wikipedia.org/wiki/Japanese_particles)
