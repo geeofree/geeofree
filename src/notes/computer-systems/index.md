@@ -9,8 +9,8 @@ Reference material: [Introduction To Computing Systems: From Bits & Gates To C/C
 
 #### Table Of Contents
 
-* [Chapter 1: Computer Architecture](1-ComputerArchitecture)
-* [Chapter 2: Bits And Data Types](2-BitsAndDataTypes)
-* [Chapter 3: Digital Logic Structures](3-DigitalLogicStructures)
-* [Chapter 4: The von Neumann Model](4-TheVonNeumannModel)
-* [Chapter 5: The LC-3](5-LC3)
+* [Chapter 1: Computer Architecture](intro-to-computing-systems/1-ComputerArchitecture)
+* [Chapter 2: Bits And Data Types](intro-to-computing-systems/2-BitsAndDataTypes)
+* [Chapter 3: Digital Logic Structures](intro-to-computing-systems/3-DigitalLogicStructures)
+* [Chapter 4: The von Neumann Model](intro-to-computing-systems/4-TheVonNeumannModel)
+* [Chapter 5: The LC-3](intro-to-computing-systems/5-LC3)
