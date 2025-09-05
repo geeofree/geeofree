@@ -1,6 +1,4 @@
 ---
-tagID: japan
-tags: notes
 title: Japan
 description: My notes for learning the Japanese language and culture.
 ---

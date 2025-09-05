@@ -1,6 +1,4 @@
 ---
-tagID: python
-tags: notes
 title: Python
 description: Trying to [re]learn Python.
 ---

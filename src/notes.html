@@ -15,10 +15,8 @@ css: notes.css
 <section class="px-4 pt-4 lg:px-0 grid grid-cols-1 sm:grid-cols-2 gap-4">
   {%- for note in collections.notes -%}
   <a href="{{ note.url }}" class="p-2 rounded bg-gray-50 border border-gray-200 h-full hover:border-gray-400">
-    <section class="flex gap-4">
-      <div class="">
-        <img src="{{ note.data.icon }}" alt="{{ note.data.title }}">
-      </div>
+    <section class="grid grid-cols-[25%_1fr] gap-4">
+      <img src="{{ note.data.icon }}" alt="{{ note.data.title }}">
       <div class="text-xs">
         <h4 class="text-xl font-bold">{{ note.data.title }}</h4>
         <p>{{ collections[note.data.tagID].length | minusOne }} note(s) written.</p>

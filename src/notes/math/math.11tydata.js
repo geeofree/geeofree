@@ -1,4 +1,4 @@
 module.exports = {
-  icon: '/images/icon-note-dsa.svg',
+  icon: '/images/icon-note-math.svg',
   tags: 'math',
 }
