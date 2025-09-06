@@ -33,3 +33,15 @@ css: projects.css
   </section>
   {% endfor %}
 </div>
+
+<h2 class="text-xl font-bold py-4">User Interfaces</h2>
+
+<ul class="list-disc pl-4">
+{%- for ui in collections.uis -%}
+  <li>
+    <a href="{{ ui.url }}" rel="noreferrer noopener" class="text-blue-400 visited:text-indigo-600">
+      {{ ui.data.title }}
+    </a>
+  </li>
+{%- endfor %}
+</ul>
