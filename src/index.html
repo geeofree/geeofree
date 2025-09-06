@@ -8,26 +8,10 @@ description: Hello world.
 
 <header class="px-4 pt-4 lg:px-0">
   <h1 class="text-2xl font-bold">HELLO</h1>
-  <p>I am Geo, a Software Engineer from the Philippines.</p>
+  <p>I'm Geo, a Software Engineer from the Philippines.</p>
 </header>
 
-<section class="px-4 pt-4 lg:px-0">
+<section class="mx-4 mt-4 lg:mx-0 rounded-xl overflow-hidden">
   <img src="/images/mint-rice.webp" alt="Mint Rice">
 </section>
 
-<ul class="px-4 pt-4 lg:px-0">
-  {%- for parent in collections.parents -%}
-  {% if parent.url != "/" %}
-  <li>
-    <p>
-      <a
-        href="{{ parent.url }}"
-        class="text-blue-400 visited:text-indigo-600"
-      >
-        {{ parent.data.title }}
-      </a>: {{ parent.data.description }}
-    </p>
-  </li>
-  {% endif %}
-  {%- endfor %}
-</ul>
