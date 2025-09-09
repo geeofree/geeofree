@@ -1,5 +1,12 @@
 [
   {
+    "name": "UIs",
+    "description": "My website for some UIs I've built on my own time.",
+    "links": [
+      { "icon": "www.png", "url": "https://ui.geeofree.dev" }
+    ]
+  },
+  {
     "name": "Kalendaryo",
     "description": "A React component for building calendars with unopinionated styling.",
     "links": [
