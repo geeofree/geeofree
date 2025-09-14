@@ -16,7 +16,7 @@
   },
   {
     "name": "Personal Website",
-    "description": "This website.",
+    "description": "This website. Built with eleventy and tailwind.",
     "links": [
       { "icon": "github.png", "url": "https://github.com/geeofree/geeofree" }
     ]
