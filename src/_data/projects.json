@@ -1,7 +1,7 @@
 [
   {
-    "name": "UIs",
-    "description": "My website for some UIs I've built on my own time.",
+    "name": "User Interfaces",
+    "description": "UIs I've implemented using basic HTML, CSS, and JavaScript",
     "links": [
       { "icon": "www.png", "url": "https://ui.geeofree.dev" }
     ]
