@@ -9,4 +9,4 @@ description: Operating Systems Notes.
 
 Reference: [Modern Operating Systems (4th Edition) - Andrew Tanenbaum, Herbert Bos](https://www.amazon.com/Modern-Operating-Systems-Andrew-Tanenbaum/dp/013359162X)
 
-* [Chapter 1: Introduction](operating-systems/1-Introduction)
+* [Chapter 1: Processes and Threads](operating-systems/1-Processes)
