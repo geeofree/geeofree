@@ -42,7 +42,8 @@ markdownLibrary.use(markdownItClass, {
   ul: ["pl-4 list-disc my-4"],
   ol: ["pl-4 list-decimal my-4"],
   li: ["my-2"],
-  blockquote: ["border-l-4 border-indigo-500 bg-indigo-50 px-2"]
+  blockquote: ["border-l-4 border-indigo-500 bg-indigo-50 px-2"],
+  img: ["mx-auto"],
 });
 
 module.exports = (eleventyConfig) => {
