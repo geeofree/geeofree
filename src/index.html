@@ -1,17 +1,73 @@
 ---
 layout: base.html
-tags: parents
-order: 1
-title: Home
-description: Hello world.
+title: "Geo Galagaran"
+description: "Software Engineer 🚀"
 ---
 
-<header class="px-4 pt-4 lg:px-0">
-  <h1 class="text-2xl font-bold">HELLO</h1>
-  <p>I'm Geo, a Software Engineer from the Philippines.</p>
+<header class="fixed top-0 left-0 z-50 py-4 px-2 sm:px-8 w-full bg-slate-950 lg:bg-transparent">
+  <div class="flex flex-wrap justify-between items-center gap-4">
+    <div class="flex items-center gap-2">
+      <img src="/images/icon.webp" class="w-16 h-16"/>
+      <h1 class="text-white font-extrabold text-xl">GEO<br/>GLGRN.</h1>
+    </div>
+
+    <nav class="hidden lg:block">
+      <ul class="flex items-center gap-4 text-white font-bold">
+        <li class="px-4 py-2 border-indigo-700 border rounded cursor-pointer lg:hover:bg-indigo-900 transition-colors bg-indigo-700">
+          <a href="#about">WHOAMI</a>
+        </li>
+        <li class="px-4 py-2 border-indigo-700 border rounded cursor-pointer lg:hover:bg-indigo-900 transition-colors bg-indigo-700">
+          <a href="#projects">Projects</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<section class="mx-4 mt-4 lg:mx-0 rounded-xl overflow-hidden">
-  <img src="/images/mint-rice.webp" alt="Mint Rice">
+<section id="hero" class="h-screen flex flex-col gap-6 items-center justify-center">
+  <div class="flex flex-col gap-4 text-center">
+    <p class="text-white text-3xl lg:text-6xl">Hello!</p>
+    <h1 class="font-extralight text-3xl lg:text-6xl text-slate-400">
+      I am, <span class="font-black text-indigo-700">Geo Galagaran 🚀</span>
+    </h1>
+    <p class="text-xl lg:text-3xl text-white">Software Engineer</p>
+  </div>
 </section>
 
+<section id="about" class="h-screen p-2 lg:p-8 flex flex-col gap-8">
+  <h1 class="text-3xl lg:text-6xl text-white text-center font-black">
+    WHO<span class="text-indigo-700">AM</span>I 👨‍🚀
+  </h1>
+
+  <div class="mx-auto sm:max-w-1/3 text-center flex flex-col gap-4">
+    <p class="text-base lg:text-xl text-white">Hello! I'm Geo! A Software Engineer based in the Philippines 🇵🇭</p>
+    <p class="text-base lg:text-xl text-white">I create software that helps teams get things done. I focus on writing clean, reliable code and learning through each project.</p>
+    <p class="text-base lg:text-xl text-white">My goal is to contribute meaningfully while growing as an engineer.</p>
+  </div>
+</section>
+
+<section id="projects" class="h-screen p-2 lg:p-8 flex flex-col gap-8">
+  <h1 class="text-3xl lg:text-6xl text-white text-center font-black">
+    PROJECTS 🛠️
+  </h1>
+
+  <ul class="grid grid-cols-1 sm:grid-cols-[repeat(2,_calc(100%/4))] justify-center gap-4">
+    {% for project in projects %}
+    <li class="rounded overflow-hidden flex flex-col">
+      <div class="bg-indigo-700 text-white p-4 flex justify-between items-center">
+        <a href="{{ project.links[0].url }}" target="_blank" rel="noopener noreferrer">
+          <h2 class="font-bold">{{ project.name }}</h2>
+        </a>
+        <div class="flex gap-2 items-center">
+          {% for projectLink in project.links %}
+          <a href="{{ projectLink.url }}">
+            <img src="/images/{{ projectLink.icon }}" alt="{{ projectLink.icon }}" class="h-4" />
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      <p class="mt-auto bg-white text-slate-950 p-4 flex-1">{{ project.description }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

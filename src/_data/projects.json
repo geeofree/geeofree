@@ -1,12 +1,5 @@
 [
   {
-    "name": "User Interfaces",
-    "description": "UIs I've implemented using basic HTML, CSS, and JavaScript",
-    "links": [
-      { "icon": "www.png", "url": "https://ui.geeofree.dev" }
-    ]
-  },
-  {
     "name": "Kalendaryo",
     "description": "A React component for building calendars with unopinionated styling.",
     "links": [
