@@ -42,11 +42,45 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-one-light.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"/>
 		<link rel="stylesheet" href="/css/output.css">
 	</head>
-  <body class="bg-gradient-to-br from-slate-900 to-slate-700">
-    {{ content }}
+  <body class="bg-slate-50 text-slate-900 selection:bg-indigo-100 selection:text-indigo-900 min-h-screen flex flex-col">
+    <header class="sticky top-0 z-50 w-full backdrop-blur-md bg-white/80 border-b border-slate-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-2">
+        <a href="/" class="font-bold text-lg sm:text-xl tracking-tighter text-slate-900 shrink-0">
+          GEO<span class="text-indigo-600">GLGRN.</span>
+        </a>
+        <nav class="overflow-x-auto no-scrollbar">
+          <ul class="flex items-center gap-3 sm:gap-6 text-xs sm:text-sm font-medium text-slate-600 whitespace-nowrap">
+            <li><a href="/#skills" class="hover:text-indigo-600 transition-colors">Skills</a></li>
+            <li><a href="/#projects" class="hover:text-indigo-600 transition-colors">Projects</a></li>
+            <li><a href="/#writing" class="hover:text-indigo-600 transition-colors">Writing</a></li>
+            <li><a href="/#about" class="hover:text-indigo-600 transition-colors">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="flex-grow">
+      {{ content }}
+    </div>
+
+    <footer class="border-t border-slate-200 bg-white">
+      <div class="max-w-4xl mx-auto px-6 py-12">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+          <p class="text-sm text-slate-500">© 2026 Geo Galagaran. Built with Eleventy & Tailwind.</p>
+          <div class="flex items-center gap-6">
+            {% for social in socials %}
+            <a href="{{ social.url }}" class="text-slate-400 hover:text-indigo-600 transition-colors" target="_blank" rel="noopener noreferrer">
+              <span class="sr-only">{{ social.text }}</span>
+              <img src="/images/{{ social.icon }}" alt="{{ social.text }}" class="h-5 w-5 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100" />
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </footer>
+
     {% if js %}<script src="/js/{{ js }}"></script>{% endif %}
   </body>
 </html>

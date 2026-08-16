@@ -1,73 +1,128 @@
 ---
 layout: base.html
-title: "Geo Galagaran"
-description: "Software Engineer 🚀"
+title: "Geo Galagaran | Software Engineer"
+description: "Software Engineer specializing in TypeScript, React, and Scalable Backend Systems."
 ---
 
-<header class="fixed top-0 left-0 z-50 py-4 px-2 sm:px-8 w-full bg-slate-950 lg:bg-transparent">
-  <div class="flex flex-wrap justify-between items-center gap-4">
-    <div class="flex items-center gap-2">
-      <img src="/images/icon.webp" class="w-16 h-16"/>
-      <h1 class="text-white font-extrabold text-xl">GEO<br/>GLGRN.</h1>
+<main class="max-w-4xl mx-auto px-6">
+  <!-- Hero Section -->
+  <section id="hero" class="py-24 lg:py-32 border-b border-slate-200">
+    <div class="flex flex-col gap-6">
+      <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight text-slate-900">
+        Building robust software <br/>
+        <span class="text-indigo-600">for complex problems.</span>
+      </h1>
+      <p class="text-xl lg:text-2xl text-slate-600 max-w-2xl leading-relaxed">
+        I'm <span class="font-semibold text-slate-900">Geo Galagaran</span>, a Software Engineer focused on crafting clean, performant, and reliable web applications.
+      </p>
     </div>
+  </section>
 
-    <nav class="hidden lg:block">
-      <ul class="flex items-center gap-4 text-white font-bold">
-        <li class="px-4 py-2 border-indigo-700 border rounded cursor-pointer lg:hover:bg-indigo-900 transition-colors bg-indigo-700">
-          <a href="#about">WHOAMI</a>
-        </li>
-        <li class="px-4 py-2 border-indigo-700 border rounded cursor-pointer lg:hover:bg-indigo-900 transition-colors bg-indigo-700">
-          <a href="#projects">Projects</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <!-- Skills Section -->
+  <section id="skills" class="py-24 border-b border-slate-200">
+    <h2 class="text-sm font-bold uppercase tracking-widest text-indigo-600 mb-12">Core Technical Skillset</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div>
+        <h3 class="font-bold text-slate-900 mb-4">Frontend</h3>
+        <ul class="space-y-2 text-slate-600">
+          <li>ReactJS & NextJS</li>
+          <li>TypeScript / JavaScript</li>
+          <li>Redux & Zustand</li>
+          <li>TailwindCSS</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold text-slate-900 mb-4">Backend</h3>
+        <ul class="space-y-2 text-slate-600">
+          <li>Node.js (Express, Hono)</li>
+          <li>Python</li>
+          <li>PostgreSQL & Redis</li>
+          <li>API Design & Integration</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-bold text-slate-900 mb-4">Core Expertise</h3>
+        <ul class="space-y-2 text-slate-600">
+          <li>System Design</li>
+          <li>Clean Architecture</li>
+          <li>Git & CI/CD</li>
+          <li>Linux Systems</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<section id="hero" class="h-screen flex flex-col gap-6 items-center justify-center">
-  <div class="flex flex-col gap-4 text-center">
-    <p class="text-white text-3xl lg:text-6xl">Hello!</p>
-    <h1 class="font-extralight text-3xl lg:text-6xl text-slate-400">
-      I am, <span class="font-black text-indigo-700">Geo Galagaran 🚀</span>
-    </h1>
-    <p class="text-xl lg:text-3xl text-white">Software Engineer</p>
-  </div>
-</section>
-
-<section id="about" class="h-screen p-2 lg:p-8 flex flex-col gap-8">
-  <h1 class="text-3xl lg:text-6xl text-white text-center font-black">
-    WHO<span class="text-indigo-700">AM</span>I 👨‍🚀
-  </h1>
-
-  <div class="mx-auto sm:max-w-1/3 text-center flex flex-col gap-4">
-    <p class="text-base lg:text-xl text-white">Hello! I'm Geo! A Software Engineer based in the Philippines 🇵🇭</p>
-    <p class="text-base lg:text-xl text-white">I create software that helps teams get things done. I focus on writing clean, reliable code and learning through each project.</p>
-    <p class="text-base lg:text-xl text-white">My goal is to contribute meaningfully while growing as an engineer.</p>
-  </div>
-</section>
-
-<section id="projects" class="h-screen p-2 lg:p-8 flex flex-col gap-8">
-  <h1 class="text-3xl lg:text-6xl text-white text-center font-black">
-    PROJECTS 🛠️
-  </h1>
-
-  <ul class="grid grid-cols-1 sm:grid-cols-[repeat(2,_calc(100%/4))] justify-center gap-4">
-    {% for project in projects %}
-    <li class="rounded overflow-hidden flex flex-col">
-      <div class="bg-indigo-700 text-white p-4 flex justify-between items-center">
-        <a href="{{ project.links[0].url }}" target="_blank" rel="noopener noreferrer">
-          <h2 class="font-bold">{{ project.name }}</h2>
-        </a>
-        <div class="flex gap-2 items-center">
-          {% for projectLink in project.links %}
-          <a href="{{ projectLink.url }}">
-            <img src="/images/{{ projectLink.icon }}" alt="{{ projectLink.icon }}" class="h-4" />
-          </a>
-          {% endfor %}
+  <!-- Projects Section -->
+  <section id="projects" class="py-24 border-b border-slate-200">
+    <div class="flex justify-between items-end mb-12">
+      <h2 class="text-sm font-bold uppercase tracking-widest text-indigo-600">Selected Projects</h2>
+      <a href="/projects" class="text-sm font-medium text-slate-500 hover:text-indigo-600 transition-colors">View All &rarr;</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {% for project in projects limit:4 %}
+      <div class="group flex flex-col bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300">
+        <div class="p-8 flex flex-col flex-grow">
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="font-bold text-xl text-slate-900 group-hover:text-indigo-600 transition-colors">
+              {{ project.name }}
+            </h3>
+            <div class="flex gap-3">
+              {% for link in project.links %}
+              <a href="{{ link.url }}" class="opacity-40 hover:opacity-100 transition-opacity" target="_blank" rel="noopener noreferrer">
+                <img src="/images/{{ link.icon }}" alt="{{ link.icon }}" class="h-5 w-5 grayscale" />
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-6 flex-grow">
+            {{ project.description }}
+          </p>
         </div>
       </div>
-      <p class="mt-auto bg-white text-slate-950 p-4 flex-1">{{ project.description }}</p>
-    </li>
-    {% endfor %}
-  </ul>
-</section>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Writing Section -->
+  <section id="writing" class="py-24 border-b border-slate-200">
+    <h2 class="text-sm font-bold uppercase tracking-widest text-indigo-600 mb-12">Technical Writing</h2>
+    <div class="space-y-8">
+      {% for blog in collections.blogs %}
+      <article class="group">
+        <a href="{{ blog.url }}" class="flex flex-col md:flex-row md:items-baseline justify-between gap-2">
+          <h3 class="text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+            {{ blog.data.title }}
+          </h3>
+          <span class="text-sm text-slate-400 font-mono whitespace-nowrap">
+            {{ blog.date | formatDate }}
+          </span>
+        </a>
+        <p class="text-slate-600 mt-2 line-clamp-2 leading-relaxed">
+          {{ blog.data.description }}
+        </p>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24">
+    <h2 class="text-sm font-bold uppercase tracking-widest text-indigo-600 mb-12">Who I Am</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      <div class="text-slate-600 leading-relaxed space-y-4 text-lg">
+        <p>
+          I'm a Software Engineer based in the Philippines 🇵🇭. I specialize in building scalable web applications and developer tools that improve productivity.
+        </p>
+      </div>
+      <div class="bg-slate-100 rounded-3xl p-8 border border-slate-200">
+        <h4 class="font-bold text-slate-900 mb-4">Let's Connect</h4>
+        <p class="text-slate-600 mb-6">
+          I'm always open to discussing new projects, technical challenges, or opportunities.
+        </p>
+        <a href="mailto:work@geeofree.dev" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-slate-900 text-white font-bold hover:bg-indigo-600 transition-colors w-full md:w-auto">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+</main>

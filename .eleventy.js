@@ -28,22 +28,22 @@ markdownLibrary.use(markdownItAnchor, {
 markdownLibrary.use(markdownItKatex);
 
 markdownLibrary.use(markdownItClass, {
-  h1: ["font-bold text-3xl my-4"],
-  h2: ["font-bold text-2xl my-4"],
-  h3: ["font-bold text-xl my-4"],
-  h4: ["font-bold text-lg my-4"],
-  h5: ["font-bold text-base my-4"],
-  a: ["text-blue-600 visited:text-indigo-600 my-4"],
-  p: ["my-4"],
-  code: ["bg-rose-100 text-rose-500 rounded p-1"],
-  table: ["w-full my-4"],
-  th: ["text-left p-2 border-b border-gray-200 bg-gray-50"],
-  td: ["text-left p-2 border-b border-gray-200"],
-  ul: ["pl-4 list-disc my-4"],
-  ol: ["pl-4 list-decimal my-4"],
-  li: ["my-2"],
-  blockquote: ["border-l-4 border-indigo-500 bg-indigo-50 px-2"],
-  img: ["mx-auto"],
+  h1: ["text-3xl font-extrabold text-slate-900 mt-12 mb-6 tracking-tight"],
+  h2: ["text-2xl font-bold text-slate-900 mt-10 mb-4 tracking-tight"],
+  h3: ["text-xl font-bold text-slate-900 mt-8 mb-4"],
+  h4: ["text-lg font-bold text-slate-900 mt-6 mb-2"],
+  h5: ["text-base font-bold text-slate-900 mt-4 mb-2"],
+  a: ["text-indigo-600 hover:text-indigo-700 underline decoration-indigo-200 underline-offset-4 hover:decoration-indigo-500 transition-all"],
+  p: ["text-slate-600 leading-relaxed mb-6"],
+  code: ["bg-slate-100 text-pink-600 rounded px-1.5 py-0.5 font-mono text-[0.9em] border border-slate-200/50"],
+  table: ["w-full my-8 border-collapse"],
+  th: ["text-left p-3 border-b-2 border-slate-200 bg-slate-50 text-slate-700 font-semibold text-sm uppercase tracking-wider"],
+  td: ["text-left p-3 border-b border-slate-100 text-slate-600"],
+  ul: ["pl-6 list-disc text-slate-600 space-y-2 mb-6"],
+  ol: ["pl-6 list-decimal text-slate-600 space-y-2 mb-6"],
+  li: ["leading-relaxed"],
+  blockquote: ["border-l-4 border-indigo-500 bg-indigo-50/50 py-4 px-6 my-8 text-slate-700 italic rounded-r-lg"],
+  img: ["mx-auto rounded-xl shadow-md my-10"],
 });
 
 module.exports = (eleventyConfig) => {
